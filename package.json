@@ -59,12 +59,12 @@
         "node": ">=0.10.0"
     },
     "scripts": {
-        "postinstall": "node_modules/protractor/bin/webdriver-manager update",
+        "postinstall": "webdriver-manager update",
         "pretest": "yarn run testserver",
         "test": "yarn run test:karma && yarn run test:e2e || :",
         "posttest": "pkill -f webpack-dev-server",
         "test:karma": "trap 'rm test/karma/spec/*.js' EXIT INT TERM; coffee -c test/karma/spec && karma start test/karma/karma.conf.js",
-        "test:e2e": "trap 'rm test/e2e/spec/*.js' EXIT INT TERM; coffee -c test/e2e/spec && node_modules/protractor/bin/protractor test/e2e/conf_e2e.js",
+        "test:e2e": "trap 'rm test/e2e/spec/*.js' EXIT INT TERM; coffee -c test/e2e/spec && protractor test/e2e/conf_e2e.js",
         "start": "webpack-dev-server --config webpack.dev.js",
         "dev": "webpack-dev-server --hot --config webpack.dev.js",
         "testserver": "webpack-dev-server --config webpack.dev.js &",
