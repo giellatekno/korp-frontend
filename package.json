@@ -59,7 +59,6 @@
         "node": ">=0.10.0"
     },
     "scripts": {
-        "postinstall": "webdriver-manager update",
         "pretest": "yarn run testserver",
         "test": "yarn run test:karma && yarn run test:e2e || :",
         "posttest": "pkill -f webpack-dev-server",
