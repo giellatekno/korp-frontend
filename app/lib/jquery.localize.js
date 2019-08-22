@@ -9,6 +9,8 @@
 			var dfds = [];
 			// some language identifyer aliases
 			var trans = {
+				"nob" : "nb",
+				"nb" : "nb",
 				"swe"  : "sv",
 				"sv" : "sv",
 				"eng" : "en",
