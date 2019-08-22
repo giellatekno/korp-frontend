@@ -3,16 +3,17 @@ var settings = {};
 
 var isLab = window.isLab || false;
 
-settings.autocomplete = true;
+settings.autocomplete = false;
 settings.enableMap = !isLab;
 settings.mapPosTag = ["PM", "NNP", "NNPS"]
 settings.newMapEnabled = isLab;
-settings.hitsPerPageDefault = 25
+settings.hitsPerPageDefault = 100
+settings.hitsPerPageValues = [25,50,75,100,500,1000]
 settings.enableBackendKwicDownload = false
-settings.enableFrontendKwicDownload = true
+settings.enableFrontendKwicDownload = false
 
-settings.languages = ["sv", "en"];
-settings.defaultLanguage = "sv";
+settings.languages = ["se", "nb", "fi", "sv", "en"];
+settings.defaultLanguage = "se";
 
 settings.downloadFormats = [
     "csv",
@@ -62,7 +63,7 @@ settings.reduceStructAttributeSelector = "intersection";
 
 settings.filterSelection = "intersection"
 
-settings.newsDeskUrl = "https://svn.spraakdata.gu.se/sb-arkiv/pub/component_news/json/korpnews.json";
+settings.newsDeskUrl = "http://gtweb.uit.no/korp/pub/gt_news.json";
 
 settings.wordpictureTagset = {
     // supported pos-tags
@@ -112,26 +113,64 @@ settings.wordPictureConf = {
 
 }
 
-settings.visibleModes = 6
+settings.visibleModes = 5
 settings.modeConfig = [
     {
-        localekey: "modern_texts",
+        localekey: "se_texts",
         mode: "default"
+    },
+    {
+        localekey: "smj_texts",
+        mode: "smj",
+    },
+    {
+        localekey: "sma_texts",
+        mode: "sma",
+    },
+    {
+        localekey: "smn_texts",
+        mode: "smn",
+    },
+    {
+        localekey: "sms_texts",
+        mode: "sms",
     },
     {
         localekey: "parallel_texts",
         mode: "parallel"
+    },
+    {
+        localekey: "parallel_fin",
+        mode: "parallel_fin"
     }
 ];
 
 settings.primaryColor = "rgb(221, 233, 255)";
 settings.primaryLight = "rgb(242, 247, 255)";
-
+/*
 settings.defaultOverviewContext = "1 sentence"
 settings.defaultReadingContext = "1 paragraph"
 
 settings.defaultWithin = {
     "sentence": "sentence"
+};
+*/
+settings.defaultOverviewContext = "1 sentence"
+settings.defaultReadingContext = "1 paragraph"
+
+settings.defaultContext = {
+    "1 sentence" : "1 sentence"
+};
+settings.spContext = {
+    "1 sentence" : "1 sentence",
+    "1 paragraph" : "1 paragraph"
+};
+settings.defaultWithin = {
+    "sentence" : "sentence"
+};
+settings.spWithin = {
+    "sentence" : "sentence",
+    "paragraph" : "paragraph"
 };
 
 // for optimization purposes
@@ -147,8 +186,8 @@ settings.defaultOptions = {
     "matches_not": "!*=",
 }
 
-settings.cgiScript = "https://ws.spraakbanken.gu.se/ws/korp";
-settings.downloadCgiScript = "https://ws.spraakbanken.gu.se/ws/korp/download";
+settings.korpBackendURL = "http://gtweb.uit.no/ws/gt_korp";
+//settings.downloadCgiScript = "https://ws.spraakbanken.gu.se/ws/korp/download";
 
 settings.mapCenter = {
   lat: 62.99515845212052,
