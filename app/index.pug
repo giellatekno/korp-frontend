@@ -11,6 +11,7 @@ html
     link(rel='stylesheet', href='components/jReject/css/jquery.reject.css', type='text/css', media='screen', charset='utf-8')
     link(type='text/css', href='styles/ui_mods.css', rel='stylesheet')
     link(rel='stylesheet', type='text/css', href='styles/jquery.tooltip.css')
+    link(rel='stylesheet', type='text/css', href='styles/itooltip.css')
     link(rel='stylesheet', href='components/rickshaw/rickshaw.css')
 
     link(rel='stylesheet', type='text/css', href='components/leaflet/dist/leaflet.css')
@@ -58,13 +59,16 @@ html
                     tab-preloader(ng-if="loading", value="progress", spinner="instance.countCorpora() < 2")
                   div(constr='StatsResults', constr-name='statsResults')
 
+                    div(ng-if="!inOrder && !hasResult")
+                      | {{'stats_not_in_order_warn' | loc:lang}}
+
                     div(ng-if="!showStatistics")
                       | {{'stats_warn' | loc:lang}}
                       div
                         button.btn.btn-sm.btn-default.activate_word_pic(ng-click="activate()")
                           | {{'word_pic_warn_btn' | loc:lang}}
 
-                    div(ng-if="showStatistics && !hasResult")
+                    div(ng-if="showStatistics && !hasResult && inOrder")
                       div
                         button.btn.btn-sm.btn-default.activate_word_pic(ng-click="activate()")
                           | {{'update_btn' | loc:lang}}
@@ -90,7 +94,8 @@ html
                             h3.map-settings-title() Välj attribut
                             ul(ng-if="mapAttributes.length != 0")
                               li(ng-repeat="attr in mapAttributes", ng-class="attr.selected ? 'selected':''", ng-click="mapToggleSelected($index, $event)")
-                                span() {{attr.label | loc:lang}}
+                                span(class="checked") ✔
+                                span {{attr.label | loc:lang}}
                             span(ng-show="mapAttributes.length == 0", class="empty-attribute-list")
                               | {{ 'no_geo_info' | loc:lang}}
                             div.btn-container()
@@ -170,6 +175,7 @@ html
       if(window.console == null) window.console = {"log" : $.noop, "error" : $.noop};
       window.c = window.console;
 
+    script(src='components/lodash/dist/lodash.js')
     // build:js scripts/korp_lib.js
     script(src='components/json3/lib/json3.js')
     script(src='components/jquery/dist/jquery.js')
@@ -205,7 +211,6 @@ html
     script(src='components/SlickGrid/plugins/slick.rowselectionmodel.js')
 
     script(src='scripts/jq_extensions.js')
-    script(src='components/lodash/dist/lodash.js')
     script(src="components/underscore.string/lib/underscore.string.js")
 
     script(src='components/moment/moment.js')
@@ -231,6 +236,7 @@ html
     script(src='config.js')
     // build:js scripts/scripts.js
     script(src='config/statistics_config.js')
+    script(src='scripts/bin/statistics.js')
     script(src='scripts/cqp_parser/CQPParser.js')
     script(src='scripts/bin/cqp_parser/cqp.js')
     script(src='scripts/bin/util.js')
