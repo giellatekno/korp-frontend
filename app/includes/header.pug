@@ -17,26 +17,18 @@
 
     ul#cog_menu.dropdown-menu.popper_menu
       li
-        a#about(ng-click="citeClick()") {{'about' | loc:lang}}
-      li
-        a(href='http://spraakbanken.gu.se/swe/forskning/infrastruktur/korp/anvandarhandledning', target='_blank') {{'docs' | loc:lang}}
+        a(href='https://spraakbanken.gu.se/swe/forskning/infrastruktur/korp/anvandarhandledning', target='_blank') {{'docs' | loc:lang}}
       li#korplink
         a(href='/korp') {{'korp' | loc:lang}}
-      li#korplablink
-        a(href='/korplabb') {{'korp_lab' | loc:lang}}
-      li
-        a(href='https://spraakbanken.gu.se/sparv', target='_blank') {{'import_chain' | loc:lang}}
     #news_area
       div(news-desk="", header="'newsdesk-header'", storage="'korp_last_read_newsitem'")
-    #log_out.link(ng-click="logout()", ng-if="loggedIn")
-      span 
-        | {{'log_out' | loc:lang}}   
-      span {{username}}
+    #cite
+        a(href="javascript:", ng-click="citeClick()") {{"about_cite_header" | loc:lang}}
     #languages
-      a(data-mode='sv', ng-click="lang = 'sv'") {{'swedish' | loc:lang}}
+      a(data-mode='se', ng-click="lang = 'se'") {{'northsaami' | loc:lang}}
+      a(data-mode='nb', ng-click="lang = 'nb'") {{'norwegian' | loc:lang}}
+      a(data-mode='fi', ng-click="lang = 'fi'") {{'finnish' | loc:lang}}
       a(data-mode='en', ng-click="lang = 'en'") {{'english' | loc:lang}}
-    #login
-      a(ng-click="showLogin()", ng-show="!loggedIn") {{'log_in' | loc:lang}}
 
     .clearfix
   #header_left
@@ -75,6 +67,13 @@
     .corpusInfoSpace.ui-corner-all
       div
         p(style='padding: 10px; margin: 0px;')
+  span.logos
+    a(ng-click="gtLogoClick()")
+      img(src="img/giellatekno_logo.png")
+    a(ng-click="divvunLogoClick()")
+      img(src="img/divvun_logo.png")
+    a(ng-click="clarinoLogoClick()")
+      img(src='img/clarino-logo.png')
   select#search_history
   div(style='clear: both;')
 
