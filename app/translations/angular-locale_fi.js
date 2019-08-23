@@ -22,93 +22,93 @@ function getVF(n, opt_precision) {
 $provide.value("$locale", {
   "DATETIME_FORMATS": {
     "AMPMS": [
-      "fm",
-      "em"
+      "ap.",
+      "ip."
     ],
     "DAY": [
-      "s\u00f6ndag",
-      "m\u00e5ndag",
-      "tisdag",
-      "onsdag",
-      "torsdag",
-      "fredag",
-      "l\u00f6rdag"
+      "sunnuntaina",
+      "maanantaina",
+      "tiistaina",
+      "keskiviikkona",
+      "torstaina",
+      "perjantaina",
+      "lauantaina"
     ],
     "ERANAMES": [
-      "f\u00f6re Kristus",
-      "efter Kristus"
+      "ennen Kristuksen syntym\u00e4\u00e4",
+      "j\u00e4lkeen Kristuksen syntym\u00e4n"
     ],
     "ERAS": [
-      "f.Kr.",
-      "e.Kr."
+      "eKr.",
+      "jKr."
     ],
     "FIRSTDAYOFWEEK": 0,
     "MONTH": [
-      "januari",
-      "februari",
-      "mars",
-      "april",
-      "maj",
-      "juni",
-      "juli",
-      "augusti",
-      "september",
-      "oktober",
-      "november",
-      "december"
+      "tammikuuta",
+      "helmikuuta",
+      "maaliskuuta",
+      "huhtikuuta",
+      "toukokuuta",
+      "kes\u00e4kuuta",
+      "hein\u00e4kuuta",
+      "elokuuta",
+      "syyskuuta",
+      "lokakuuta",
+      "marraskuuta",
+      "joulukuuta"
     ],
     "SHORTDAY": [
-      "s\u00f6n",
-      "m\u00e5n",
-      "tis",
-      "ons",
-      "tors",
-      "fre",
-      "l\u00f6r"
+      "su",
+      "ma",
+      "ti",
+      "ke",
+      "to",
+      "pe",
+      "la"
     ],
     "SHORTMONTH": [
-      "jan.",
-      "feb.",
-      "mars",
-      "apr.",
-      "maj",
-      "juni",
-      "juli",
-      "aug.",
-      "sep.",
-      "okt.",
-      "nov.",
-      "dec."
+      "tammik.",
+      "helmik.",
+      "maalisk.",
+      "huhtik.",
+      "toukok.",
+      "kes\u00e4k.",
+      "hein\u00e4k.",
+      "elok.",
+      "syysk.",
+      "lokak.",
+      "marrask.",
+      "jouluk."
     ],
     "STANDALONEMONTH": [
-      "januari",
-      "februari",
-      "mars",
-      "april",
-      "maj",
-      "juni",
-      "juli",
-      "augusti",
-      "september",
-      "oktober",
-      "november",
-      "december"
+      "tammikuu",
+      "helmikuu",
+      "maaliskuu",
+      "huhtikuu",
+      "toukokuu",
+      "kes\u00e4kuu",
+      "hein\u00e4kuu",
+      "elokuu",
+      "syyskuu",
+      "lokakuu",
+      "marraskuu",
+      "joulukuu"
     ],
     "WEEKENDRANGE": [
       5,
       6
     ],
-    "fullDate": "EEEE d MMMM y",
-    "longDate": "d MMMM y",
-    "medium": "d MMM y HH:mm:ss",
-    "mediumDate": "d MMM y",
-    "mediumTime": "HH:mm:ss",
-    "short": "y-MM-dd HH:mm",
-    "shortDate": "y-MM-dd",
-    "shortTime": "HH:mm"
+    "fullDate": "cccc d. MMMM y",
+    "longDate": "d. MMMM y",
+    "medium": "d.M.y H.mm.ss",
+    "mediumDate": "d.M.y",
+    "mediumTime": "H.mm.ss",
+    "short": "d.M.y H.mm",
+    "shortDate": "d.M.y",
+    "shortTime": "H.mm"
   },
   "NUMBER_FORMATS": {
-    "CURRENCY_SYM": "kr",
+    "CURRENCY_SYM": "\u20ac",
     "DECIMAL_SEP": ",",
     "GROUP_SEP": "\u00a0",
     "PATTERNS": [
@@ -136,8 +136,8 @@ $provide.value("$locale", {
       }
     ]
   },
-  "id": "sv",
-  "localeID": "sv",
+  "id": "fi",
+  "localeID": "fi",
   "pluralCat": function(n, opt_precision) {  var i = n | 0;  var vf = getVF(n, opt_precision);  if (i == 1 && vf.v == 0) {    return PLURAL_CATEGORY.ONE;  }  return PLURAL_CATEGORY.OTHER;}
 });
 }]);

@@ -22,86 +22,86 @@ function getVF(n, opt_precision) {
 $provide.value("$locale", {
   "DATETIME_FORMATS": {
     "AMPMS": [
-      "fm",
-      "em"
+      "i\u0111itbeaivet",
+      "eahketbeaivet"
     ],
     "DAY": [
-      "s\u00f6ndag",
-      "m\u00e5ndag",
-      "tisdag",
-      "onsdag",
-      "torsdag",
-      "fredag",
-      "l\u00f6rdag"
+      "sotnabeaivi",
+      "vuoss\u00e1rga",
+      "ma\u014b\u014beb\u00e1rga",
+      "gaskavahkku",
+      "duorasdat",
+      "bearjadat",
+      "l\u00e1vvardat"
     ],
     "ERANAMES": [
-      "f\u00f6re Kristus",
-      "efter Kristus"
+      "ovdal Kristtusa",
+      "ma\u014b\u014bel Kristtusa"
     ],
     "ERAS": [
-      "f.Kr.",
-      "e.Kr."
+      "o.Kr.",
+      "m.Kr."
     ],
     "FIRSTDAYOFWEEK": 0,
     "MONTH": [
-      "januari",
-      "februari",
-      "mars",
-      "april",
-      "maj",
-      "juni",
-      "juli",
-      "augusti",
-      "september",
-      "oktober",
-      "november",
-      "december"
+      "o\u0111\u0111ajagem\u00e1nnu",
+      "guovvam\u00e1nnu",
+      "njuk\u010dam\u00e1nnu",
+      "cuo\u014bom\u00e1nnu",
+      "miessem\u00e1nnu",
+      "geassem\u00e1nnu",
+      "suoidnem\u00e1nnu",
+      "borgem\u00e1nnu",
+      "\u010dak\u010dam\u00e1nnu",
+      "golggotm\u00e1nnu",
+      "sk\u00e1bmam\u00e1nnu",
+      "juovlam\u00e1nnu"
     ],
     "SHORTDAY": [
-      "s\u00f6n",
-      "m\u00e5n",
-      "tis",
-      "ons",
-      "tors",
-      "fre",
-      "l\u00f6r"
+      "sotn",
+      "vuos",
+      "ma\u014b",
+      "gask",
+      "duor",
+      "bear",
+      "l\u00e1v"
     ],
     "SHORTMONTH": [
-      "jan.",
-      "feb.",
-      "mars",
-      "apr.",
-      "maj",
-      "juni",
-      "juli",
-      "aug.",
-      "sep.",
-      "okt.",
-      "nov.",
-      "dec."
+      "o\u0111\u0111j",
+      "guov",
+      "njuk",
+      "cuo",
+      "mies",
+      "geas",
+      "suoi",
+      "borg",
+      "\u010dak\u010d",
+      "golg",
+      "sk\u00e1b",
+      "juov"
     ],
     "STANDALONEMONTH": [
-      "januari",
-      "februari",
-      "mars",
-      "april",
-      "maj",
-      "juni",
-      "juli",
-      "augusti",
-      "september",
-      "oktober",
-      "november",
-      "december"
+      "o\u0111\u0111ajagem\u00e1nnu",
+      "guovvam\u00e1nnu",
+      "njuk\u010dam\u00e1nnu",
+      "cuo\u014bom\u00e1nnu",
+      "miessem\u00e1nnu",
+      "geassem\u00e1nnu",
+      "suoidnem\u00e1nnu",
+      "borgem\u00e1nnu",
+      "\u010dak\u010dam\u00e1nnu",
+      "golggotm\u00e1nnu",
+      "sk\u00e1bmam\u00e1nnu",
+      "juovlam\u00e1nnu"
     ],
     "WEEKENDRANGE": [
       5,
       6
     ],
-    "fullDate": "EEEE d MMMM y",
-    "longDate": "d MMMM y",
-    "medium": "d MMM y HH:mm:ss",
-    "mediumDate": "d MMM y",
+    "fullDate": "y MMMM d, EEEE",
+    "longDate": "y MMMM d",
+    "medium": "y MMM d HH:mm:ss",
+    "mediumDate": "y MMM d",
     "mediumTime": "HH:mm:ss",
     "short": "y-MM-dd HH:mm",
     "shortDate": "y-MM-dd",
@@ -136,8 +136,8 @@ $provide.value("$locale", {
       }
     ]
   },
-  "id": "sv",
-  "localeID": "sv",
+  "id": "se-no",
+  "localeID": "se_NO",
   "pluralCat": function(n, opt_precision) {  var i = n | 0;  var vf = getVF(n, opt_precision);  if (i == 1 && vf.v == 0) {    return PLURAL_CATEGORY.ONE;  }  return PLURAL_CATEGORY.OTHER;}
 });
 }]);
