@@ -240,8 +240,10 @@ korpApp.directive "kwicCtrl", () ->
 class ExampleCtrl extends KwicCtrl
 
     @$inject: ['$scope', "$timeout", "utils", "$location", "kwicDownload"]
-    constructor: (@scope, $timeout, utils, $location, @kwicDownload) ->
-        super(@scope, $timeout, utils, $location, @kwicDownload)
+    constructor: (scope, $timeout, utils, $location, kwicDownload) ->
+        super(scope, $timeout, utils, $location, kwicDownload)
+        @scope = scope
+        @kwicDownload = kwicDownload
         s = @scope
 
         s.newDynamicTab()
