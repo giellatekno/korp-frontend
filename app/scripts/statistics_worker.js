@@ -17,11 +17,16 @@ onmessage = function(e) {
         ref = _.zip(reduceVals, fields);
         for(i = 0, len = ref.length; i < len; i++) {
             [reduceVal, field] = ref[i];
+	    if(groupStatistics){
+   	    console.log("groupSt="+groupStatistics);
             if(groupStatistics.indexOf(reduceVal) != -1) {
                 newFields.push(field.replace(/(:.+?)($| )/g, "$2"));
             } else {
                 newFields.push(field);
             }
+            } else {
+                newFields.push(field);
+	    }
         }
         return newFields.join("/");
     };
