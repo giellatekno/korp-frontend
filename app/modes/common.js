@@ -1,6 +1,6 @@
 settings.senseAutoComplete = "<autoc model='model' placeholder='placeholder' type='sense'/>";
 
-var karpLemgramLink = "https://spraakbanken.gu.se/karp/#?mode=DEFAULT&search=extended||and|lemgram|equals|<%= val.replace(/:\\d+/, '') %>";
+//var karpLemgramLink = "https://spraakbanken.gu.se/karp/#?mode=DEFAULT&search=extended||and|lemgram|equals|<%= val.replace(/:\\d+/, '') %>";
 
 var selectType = {
     extendedTemplate: "<select ng-model='input' escaper "
@@ -64,31 +64,30 @@ var sattrs = {}; // structural attributes
 
 attrs.pos = {
     label: "pos",
+    displayType : "select",
     translationKey: "pos_",
     dataset: {
-        "AB": "AB",
-        "MID|MAD|PAD": "DL",
-        "DT": "DT",
-        "HA": "HA",
-        "HD": "HD",
-        "HP": "HP",
-        "HS": "HS",
-        "IE": "IE",
-        "IN": "IN",
-        "JJ": "JJ",
-        "KN": "KN",
-        "NN": "NN",
-        "PC": "PC",
-        "PL": "PL",
-        "PM": "PM",
-        "PN": "PN",
-        "PP": "PP",
-        "PS": "PS",
-        "RG": "RG",
-        "RO": "RO",
-        "SN": "SN",
-        "UO": "UO",
-        "VB": "VB"
+        "A" : "A",
+        "N" : "N",
+        "V" : "V",
+        "Adv" : "Adv",
+        "Po" : "Po",
+        "Pr" : "Pr",
+        "Pron" : "Pron",
+        "Det" : "Det",
+        "Num" : "Num",
+        "Cmp_SplitR" : "Cmp_SplitR",
+        "Cmp_Sh" : "Cmp_Sh",
+        "CmpNP_First" : "CmpNP_First",
+        "CmpNP_None" : "CmpNP_None",
+        "Cmp_SgNom" : "Cmp_SgNom",
+        "Pcle" : "Pcle",
+        "PUNCT" : "PUNCT",
+        "CC" : "CC",
+        "Interj" : "Interj",
+        "CS" : "CS",
+        "CLB" : "CLB",
+        "___" : "___"
     },
     opts: liteOptions,
     extendedTemplate: selectType.extendedTemplate,
@@ -97,7 +96,46 @@ attrs.pos = {
 };
 
 attrs.msd = {
+    label : "msd",
+    translationKey : "msdval_",
+    opts : settings.defaultOptions,
+    extended_template : '<input class="arg_value" ng-model="model" escaper>' +
+    '<span ng-click="onIconClick()" class="fa fa-info-circle"></span>',
+    controller : function($scope, $modal) {
+        var modal = null;
+
+        $scope.onIconClick = function() {
+            modal = $modal.open({
+                template : '<div>' +
+                                '<div class="modal-header">' +
+                                    '<h3 class="modal-title">{{\'msd_long\' | loc:lang}}</h3>' +
+                                    '<span ng-click="clickX()" class="close-x">×</span>' +
+                                '</div>' +
+                                '<div class="modal-body msd-modal" ng-click="msdClick($event)" ng-include="\'markup/msd.html\'"></div>' +
+                            '</div>',
+                scope : $scope
+            })
+        }
+        $scope.clickX = function(event) {
+            modal.close()
+        }
+        $scope.msdClick = function(event) {
+            val = $(event.target).parent().data("value")
+            if(!val) return;
+            $scope.model = val;
+
+
+            modal.close();
+        }
+    }
+};
+
+
+
+/*
+attrs.msd = {
     label: "msd",
+    translationKey : "msdval_",
     opts: settings.defaultOptions,
     extendedTemplate: '<input ng-model="input" class="arg_value" escaper ng-model-options=\'{debounce : {default : 300, blur : 0}, updateOn: "default blur"}\'>' +
     '<span ng-click="onIconClick()" class="fa fa-info-circle"></span>',
@@ -127,10 +165,13 @@ attrs.msd = {
         }
     }
 };
+*/
+
 attrs.baseform = {
     label: "baseform",
-    type: "set",
-    opts: setOptions,
+    //type: "set",
+    //opts: setOptions,
+    opts :  settings.defaultOptions,
     extendedTemplate: "<input ng-model='model' >",
     order: 1
 };
@@ -142,7 +183,7 @@ attrs.lemgram = {
         // TODO: what if we're getting more than one consequtive lemgram back?
         return util.lemgramToString(_.str.trim(lemgram), true);
     },
-    externalSearch: karpLemgramLink,
+    //externalSearch: karpLemgramLink,
     internalSearch: true,
     extendedTemplate: "<autoc model='model' placeholder='placeholder' type='lemgram' typeahead-close-callback='checkForError(valueSelected)'/>"
                         + "<span ng-if='valueError' style='color: red; position: relative; top: 3px; margin-left: 6px'>{{'choose_lemgram' | loc:lang}}</span>",
@@ -155,31 +196,6 @@ attrs.lemgram = {
     },
     order: 2
 };
-attrs.dalinlemgram = {
-    label: "dalin-lemgram",
-    type: "set",
-    opts: setOptions,
-    stringify: function(lemgram) {
-        // TODO: what if we're getting more than one consequtive lemgram back?
-        return util.lemgramToString(_.str.trim(lemgram), true);
-    },
-    externalSearch: karpLemgramLink,
-    internalSearch: true,
-    extendedTemplate: "<autoc model='model' placeholder='placeholder' type='lemgram' variant='dalin'/>",
-    order: 2
-};
-attrs.saldo = {
-    label: "saldo",
-    type: "set",
-    opts: setOptions,
-    stringify: function(saldo) {
-        return util.saldoToString(saldo, true);
-    },
-    externalSearch: "https://spraakbanken.gu.se/karp/#?mode=DEFAULT&search=extended||and|sense|equals|<%= val %>",
-    internalSearch: true,
-    extendedTemplate: settings.senseAutoComplete,
-    order: 3
-};
 attrs.dephead = {
     label: "dephead",
     displayType: "hidden"
@@ -190,72 +206,71 @@ attrs.deprel = {
     extendedTemplate: selectType.extendedTemplate,
     extendedController: selectType.extendedController,
     dataset: {
-        "++": "++",
-        "+A": "+A",
-        "+F": "+F",
-        "AA": "AA",
-        "AG": "AG",
-        "AN": "AN",
-        "AT": "AT",
-        "CA": "CA",
-        "DB": "DB",
-        "DT": "DT",
-        "EF": "EF",
-        "EO": "EO",
-        "ES": "ES",
-        "ET": "ET",
-        "FO": "FO",
-        "FP": "FP",
-        "FS": "FS",
-        "FV": "FV",
-        "I?": "I?",
-        "IC": "IC",
-        "IG": "IG",
-        "IK": "IK",
-        "IM": "IM",
-        "IO": "IO",
-        "IP": "IP",
-        "IQ": "IQ",
-        "IR": "IR",
-        "IS": "IS",
-        "IT": "IT",
-        "IU": "IU",
-        "IV": "IV",
-        "JC": "JC",
-        "JG": "JG",
-        "JR": "JR",
-        "JT": "JT",
-        "KA": "KA",
-        "MA": "MA",
-        "MS": "MS",
-        "NA": "NA",
-        "OA": "OA",
-        "OO": "OO",
-        "OP": "OP",
-        "PL": "PL",
-        "PR": "PR",
-        "PT": "PT",
-        "RA": "RA",
-        "SP": "SP",
-        "SS": "SS",
-        "TA": "TA",
-        "TT": "TT",
-        "UK": "UK",
-        "VA": "VA",
-        "VO": "VO",
-        "VS": "VS",
-        "XA": "XA",
-        "XF": "XF",
-        "XT": "XT",
-        "XX": "XX",
-        "YY": "YY",
-        "CJ": "CJ",
-        "HD": "HD",
-        "IF": "IF",
-        "PA": "PA",
-        "UA": "UA",
-        "VG": "VG",
-        "ROOT": "ROOT"
+     	"→A"        : 	 "→A",
+     	"→ADVL"     : 	 "→ADVL",
+     	"→CC"       : 	 "→CC",
+     	"→N"        : 	 "→N",
+     	"→Num"      : 	 "→Num",
+     	"→P"        : 	 "→P",
+     	"→Pron"     : 	 "→Pron",
+     	"←ADVL"     : 	 "←ADVL",
+     	"←OBJ"      : 	 "←OBJ",
+     	"←OPRED"    : 	 "←OPRED",
+     	"←PPRED"    : 	 "←PPRED",
+     	"←SPRED"    : 	 "←SPRED",
+     	"←SUBJ"     : 	 "←SUBJ",
+     	"-F←ADVL"   : 	 "-F←ADVL",
+     	"-F←OBJ"    : 	 "-F←OBJ",
+     	"-F←OPRED"  : 	 "-F←OPRED",
+     	"-F←SUBJ"   : 	 "-F←SUBJ",
+     	"-FADVL→"   : 	 "-FADVL→",
+     	"-FOBJ→"    : 	 "-FOBJ→",
+     	"-FSUBJ→"   : 	 "-FSUBJ→",
+     	"A←"        : 	 "A←",
+     	"ADVL"      : 	 "ADVL",
+     	"ADVL→"     : 	 "ADVL→",
+     	"ADVL→CS"   : 	 "ADVL→CS",
+     	"ADVL←"     : 	 "ADVL←",
+     	"APP-ADVL←" : 	 "APP-ADVL←",
+     	"APP-N←"    : 	 "APP-N←",
+     	"APP-Pron←" : 	 "APP-Pron←",
+     	"CNP"       : 	 "CNP",
+     	"COMP-CS←"  : 	 "COMP-CS←",
+     	"CVP"       : 	 "CVP",
+     	"FAUX"      : 	 "FAUX",
+     	"FMV"       : 	 "FMV",
+     	"FMVdic"    : 	 "FMVdic",
+     	"FS-←ADVL"  : 	 "FS-←ADVL",
+     	"FS-←SUBJ"  : 	 "FS-←SUBJ",
+     	"FS-ADVL→"  : 	 "FS-ADVL→",
+     	"FS-IAUX"   : 	 "FS-IAUX",
+     	"FS-IMV"    : 	 "FS-IMV",
+     	"FS-N←"     : 	 "FS-N←",
+     	"FS-N←IAUX" : 	 "FS-N←IAUX",
+     	"FS-N←IMV"  : 	 "FS-N←IMV",
+     	"FS-OBJ"    : 	 "FS-OBJ",
+     	"FS-P←"     : 	 "FS-P←",
+     	"FS-VFIN←"  : 	 "FS-VFIN←",
+     	"HNOUN"     : 	 "HNOUN",
+     	"IAUX"      : 	 "IAUX",
+     	"ICL-OBJ"   : 	 "ICL-OBJ",
+     	"ICL-SUBJ"  : 	 "ICL-SUBJ",
+     	"IMV"       : 	 "IMV",
+     	"IMVdic"    : 	 "IMVdic",
+     	"INTERJ"    : 	 "INTERJ",
+     	"N←"        : 	 "N←",
+     	"Num←"      : 	 "Num←",
+     	"OBJ→"      : 	 "OBJ→",
+     	"OPRED→"    : 	 "OPRED→",
+     	"P←"        : 	 "P←",
+     	"PCLE"      : 	 "PCLE",
+     	"Pron←"     : 	 "Pron←",
+     	"S←"        : 	 "S←",
+     	"SPRED→"    : 	 "SPRED→",
+     	"SPRED←OBJ" : 	 "SPRED←OBJ",
+     	"SUBJ→"     : 	 "SUBJ→",
+     	"VOC"       : 	 "VOC",
+     	"X"         : 	 "X"
     },
     opts: liteOptions
 };
@@ -266,7 +281,7 @@ attrs.prefix = {
     stringify: function(lemgram) {
         return util.lemgramToString(lemgram, true);
     },
-    externalSearch: karpLemgramLink,
+    //externalSearch: karpLemgramLink,
     internalSearch: true,
     extendedTemplate: "<autoc model='model' placeholder='placeholder' type='lemgram' variant='affix'/>"
 };
@@ -277,7 +292,7 @@ attrs.suffix = {
     stringify: function(lemgram) {
         return util.lemgramToString(lemgram, true);
     },
-    externalSearch: karpLemgramLink,
+//    externalSearch: karpLemgramLink,
     internalSearch: true,
     extendedTemplate: "<autoc model='model' placeholder='placeholder' type='lemgram' variant='affix'/>"
 };
@@ -395,21 +410,17 @@ sattrs.date = {
     label: "date"
 };
 
-var modernAttrsOld = {
+var modernAttrs = {
     pos: attrs.pos,
     msd: attrs.msd,
     lemma: attrs.baseform,
-    lex: attrs.lemgram,
-    saldo: attrs.saldo,
     dephead: attrs.dephead,
     deprel: attrs.deprel,
-    ref: attrs.ref,
-    prefix: attrs.prefix,
-    suffix: attrs.suffix
+    ref: attrs.ref
 };
 
 
-var modernAttrs = {
+var modernAttrsNew = {
     pos: attrs.pos,
     msd: attrs.msd,
     lemma: attrs.baseform,

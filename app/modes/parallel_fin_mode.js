@@ -1,6 +1,6 @@
 settings.wordpicture = false;
 settings.enableMap = false;
-var start_lang = "nob";
+var start_lang = "fin";
 
 settings.hitsPerPageDefault = 10
 settings.hitsPerPageValues = [10,25,50,75,100,500,1000]
@@ -32,23 +32,23 @@ korpApp.controller("SearchCtrl", function($rootScope, $scope, $controller, $loca
 
 function parseLocationLangs() {
     try {
-        var langs = _(location.hash.split("?")[1].split("&")).invoke("split", "=").object().value()["parallel_corpora"].split(",")
+        var langs = _(location.hash.split("?")[1].split("&")).invoke("split", "=").object().value()["parallel_fin_corpora"].split(",")
     } catch(e) {
-        return ["nob"]
+        return ["fin"]
     }
     c.log("lang", langs)
     if(langs.length)
         return langs
     else
-        return ["nob"]
+        return ["fin"]
 }
 
 korpApp.controller("ParallelSearch", function($scope, $location, $rootScope, $timeout, searches) {
     var s = $scope;
     s.negates = [];
 
-    if($location.search().parallel_corpora)
-        s.langs = _.map($location.search().parallel_corpora.split(","), function(lang) {
+    if($location.search().parallel_fin_corpora)
+        s.langs = _.map($location.search().parallel_fin_corpora.split(","), function(lang) {
             var obj = {lang: lang};
             if(locationSearch()["cqp_" + lang])
                 obj.cqp = locationSearch()["cqp_" + lang];
@@ -56,7 +56,7 @@ korpApp.controller("ParallelSearch", function($scope, $location, $rootScope, $ti
         })
 
     else
-        s.langs = [{lang: "nob"}];
+        s.langs = [{lang: "fin"}];
     s.negChange = function() {
         $location.search("search", null)
     }
@@ -65,7 +65,7 @@ korpApp.controller("ParallelSearch", function($scope, $location, $rootScope, $ti
         c.log("ParallelSearch language change");
         var currentLangList = _.pluck(s.langs, "lang");
         settings.corpusListing.setActiveLangs(currentLangList);
-        $location.search("parallel_corpora", currentLangList.join(","))
+        $location.search("parallel_fin_corpora", currentLangList.join(","))
         var struct = settings.corpusListing.getLinksFromLangs(currentLangList);
         function getLangMapping(excludeLangs) {
             return _(struct)
@@ -288,15 +288,9 @@ settings.defaultWithin = { "link": "link" };
 
 settings.corporafolders = {};
 
-settings.corporafolders.nob2sme = {
-    title: "Norwegian-North Saami parallel texts",
-    contents: ["nob2sme_20131127-nob"]
-    //description: "xxx"
-};
-
-settings.corporafolders.nob2sma = {
-    title: "Norwegian-South Saami parallel texts",
-    contents: ["nob2sma_20170828-nob"]
+settings.corporafolders.fin2smn = {
+    title: "Finnish-Inari Saami parallel texts",
+    contents: ["fin2smn_20170828-fin"]
     //description: "xxx"
 };
 
@@ -304,60 +298,15 @@ settings.corporafolders.nob2sma = {
 settings.corpora = {};
 
 //////////////////////////
-//corporafolders.nob2sme//
+//corporafolders.fin2smn//
 //////////////////////////
 
-settings.corpora["nob2sme_20131127-nob"] = {
-    id: "nob2sme_20131127-nob",
-    lang: "nob",
-    linkedTo: ["nob2sme_20131127-sme"],
+settings.corpora["fin2smn_20170828-fin"] = {
+    id: "fin2smn_20170828-fin",
+    lang: "fin",
+    linkedTo: ["fin2smn_20170828-smn"],
     pivot: true,
-    title: "Norwegian-North Saami administrative corpus",
-    context: context.defaultAligned,
-    within: {
-        "linksme": "meningspar"
-    },
-    attributes: {
-        pos: attrs.pos,
-        lemma: attrs.baseform,
-    },
-    structAttributes: {
-            //text_de_title : {label : "title"},
-            //text_o_lang : {label : "origlang"},
-            //text_author : {label : "author"},
-    }
-};
-
-settings.corpora["nob2sme_20131127-sme"] = {
-    id: "nob2sme_20131127-sme",
-    lang: "sme",
-    linkedTo: ["nob2sme_20131127-nob"],
-    title: "Norwegian-North Saami administrative corpus",
-    context: {
-        "1 link": "1 link"
-    },
-    within: {
-        "link": "meningspar"
-    },
-    attributes: {
-                pos: attrs.pos,
-                lemma: attrs.baseform,
-    },
-    structAttributes: {
-    },
-    hide: true
-};
-
-//////////////////////////
-//corporafolders.nob2sma//
-//////////////////////////
-
-settings.corpora["nob2sma_20170828-nob"] = {
-    id: "nob2sma_20170828-nob",
-    lang: "nob",
-    linkedTo: ["nob2sma_20170828-sma"],
-    pivot: true,
-    title: "Norwegian-South Saami administrative corpus",
+    title: "Finnish-Inari Saami administrative corpus",
     context: context.defaultAligned,
     within: {
         "linksma": "meningspar"
@@ -365,17 +314,18 @@ settings.corpora["nob2sma_20170828-nob"] = {
     attributes: {
         pos: attrs.pos,
         lemma: attrs.baseform,
+        msd: attrs.msd
     },
     structAttributes: {
 	text_gt_domain : {label : "domain"}
     }
 };
 
-settings.corpora["nob2sma_20170828-sma"] = {
-    id: "nob2sma_20170828-sma",
-    lang: "sma",
-    linkedTo: ["nob2sma_20170828-nob"],
-    title: "Norwegian-South Saami administrative corpus",
+settings.corpora["fin2smn_20170828-smn"] = {
+    id: "fin2smn_20170828-smn",
+    lang: "smn",
+    linkedTo: ["fin2smn_20170828-fin"],
+    title: "Finnish-Inari Saami administrative corpus",
     context: {
         "1 link": "1 link"
     },
