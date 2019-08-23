@@ -54,7 +54,7 @@ korpApp.run ($rootScope, $location, utils, searches, tmhDynamicLocale, $timeout,
         c.log "loc.search() change", $location.search()
         _.defer () -> window.onHashChange?()
 
-        tmhDynamicLocale.set($location.search().lang or "sv")
+        tmhDynamicLocale.set($location.search().lang or "nb")
 
 
 
@@ -134,6 +134,15 @@ korpApp.controller "headerCtrl", ($scope, $location, $uibModal, utils) ->
         window.location = $scope.getUrl currentMode
         window.location.reload()
 
+    s.clarinoLogoClick = () ->
+        window.open('https://clarin.w.uib.no/','_blank')
+
+    s.gtLogoClick = () ->
+        window.open('http://giellatekno.uit.no/','_blank')
+
+    s.divvunLogoClick = () ->
+        window.open('http://divvun.no/','_blank')
+        window.attr('title', 'Divvun')
 
     s.citeClick = () ->
         s.show_modal = 'about'

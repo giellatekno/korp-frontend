@@ -90,24 +90,29 @@ class KwicCtrl
 
             for hitContext, i in hitArray
                 currentStruct = {}
-                if currentMode == "parallel"
+                if currentMode == "parallel" or currentMode == "parallel_fin"
                     mainCorpusId = hitContext.corpus.split("|")[0].toLowerCase()
                     linkCorpusId = hitContext.corpus.split("|")[1].toLowerCase()
                 else
                     mainCorpusId = hitContext.corpus.toLowerCase()
 
                 id = (linkCorpusId or mainCorpusId)
-                
+
                 [matchSentenceStart, matchSentenceEnd] = findMatchSentence hitContext
-                {matchStart, matchEnd} = hitContext.match
+
+                if not (hitContext.match instanceof Array)
+                    matches = [{start: hitContext.match.start, end: hitContext.match.end}]
+                else
+                    matches = hitContext.match
 
                 for j in [0...hitContext.tokens.length]
                     wd = hitContext.tokens[j]
                     wd.position = j
                     wd._open = []
                     wd._close = []
-                    if matchStart <= j < matchEnd
-                        _.extend wd, {_match : true}
+                    for {start, end} in matches
+                        if start <= j < end
+                            _.extend wd, {_match : true}
                     if matchSentenceStart < j < matchSentenceEnd
                         _.extend wd, {_matchSentence : true}
                     if wd.word in punctArray
@@ -176,10 +181,12 @@ class KwicCtrl
         s.kwic = []
         s.contextKwic = []
         s.setContextData = (data) ->
+            s.kwic = []
             s.pagerHitsPerPage = s.hitsPerPage
             s.contextKwic = massageData data.kwic
 
         s.setKwicData = (data) ->
+            s.contextKwic = []
             s.pagerHitsPerPage = s.hitsPerPage
             s.kwic = massageData(data.kwic)
 
@@ -202,9 +209,9 @@ class KwicCtrl
             sentence.tokens.slice from, len
 
         s.$watch (() -> $location.search().hpp), (hpp) ->
-            s.hitsPerPage = hpp or 25
+            s.hitsPerPage = hpp or 100
 
-        s.download = 
+        s.download =
             options: [
                     {value: "", label: "download_kwic"},
                     {value: "kwic/csv", label: "download_kwic_csv"},
@@ -223,7 +230,7 @@ class KwicCtrl
                 s.download.fileName = fileName
                 s.download.blobName = blobName
                 s.download.selected = ""
-                @timeout (() -> 
+                @timeout (() ->
                         angular.element("#kwicDownloadLink")[0].click()
                     ), 0
 
@@ -281,6 +288,12 @@ korpApp.directive "statsResultCtrl", () ->
         s.$watch (() -> $location.search().hide_stats), (val) ->
             s.showStatistics = not val?
 
+        s.$watch (() -> $location.search().in_order), (val) ->
+            s.inOrder = not val?
+
+        s.shouldSearch = () ->
+            return s.showStatistics and s.inOrder
+
         $scope.activate = () ->
             $location.search("hide_stats", null)
             cqp = searches.getCqpExpr()
@@ -289,7 +302,7 @@ korpApp.directive "statsResultCtrl", () ->
 
         s.onGraphShow = (data) ->
             $rootScope.graphTabs.push data
-        
+
         s.newMapEnabled = settings.newMapEnabled
 
         s.getGeoAttributes = (corpora) ->
@@ -312,7 +325,7 @@ korpApp.directive "statsResultCtrl", () ->
 
         s.mapToggleSelected = (index, event) ->
             _.map s.mapAttributes, (attr) -> attr.selected = false
-            
+
             attr = s.mapAttributes[index]
             attr.selected = true
             event.stopPropagation()
@@ -326,15 +339,16 @@ korpApp.directive "statsResultCtrl", () ->
                     continue
                 row = s.instance.getDataAt(rowIx)
                 searchParams = s.instance.searchParams
-                cqp = statisticsFormatting.getCqp searchParams.reduceVals, row.hit_value, searchParams.ignoreCase
-                texts = statisticsFormatting.getTexts searchParams.reduceVals, row.hit_value, searchParams.corpora
-                cqpExprs[cqp] = texts.join ", "
+                cqp = statisticsFormatting.getCqp row.statsValues, searchParams.ignoreCase
+                parts = for reduceVal in searchParams.reduceVals
+                    row.formattedValue[reduceVal]
+                cqpExprs[cqp] = parts.join ", "
 
             selectedAttributes = _.filter(s.mapAttributes, "selected")
             if selectedAttributes.length > 1
                 c.log "Warning: more than one selected attribute, choosing first"
             selectedAttribute = selectedAttributes[0]
-            
+
             within = settings.corpusListing.subsetFactory(selectedAttribute.corpora).getWithinParameters()
             $rootScope.mapTabs.push backend.requestMapData(cqpExpr, cqpExprs, within, selectedAttribute)
 
@@ -569,7 +583,7 @@ korpApp.directive "compareCtrl", () ->
                         else
                             val = attrVal[0]
 
-                        if type == "set" and val == "|"
+                        if type == "set" and (val == "|" or val == "")
                             return "ambiguity(#{attrKey}) = 0"
                         else
                             return "#{attrKey} #{op} \"#{val}\""

@@ -6,8 +6,16 @@ Sidebar =
         @element.html '<div id="selected_sentence" /><div id="selected_word" />'
         corpusObj = settings.corpora[corpus]
 
+        corpusInfo = $("<div />").html("<h4 rel='localize[corpus]'></h4> <p>#{corpusObj.title}</p>")
+        corpusInfo.prependTo "#selected_sentence"
 
-        $("<div />").html("<h4 rel='localize[corpus]'></h4> <p>#{corpusObj.title}</p>").prependTo "#selected_sentence"
+        if corpusObj["inStrix"]
+            sentenceID = sentenceData["sentence_id"]
+            if sentenceID
+                # TODO fix this so that strix uses correct corpus ids
+                strixCorpus = if corpus == "wikipedia-sv" then "wikipedia" else corpus
+                strixLinkText = "#{settings.strixUrl}?sentenceID=#{sentenceID}&documentCorpus=#{strixCorpus}"
+                $("<div class='strix-link'/>").html("<a target='_blank' href='#{strixLinkText}' rel='localize[read_in_strix]'></a>").prependTo corpusInfo
 
         customData = pos: [], struct: []
         unless $.isEmptyObject(corpusObj.customAttributes)
@@ -42,7 +50,11 @@ Sidebar =
                 tokens = tokens
                 wnd.draw_deptree.call wnd, tokens, (msg) ->
                     [type, val] = _.head _.pairs msg
-                    info.empty().append $("<span>").localeKey(type), $("<span>: </span>"), $("<span>").localeKey("#{type}_#{val}")
+                    if type == 'deprel'
+                      itype = "#{type}_if"
+                      info.empty().append $("<span>").localeKey(type), $("<span>: </span>"), $("<span>").localeKey("#{itype}_#{val}")
+                    else
+                      info.empty().append $("<span>").localeKey(type), $("<span>: </span>"), $("<span>").localeKey("#{type}_#{val}")
 
             $("#deptree_popup").empty().append(info, iframe).dialog(
                 height : 300
@@ -115,7 +127,7 @@ Sidebar =
             return output.append(attrs.renderItem key, value, attrs, wordData, sentenceData, tokens)
 
         output.data("attrs", attrs)
-        if value == "|" or value == ""
+        if value == "|" or value == "" or value == null
             output.append "<i rel='localize[empty]' style='color : grey'>${util.getLocaleString('empty')}</i>"
             return output
 
@@ -144,13 +156,13 @@ Sidebar =
                                 locationSearch({"search": "cqp", "cqp": cqpExpr, "page": null})
                         if attrs.externalSearch
                             address = _.template(attrs.externalSearch, {val : subValue})
-                            karpLink = $("<a href='#{address}' class='external_link' target='_blank' style='margin-top: -6px'></a>")
+                            externalLink = $("<a href='#{address}' class='external_link' target='_blank' style='margin-top: -6px'></a>")
 
                         li.append inner
                         if attrSettings.joinValues and idx isnt subValues.length - 1
                             li.append attrSettings.joinValues
-                    if karpLink
-                        li.append karpLink
+                    if externalLink
+                        li.append externalLink
                     lis.push li
             else
                 lis = []
@@ -166,7 +178,7 @@ Sidebar =
                 ul = $("<ul style='list-style:initial'>")
                 ul.append lis
 
-                if lis.length isnt 1
+                if lis.length isnt 1 and (not attrSettings.showAll)
 
                     _.map lis, (li, idx) -> if idx != 0 then li.css('display', 'none')
 
@@ -181,7 +193,7 @@ Sidebar =
                         showAll.css "display", "none"
                         showOne.css "display", "inline"
                         _.map lis, (li) ->
-                            
+
                             li.css "display", "list-item"
 
                     showOne.click () ->
@@ -238,15 +250,21 @@ Sidebar =
 
 
         str_value = (attrs.stringify or _.identity)(value)
-
+        msdval_value = str_value.replace(/\./g, "_")
 
         if attrs.type == "url"
             return output.append "<a href='#{str_value}' class='exturl sidebar_url' target='_blank'>#{decodeURI(str_value)}</a>"
 
         else if key == "msd"
-            return output.append """<span class='msd_sidebar'>#{str_value}</span>
-                                        <a href='markup/msdtags.html' target='_blank'>
-                                            <span id='sidbar_info' class='ui-icon ui-icon-info'></span>
+
+            return output.append """<a data-container="body" class="itooltip" href="#">#{str_value}
+                                            <span class="classic" rel='localize[#{attrs.translationKey}#{msdval_value}]'></span>                                        </a>
+                                    </span>
+                                """
+        else if key == "deprel"
+
+            return output.append """<a data-container="body" class="itooltip" href="#">#{str_value}
+                                            <span class="classic" rel='localize[#{attrs.translationKey}if_#{str_value}]'></span>
                                         </a>
                                     </span>
                                 """

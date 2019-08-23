@@ -133,8 +133,14 @@ korpApp.controller "SearchCtrl", window.SearchCtrl
 korpApp.controller "SimpleCtrl", ($scope, utils, $location, backend, $rootScope, searches, compareSearches, $uibModal, $timeout) ->
     s = $scope
 
+    $scope.inOrder = not $location.search().in_order?
+    $scope.$watch (() -> $location.search().in_order), (val) ->
+        $scope.inOrder = not val?
+    $scope.$watch "inOrder", (val) -> 
+        $location.search("in_order", if not s.inOrder then false else null)
+
     s.prefix = false
-    s.suffix = false 
+    s.suffix = false
     s.isCaseInsensitive = false
     if settings.inputCaseInsensitiveDefault
         s.isCaseInsensitive = true
@@ -226,7 +232,7 @@ korpApp.controller "SimpleCtrl", ($scope, utils, $location, backend, $rootScope,
                 <span ng-click="clickX()" class="close-x">×</span>
             </div>
             <div class="modal-body">
-                <div ng-repeat="obj in relatedObj" class="col"><a target="_blank" ng-href="http://spraakbanken.gu.se/karp/#?lexicon=swefn&amp;search=extended||and|sense|equals|swefn--{{obj.label}}" class="header">{{stringifyRelatedHeader(obj.label)}}</a>
+                <div ng-repeat="obj in relatedObj" class="col"><a target="_blank" ng-href="https://spraakbanken.gu.se/karp/#?mode=swefn&lexicon=swefn&amp;search=extended||and|sense|equals|swefn--{{obj.label}}" class="header">{{stringifyRelatedHeader(obj.label)}}</a>
                   <div class="list_wrapper">
                       <ul>
                         <li ng-repeat="wd in obj.words"> <a ng-click="clickRelated(wd, relatedObj.attribute)" class="link">{{stringifyRelated(wd) + " "}}</a></li>
@@ -299,6 +305,7 @@ korpApp.controller "ExtendedSearch", ($scope, utils, $location, backend, $rootSc
         c.log "extended submit"
         $location.search("search", null)
         $location.search("page", null)
+        $location.search("in_order", null)
         $timeout( () ->
             $location.search("search", "cqp")
             within = s.within if s.within not in _.keys settings.defaultWithin
@@ -438,6 +445,7 @@ korpApp.directive "advancedSearch", () ->
             $location.search "search", null
             $location.search "page", null
             $location.search "within", null
+            $location.search "in_order", null
             $timeout( () ->
                 $location.search "search", "cqp|" + $scope.cqp
             , 0)

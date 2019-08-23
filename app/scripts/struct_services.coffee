@@ -246,16 +246,15 @@ korpApp.factory "structService",  ($http, $q) ->
         returnByCorpora ?= true
 
         params =
-            command: "struct_values"
             corpus: corpora.join ","
             struct: structValue
             count: count
 
         conf =
-            url : settings.cgiScript
-            params : params
-            method : "GET"
-            headers : {}
+            url: settings.korpBackendURL + "/struct_values"
+            params: params
+            method: "GET"
+            headers: {}
 
         _.extend conf.headers, model.getAuthorizationHeader()
 

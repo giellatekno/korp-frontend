@@ -546,7 +546,7 @@ util.getLocaleString = (key, lang) ->
 
 util.getLocaleStringUndefined = (key, lang) ->
     unless lang
-        lang = window.lang or settings.defaultLanguage or "sv"
+        lang = window.lang or settings.defaultLanguage or "nb"
     try
         return loc_data[lang][key]
     catch e
@@ -670,7 +670,7 @@ util.setDownloadLinks = (xhr_settings, result_data) ->
                 $.deparam.querystring(xhr_settings.url))
             format: format
             korp_url: window.location.href
-            korp_server_url: settings.cgiScript
+            korp_server_url: settings.korpBackendURL
             corpus_config: JSON.stringify(result_corpora_settings)
             corpus_config_info_keys: [
                 'metadata'

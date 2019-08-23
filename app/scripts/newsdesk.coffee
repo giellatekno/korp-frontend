@@ -64,7 +64,7 @@ angular.module('newsdesk', []).directive "newsDesk", ($window, $document, $rootE
                    console.log "error, couldn't fetch news", e.message
             });
 
-        s.currentLang = $location.search().lang or "sv"
+        s.currentLang = $location.search().lang or "nb"
 
         s.numNewNews = 0
         s.initData()
@@ -73,7 +73,7 @@ angular.module('newsdesk', []).directive "newsDesk", ($window, $document, $rootE
             if s.isPopoverVisible
                 s.popHide()
             else
-                s.currentLang = $location.search().lang or "sv"
+                s.currentLang = $location.search().lang or "nb"
                 s.popShow()
                 s.numNewNews = 0
             event.preventDefault()

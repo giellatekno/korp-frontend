@@ -57,7 +57,6 @@ korpApp.factory 'backend', ($http, $q, utils, lexicons) ->
 
         def = $q.defer()
         params =
-            command : "loglike"
             groupby : reduce.join ','
             set1_corpus : corpora1.join(",").toUpperCase()
             set1_cqp : cmpObj1.cqp
@@ -68,7 +67,7 @@ korpApp.factory 'backend', ($http, $q, utils, lexicons) ->
             top : top
 
         conf =
-            url : settings.cgiScript
+            url : settings.korpBackendURL + "/loglike"
             params : params
             method : "GET"
             headers : {}
@@ -142,7 +141,6 @@ korpApp.factory 'backend', ($http, $q, utils, lexicons) ->
 
         def = $q.defer()
         params =
-            command: "count"
             groupby: attribute.label
             cqp: cqp
             corpus: attribute.corpora.join(",")
@@ -153,7 +151,7 @@ korpApp.factory 'backend', ($http, $q, utils, lexicons) ->
         _.extend params, cqpSubExprs
 
         conf =
-            url : settings.cgiScript
+            url : settings.korpBackendURL + "/count"
             params : params
             method : "GET"
             headers : {}
@@ -253,9 +251,8 @@ korpApp.factory 'searches', (utils, $location, $rootScope, $http, $q, nameEntity
             def = $q.defer()
             $http(
                 method : "GET"
-                url : settings.cgiScript
+                url : settings.korpBackendURL + "/info"
                 params:
-                    command : "info"
                     corpus : _(settings.corpusListing.corpora).pluck("id").invoke("toUpperCase").join ","
             ).then (response) ->
                 data = response.data
@@ -361,7 +358,7 @@ korpApp.service "compareSearches",
 
 
 korpApp.factory "lexicons", ($q, $http) ->
-    karpURL = "https://ws.spraakbanken.gu.se/ws/karp/v3"
+    karpURL = "https://ws.spraakbanken.gu.se/ws/karp/v4"
     getLemgrams: (wf, resources, corporaIDs) ->
         deferred = $q.defer()
 
@@ -392,8 +389,8 @@ korpApp.factory "lexicons", ($q, $http) ->
                 headers["Content-Type"] = "application/x-www-form-urlencoded; charset=UTF-8"
                 $http(
                     method: 'POST'
-                    url: settings.cgiScript
-                    data : "command=lemgram_count&lemgram=#{lemgram}&count=lemgram&corpus=#{corpora}"
+                    url: settings.korpBackendURL + "/lemgram_count"
+                    data : "lemgram=#{lemgram}&count=lemgram&corpus=#{corpora}"
                     headers : headers
                 ).then (response) =>
                     data = response.data
