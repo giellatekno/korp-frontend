@@ -180,7 +180,7 @@
     "prefix_chk": "initial part",
     "suffix_chk": "final part",
 
-    "translated from" : "translated from",
+    "translated_from" : "translated from",
     "domain" : "domain",
     "autor_first_name" : "author's surname",
     "autor_last_name" : "author's name",
