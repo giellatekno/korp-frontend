@@ -156,7 +156,7 @@
   "pos_CS" : "subjunksjon",
   "pos_CLB" : "setningsgrensemerke",
   "pos_Interj" : "interjection",
-  "pos____" : "ukjent",  
+  "pos____" : "ukjent",
 
 
     "saldo" : "betydning",
@@ -185,7 +185,7 @@
     "year_from" : "startår",
     "year_to" : "sluttår",
 
-    "translated_from" : "translated from",
+    "translated_from" : "oversatt fra",
     "domain" : "domain",
     "autor_first_name" : "forfatters fornavn",
     "autor_last_name" : "forfatters navn",

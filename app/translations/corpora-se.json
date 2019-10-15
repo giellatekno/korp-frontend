@@ -156,7 +156,7 @@
   "pos_CS" : "subjunkšuvdna",
   "pos_CLB" : "cealkkaráji mearka",
   "pos_Interj" : "interjekšuvdna",
-  "pos____" : "dovddatmeahttun",  
+  "pos____" : "dovddatmeahttun",
 
     "saldo" : "mearkkašupmi",
     "pos" : "sátneluohkká",
@@ -181,7 +181,7 @@
     "prefix_chk": "sáni álgun",
     "suffix_chk": "sáni loahppan",
 
-    "translated_from" : "jorgaluvvon dán gielas:",
+    "translated_from" : "jorgaluvvon dán gielas",
     "domain" : "domeana",
     "autor_first_name" : "čálli ovdanamma",
     "autor_last_name" : "čálli namma",
