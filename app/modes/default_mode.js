@@ -37,7 +37,7 @@ settings.corpora.sme_admin_20181106 = {
 	attributes : modernAttrs,
 	structAttributes : {
 		text_title : {label : "title"},
-		//text_orig_lang : {label : "translated_from"},
+		text_orig_lang : {label : "translated_from"},
 		text_gt_domain : {label : "domain"},
 		//text_first_name : {label : "autor_first_name"},
 		//text_last_name : {label : "autor_last_name"},
@@ -55,7 +55,7 @@ settings.corpora.sme_bible_20181106 = {
 	attributes : modernAttrs,
 	structAttributes : {
 		text_title : {label : "title"},
-		//text_orig_lang : {label : "translated_from"},
+		text_orig_lang : {label : "translated_from"},
 		text_gt_domain : {label : "domain"},
 		//text_first_name : {label : "autor_first_name"},
 		//text_last_name : {label : "autor_last_name"},
@@ -73,7 +73,7 @@ settings.corpora.sme_facta_20181106 = {
 	attributes : modernAttrs,
 	structAttributes : {
 		text_title : {label : "title"},
-		//text_orig_lang : {label : "translated_from"},
+		text_orig_lang : {label : "translated_from"},
 		text_gt_domain : {label : "domain"},
 		//text_first_name : {label : "autor_first_name"},
 		//text_last_name : {label : "autor_last_name"},
@@ -91,7 +91,7 @@ settings.corpora.sme_ficti_20181106 = {
 	attributes : modernAttrs,
 	structAttributes : {
 		text_title : {label : "title"},
-		//text_orig_lang : {label : "translated_from"},
+		text_orig_lang : {label : "translated_from"},
 		text_gt_domain : {label : "domain"},
 		//text_first_name : {label : "autor_first_name"},
 		//text_last_name : {label : "autor_last_name"},
@@ -109,7 +109,7 @@ settings.corpora.sme_laws_20181106 = {
 	attributes : modernAttrs,
 	structAttributes : {
 		text_title : {label : "title"},
-		//text_orig_lang : {label : "translated_from"},
+		text_orig_lang : {label : "translated_from"},
 		text_gt_domain : {label : "domain"},
 		//text_first_name : {label : "autor_first_name"},
 		//text_last_name : {label : "autor_last_name"},
@@ -127,7 +127,7 @@ settings.corpora.sme_science_20181106 = {
 	attributes : modernAttrs,
 	structAttributes : {
 		text_title : {label : "title"},
-		//text_orig_lang : {label : "translated_from"},
+		text_orig_lang : {label : "translated_from"},
 		text_gt_domain : {label : "domain"},
 		//text_first_name : {label : "autor_first_name"},
 		//text_last_name : {label : "autor_last_name"},
@@ -146,7 +146,7 @@ settings.corpora.sme_assu_20181106 = {
 	attributes : modernAttrs,
 	structAttributes : {
 		text_title : {label : "title"},
-		//text_orig_lang : {label : "translated_from"},
+		text_orig_lang : {label : "translated_from"},
 		text_gt_domain : {label : "domain"},
 		//text_first_name : {label : "autor_first_name"},
 		//text_last_name : {label : "autor_last_name"},
@@ -164,7 +164,7 @@ settings.corpora.sme_avvir_20181106 = {
 	attributes : modernAttrs,
 	structAttributes : {
 		text_title : {label : "title"},
-		//text_orig_lang : {label : "translated_from"},
+		text_orig_lang : {label : "translated_from"},
 		text_gt_domain : {label : "domain"},
 		//text_first_name : {label : "autor_first_name"},
 		//text_last_name : {label : "autor_last_name"},
@@ -182,7 +182,7 @@ settings.corpora.sme_minaigi_20181106 = {
 	attributes : modernAttrs,
 	structAttributes : {
 		text_title : {label : "title"},
-		//text_orig_lang : {label : "translated_from"},
+		text_orig_lang : {label : "translated_from"},
 		text_gt_domain : {label : "domain"},
 		//text_first_name : {label : "autor_first_name"},
 		//text_last_name : {label : "autor_last_name"},
@@ -200,7 +200,7 @@ settings.corpora.sme_nrk_20181106 = {
 	attributes : modernAttrs,
 	structAttributes : {
 		text_title : {label : "title"},
-		//text_orig_lang : {label : "translated_from"},
+		text_orig_lang : {label : "translated_from"},
 		text_gt_domain : {label : "domain"},
 		//text_first_name : {label : "autor_first_name"},
 		//text_last_name : {label : "autor_last_name"},
@@ -218,7 +218,7 @@ settings.corpora.sme_blogs_20181106 = {
 	attributes : modernAttrs,
 	structAttributes : {
 		text_title : {label : "title"},
-		//text_orig_lang : {label : "translated_from"},
+		text_orig_lang : {label : "translated_from"},
 		text_gt_domain : {label : "domain"},
 		//text_first_name : {label : "autor_first_name"},
 		//text_last_name : {label : "autor_last_name"},

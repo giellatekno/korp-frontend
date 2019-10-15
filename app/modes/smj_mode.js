@@ -23,7 +23,7 @@ settings.corpora.smj_admin_20181106 = {
         },
         structAttributes : {
                 text_title : {label : "title"},
-                //text_orig_lang : {label : "translated_from"},
+                text_orig_lang : {label : "translated_from"},
                 text_gt_domain : {label : "domain"},
                 //text_first_name : {label : "autor_first_name"},
                 //text_last_name : {label : "autor_last_name"},
@@ -48,7 +48,7 @@ settings.corpora.smj_bible_20181106 = {
         },
         structAttributes : {
                 text_title : {label : "title"},
-                //text_orig_lang : {label : "translated_from"},
+                text_orig_lang : {label : "translated_from"},
                 text_gt_domain : {label : "domain"},
                 //text_first_name : {label : "autor_first_name"},
                 //text_last_name : {label : "autor_last_name"},
@@ -73,7 +73,7 @@ settings.corpora.smj_facta_20181106 = {
         },
         structAttributes : {
                 text_title : {label : "title"},
-                //text_orig_lang : {label : "translated_from"},
+                text_orig_lang : {label : "translated_from"},
                 text_gt_domain : {label : "domain"},
                 //text_first_name : {label : "autor_first_name"},
                 //text_last_name : {label : "autor_last_name"},
@@ -98,7 +98,7 @@ settings.corpora.smj_ficti_20181106 = {
         },
         structAttributes : {
                 text_title : {label : "title"},
-                //text_orig_lang : {label : "translated_from"},
+                text_orig_lang : {label : "translated_from"},
                 text_gt_domain : {label : "domain"},
                 //text_first_name : {label : "autor_first_name"},
                 //text_last_name : {label : "autor_last_name"},
@@ -123,7 +123,7 @@ settings.corpora.smj_laws_20181106 = {
         },
         structAttributes : {
                 text_title : {label : "title"},
-                //text_orig_lang : {label : "translated_from"},
+                text_orig_lang : {label : "translated_from"},
                 text_gt_domain : {label : "domain"},
                 //text_first_name : {label : "autor_first_name"},
                 //text_last_name : {label : "autor_last_name"},
@@ -148,7 +148,7 @@ settings.corpora.smj_news_20181106 = {
         },
         structAttributes : {
                 text_title : {label : "title"},
-                //text_orig_lang : {label : "translated_from"},
+                text_orig_lang : {label : "translated_from"},
                 text_gt_domain : {label : "domain"},
                 //text_first_name : {label : "autor_first_name"},
                 //text_last_name : {label : "autor_last_name"},
@@ -173,7 +173,7 @@ settings.corpora.smj_science_20181106 = {
         },
         structAttributes : {
                 text_title : {label : "title"},
-                //text_orig_lang : {label : "translated_from"},
+                text_orig_lang : {label : "translated_from"},
                 text_gt_domain : {label : "domain"},
                 //text_first_name : {label : "autor_first_name"},
                 //text_last_name : {label : "autor_last_name"},
