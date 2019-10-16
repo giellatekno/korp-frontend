@@ -120,15 +120,22 @@ Sidebar =
 
     renderItem: (key, value, attrs, wordData, sentenceData, tokens) ->
         if attrs.label
-            output = $("<p><span rel='localize[#{attrs.label}]'></span>: </p>")
+            if attrs.label == "translated_from"
+              output = $("<p class='trans_from' style='background-color:#fff1d8'><span rel='localize[#{attrs.label}]'></span>: </p>")
+            else
+              output = $("<p><span rel='localize[#{attrs.label}]'></span>: </p>")
         else
             output = $("<p></p>")
         if attrs.renderItem
             return output.append(attrs.renderItem key, value, attrs, wordData, sentenceData, tokens)
 
         output.data("attrs", attrs)
+
         if value == "|" or value == "" or value == null
-            output.append "<i rel='localize[empty]' style='color : grey'>${util.getLocaleString('empty')}</i>"
+            if attrs.label == "translated_from"
+              output.select($(".trans_from")).css("visibility", "hidden")
+            else
+              output.append "<i rel='localize[empty]' style='color : grey'>${util.getLocaleString('empty')}</i>"
             return output
 
         if attrs.type == "set" and attrs.display?.expandList
@@ -277,6 +284,8 @@ Sidebar =
                     return output.append "<span rel='localize[#{attrs.translationKey}#{value}]'></span>"
                 else
                     return output.append "<span>#{value}</span>"
+            else if key == "text_orig_lang"
+                  return output.append "<span rel='localize[#{str_value}]'></span>"
             else
                 return output.append "<span>#{str_value || ''}</span>"
 
