@@ -113,7 +113,7 @@ settings.wordPictureConf = {
 
 }
 
-settings.visibleModes = 5
+settings.visibleModes = 7
 settings.modeConfig = [
     {
         localekey: "se_texts",
