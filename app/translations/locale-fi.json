@@ -15,7 +15,7 @@
     "smn_texts" : "Inarinsaamen tekstit",
     "sms_texts" : "Koltansaamen tekstit",
     "parallel_texts" : "Rinnakkaistekstit",
-    "parallel_fin" : "Finnish parallel texts",    
+    "parallel_fin" : "Finnish parallel texts",
     "search_history" : "Hakuhistoria",
     "search_history_clear" : "✘ Tyhjennä hakuhistoria",
     "add_lang" : "Enemmän kieliä",
@@ -33,7 +33,7 @@
     "about_cite_sikor_smj": "SIKOR. UiT Vuona arktalasj universitehta ja Vuona Sámedikke sáme tækstatjoakkáldahka, <em>Versjåvnnå 06.11.2018</em>,<br>URL: http://gtweb.uit.no/korp/<br><a href='http://gtweb.uit.no/korp/pub/sikor_smj' target='_blank'><img src='http://gtweb.uit.no/korp/pub/bibtex.png' alt='BibTeX'>",
     "about_man" : "Projektinjohto",
     "about_dev" : "Kehittäjät",
-    "about_dev_additional" : "Korpusannotoinnin työryhmä",    
+    "about_dev_additional" : "Korpusannotoinnin työryhmä",
     "about_logo" : "Logo",
     "about_contributors" : "Avustajat",
     "warning_header" : "Huomaa",
@@ -64,12 +64,12 @@
     "import_chain" : "Annotaatiolaboratorio",
     "show_deptree" : "Näytä dependenssipuu",
     "dep_tree" : "Dependenssipuu",
-    
+
     "is" : "on",
     "is_not" : "ei ole",
     "starts_with" : "alkaa",
     "ends_with" : "loppuu",
-    
+
     "any_word_placeholder" : "<mikä tahansa sana>",
     "case_insensitive" : "samaista pien- ja suuraakkoset",
     "case_sensitive" : "erottele pien- ja suuraakkoset",
@@ -91,26 +91,26 @@
     "interval" : "väli",
     "matches" : "säännöllinen lauseke",
     "matches_not" : "ei säännöllinen lauseke",
-    
+
     "repeat" : "toista",
     "to" : "-",
     "times" : "kertaa",
-    
+
     "sent_start" : "virkkeen alussa",
     "sent_end" : "virkkeen lopussa",
-    
+
     "none_selected" : "&lt;ei valittuja&gt;",
-    
+
     "any" : "mikä tahansa sana",
     "all" : "kaikki",
     "one_of" : "jokin",
     "error_occurred" : "Virhe tapahtui",
-    
+
     "following_text" : "Täsmää johonkin seuraavista säännöistä:",
     "stats_hit" : "Osuma",
     "stats_total" : "Yhteensä",
     "options" : "Valinnat",
-    
+
     "simple" : "Yksinkertainen",
     "detailed" : "Laajennettu",
     "advanced" : "Edistynyt",
@@ -165,11 +165,11 @@
     "material_warn" : "Valittu materiaali ei sisällä aikatietoa",
     "graph_material" : "Ei ole aikatietoja saatavilla",
     "graph_material_tooltip" : "Valitusta korpuksesta puuttuu aikatietoa näytetystä jaksoista",
-    
+
     "word_insensitive" : "sana (pien- ja suuraakkoset samaistettu)",
-    "sentence_attr" : "tekstin ominaisuudet",
-    "word_attr" : "sanan ominaisuudet",
-    
+    "sentence_attr" : "Tekstin ominaisuudet",
+    "word_attr" : "Sanan ominaisuudet",
+
     "similar_header" : "Liittyvät sanat",
     "show_wordclass" : "Näytä sanaluokka",
     "search" : "Etsi",
@@ -198,7 +198,7 @@
     "compare_distinctive" : "Prominent in",
 
     "msd_long" : "Morfologinen analyysi",
-    
+
     "corpselector_allselected" : " korpusta valittuina (kaikki)",
     "corpselector_noneselected" : "Ei korpuksia valittuna",
     "corpselector_selectedone" : " valittu",
@@ -220,7 +220,7 @@
     "corpselector_time_chosen" : "Valitut aineistot",
     "corpselector_of_total" : "kaikista",
     "corpselector_of" : "/",
-    
+
     "statstable_allcorpora" : "Kaikki&nbsp;korpukset",
     "statstable_relfreq" : "suhteellinen frekvenssi (miljoonaa sanaa kohti):",
     "statstable_absfreq" : "absoluuttinen frekvenssi:",
@@ -233,13 +233,13 @@
     "statstable_exp_csv" : "CSV (pilkulla erotetut arvot)",
     "statstable_exp_tsv" : "TSV (sarkainmerkillä erotetut arvot)",
     "statstable_export" : "Vie",
-    
+
     "util_decimalseparator" : ",",
     "util_numbergroupseparator" : "&nbsp;",
-    
+
     "hitspicture_hits" : "osumaa",
     "hitspicture_gotocorpushits" : "Napsauta päästäksesi ensimmäiselle sivulle, jolla on osumia tästä korpuksesta.",
-    
+
     "hits_per_mil" : "Osumia miljoonaa sanetta kohti",
 
     "msdval_A" : "adjektiivi",
@@ -4288,4 +4288,4 @@
     "msdval_V*_Actio_N_Sg_Loc" : "aktio substantiivi yksikön lokatiivi",
     "msdval_V*_Actio_N_Sg_Nom" : "aktio substantiivi yksikön nominatiivi",
     "msdval____" : "tuntematon"
-} 
+}

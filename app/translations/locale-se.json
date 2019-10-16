@@ -15,7 +15,7 @@
     "smn_texts" : "Anársámi teavsttat",
     "sms_texts" : "Nuortalaš teavsttat",
     "parallel_texts" : "Bálddalasteavsttat",
-    "parallel_fin" : "Finnish parallel texts",    
+    "parallel_fin" : "Finnish parallel texts",
     "search_history" : "Ohcanhistorjá",
     "search_history_clear" : "✘ Sihko ohcanhistorjjá",
     "add_lang" : "Eanet gielat",
@@ -64,7 +64,7 @@
     "import_chain" : "Annoteringslabbet",
     "show_deptree" : "Čájet dependeansamuora",
     "dep_tree" : "Dependeansamuorra",
-    
+
     "is" : "lea",
     "is_not" : "ii leat",
     "starts_with" : "álgá ná:",
@@ -80,7 +80,7 @@
     "word_pic_warn_btn" : "Aktivere ja oza",
     "word_pic_bad_search" : "Ii leat vejolaš ráhkadit sátnegova du ohcamis. Velge sáhttá beare ohcat eaŋkilsáni ja lemmagramma",
     "search_aborted" : "Ohcan gaskkalduvai",
-    
+
     "word_is" : "sátni lea",
     "word_is_not" : "sátni ii leat",
     "word_beginswith" : "sáni álgu lea",
@@ -91,26 +91,26 @@
     "interval" : "gaskkadat",
     "matches" : "virolaš cealkka",
     "matches_not" : "ii virolaš cealkka",
-    
+
     "repeat" : "Gearddut",
     "to" : "gitta",
     "times" : "geardde",
-    
+
     "sent_start" : "Cealkaga álgu",
     "sent_end" : "Cealkaga loahppa",
-    
+
     "none_selected" : "&lt;ii válljejuvvon&gt;",
-    
+
     "any" : "vaikko makkár sátni",
     "all" : "buot",
     "one_of" : "muhtun dain",
     "error_occurred" : "Meattáhus lea dihtton",
-    
+
     "following_text" : "Čuovo muhtun čuovvovaš njuolggadusain:",
     "stats_hit" : "Boađus",
     "stats_total" : "Oktiibuot",
     "options" : "Molssaeavttut",
-    
+
     "simple" : "Oktageardán ohcan",
     "detailed" : "Viiddiduvvon ohcan",
     "advanced" : "CQP ohcan",
@@ -165,11 +165,11 @@
     "material_warn" : "válljejuvvon teavsttain ii leat vuođđalohku",
     "graph_material" : "Áigodagas váilot teavsttat",
     "graph_material_tooltip" : "Válljejuvvon čoakkáldagain eai leat teavsttat dáin áigodagain.",
-    
+
     "word_insensitive" : "sáni (váldá vuhtii unna/stuorra bustávaid)",
-    "sentence_attr" : "iešvuohta dán teavsttas",
-    "word_attr" : "sáni iešvuohta",
-    
+    "sentence_attr" : "Iešvuohta dán teavsttas",
+    "word_attr" : "Sáni iešvuohta",
+
     "similar_header" : "Relaterade ord",
     "show_wordclass" : "Čájet sátneluohká",
     "search" : "   Oza   ",
@@ -185,7 +185,7 @@
     "link" : "liŋka",
     "text" : "teaksta",
     "word" : "sáni",
-    
+
     "compare_vb" : "Buohtastahte",
     "compare_with" : "dáinna",
     "compare_reduce" : "ja buohtastahte dasa: ",
@@ -198,7 +198,7 @@
     "compare_distinctive" : "Utmärkande för_xxx",
 
     "msd_long" : "Morfosyntávttalaš dieđut",
-    
+
     "corpselector_allselected" : " válljejuvvon čoakkáldaga (buot)",
     "corpselector_noneselected" : "It leat válljen čoakkáldaga",
     "corpselector_selectedone" : " válljejuvvon",
@@ -220,7 +220,7 @@
     "corpselector_time_chosen" : "Válljejuvvon teavsttat",
     "corpselector_of_total" : "váldon oktiibuot",
     "corpselector_of" : "/",
-    
+
     "statstable_allcorpora" : "Buot",
     "statstable_relfreq" : "relatiiva dávjodat (pr miljovnna sáni):",
     "statstable_absfreq" : "absoluhtta dávjodat:",
@@ -233,13 +233,13 @@
     "statstable_exp_csv" : "CSV (rihkuin sirrejuvvon)",
     "statstable_exp_tsv" : "TSV (tabain sirrejuvvon)",
     "statstable_export" : "Fievrrit olggos",
-    
+
     "util_decimalseparator" : ",",
     "util_numbergroupseparator" : "&nbsp;",
-    
+
     "hitspicture_hits" : "deaivamat",
     "hitspicture_gotocorpushits" : "Coahkkal vai beasat dán čoakkáldaga bohtosa vuosttaš siidui.",
-    
+
     "hits_per_mil" : "Galle bohtosa miljovnna sánis",
 
     "msdval_A" : "adjektiiva",
@@ -4288,4 +4288,4 @@
     "msdval_V*_Actio_N_Sg_Loc" : "aktio substantiiva ovttaidlogu lokatiiva",
     "msdval_V*_Actio_N_Sg_Nom" : "aktio substantiiva ovttaidlogu nominatiiva",
     "msdval____" : "dovddatmeahttun"
-}    
+}
