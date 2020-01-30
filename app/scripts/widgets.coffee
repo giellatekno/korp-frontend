@@ -121,7 +121,8 @@ Sidebar =
     renderItem: (key, value, attrs, wordData, sentenceData, tokens) ->
         if attrs.label
             if attrs.label == "translated_from"
-              output = $("<p class='trans_from' style='background-color:#fff1d8'><span rel='localize[#{attrs.label}]'></span>: </p>")
+              output = $("<p class='trans_from' style='color:#3e6fc8;font-weight:bold'><span rel='localize[#{attrs.label}]'></span>: </p>")
+              #output = $("<p class='trans_from' style='background-color:#fff1d8'><span rel='localize[#{attrs.label}]'></span>: </p>")
             else
               output = $("<p><span rel='localize[#{attrs.label}]'></span>: </p>")
         else
