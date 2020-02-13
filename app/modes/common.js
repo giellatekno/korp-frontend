@@ -95,6 +95,7 @@ attrs.pos = {
     order: 0
 };
 
+/*
 attrs.msd = {
     label : "msd",
     translationKey : "msdval_",
@@ -129,10 +130,11 @@ attrs.msd = {
         }
     }
 };
-
+*/
 
 
 /*
+*/
 attrs.msd = {
     label: "msd",
     translationKey : "msdval_",
@@ -165,6 +167,7 @@ attrs.msd = {
         }
     }
 };
+/*
 */
 
 attrs.baseform = {
