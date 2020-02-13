@@ -138,7 +138,7 @@ attrs.msd = {
 attrs.msd = {
     label: "msd",
     translationKey : "msdval_",
-    opts: settings.defaultOptions,
+    opts: settings.defaultOptionsMsd,
     extendedTemplate: '<input ng-model="input" class="arg_value" escaper ng-model-options=\'{debounce : {default : 300, blur : 0}, updateOn: "default blur"}\'>' +
     '<span ng-click="onIconClick()" class="fa fa-info-circle"></span>',
     extendedController: function($scope, $uibModal) {

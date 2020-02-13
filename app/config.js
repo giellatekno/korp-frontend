@@ -186,6 +186,16 @@ settings.defaultOptions = {
     "matches_not": "!*=",
 }
 
+settings.defaultOptionsMsd = {
+    "contains": "_=",
+    "is": "=",
+    "is_not": "!=",
+    "starts_with": "^=",
+    "ends_with": "&=",
+    "matches": "*=",
+    "matches_not": "!*=",
+}
+
 settings.korpBackendURL = "http://gtweb.uit.no/ws/gt_korp";
 //settings.downloadCgiScript = "https://ws.spraakbanken.gu.se/ws/korp/download";
 
