@@ -10,7 +10,7 @@ settings.newMapEnabled = isLab;
 settings.hitsPerPageDefault = 100
 settings.hitsPerPageValues = [25,50,75,100,500,1000]
 settings.enableBackendKwicDownload = false
-settings.enableFrontendKwicDownload = false
+settings.enableFrontendKwicDownload = true
 
 settings.languages = ["se", "nb", "fi", "sv", "en"];
 settings.defaultLanguage = "se";
