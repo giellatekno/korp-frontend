@@ -590,18 +590,27 @@ class view.LemgramResults extends BaseResults
         else
             @renderWordTables query, data.relations
 
+    getTagsetKey: (pos) ->
+      pairs = _.pairs(settings.wordpictureTagset)
+      pair = _.find pairs, (tuple) ->
+        tuple[1] == pos
+      return pair[0] if pair
+
     renderWordTables: (word, data) ->
         wordlist = $.map(data, (item) ->
             output = []
-            output.push [item.head, item.headpos.toLowerCase()] if item.head.split("_")[0] is word
-            output.push [item.dep, item.deppos.toLowerCase()] if item.dep.split("_")[0] is word
+            for lemma in item.lemma_string
+              output.push [item.head, item.headpos] if item.search_string is word and item.head.split("_")[0] is lemma.lemma
+              output.push [item.dep, item.deppos] if item.search_string is word and item.dep.split("_")[0] is lemma.lemma
+
             output
         )
         unique_words = _.uniq wordlist, ([word, pos]) ->
             word + pos
-        tagsetTrans = _.invert settings.wordpictureTagset
-        unique_words = _.filter unique_words, ([currentWd, pos]) ->
-            settings.wordPictureConf[tagsetTrans[pos]]?
+
+        unique_words = _.filter unique_words, ([currentWd, pos]) =>
+
+            settings.wordPictureConf[@getTagsetKey(pos)]?
         if not unique_words.length
             @showNoResults()
             return
@@ -626,14 +635,12 @@ class view.LemgramResults extends BaseResults
             i : i
             type : type
 
-        tagsetTrans = _.invert settings.wordpictureTagset
+        res = _.map(tables, ([token, wordClass]) =>
+            getRelType = (item) =>
+                return {rel : @getTagsetKey(item.rel) , field_reverse : item.dep == token}
 
-        res = _.map(tables, ([token, wordClass]) ->
-            getRelType = (item) ->
-                return {rel : tagsetTrans[item.rel.toLowerCase()] , field_reverse : item.dep == token}
-
-            wordClassShort = wordClass.toLowerCase()
-            wordClass = (_.invert settings.wordpictureTagset)[wordClassShort]
+            wordClassShort = wordClass
+            wordClass = @getTagsetKey(wordClassShort)
 
             unless settings.wordPictureConf[wordClass]?
                 return
