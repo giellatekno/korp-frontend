@@ -109,7 +109,7 @@ class window.CorpusListing
 
     getDefaultFilters: () ->
         return @_getFilters "intersection", "defaultFilters"
-        
+
     getCurrentFilters: () ->
         return @_getFilters settings.filterSelection, "showFilters"
 
@@ -128,7 +128,7 @@ class window.CorpusListing
                             corpora: [corpus.id]
                     else
                         attrs[filter].corpora.push corpus.id
-        
+
 
         if selection is "intersection"
             attrNames2 = []
@@ -597,7 +597,7 @@ util.saldoToPlaceholderString = (saldoId, appendIndex) ->
 
 util.lemgramRegexp = /\.\.\w+\.\d\d?(\:\d+)?$/
 util.isLemgramId = (lemgram) ->
-    lemgram.search(util.lemgramRegexp) isnt -1
+    if lemgram then lemgram.search(util.lemgramRegexp) isnt -1
 
 util.splitLemgram = (lemgram) ->
     unless util.isLemgramId(lemgram)
