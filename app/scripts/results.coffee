@@ -654,8 +654,15 @@ class view.LemgramResults extends BaseResults
                     ret = inArray(rel, rel_type_list)
                     return if ret.i is -1
                     list[ret.i] = [] unless list[ret.i]
-                    item.show_rel = ret.type
-                    list[ret.i].push item
+                    for lemma in item.lemma_string
+                      if ((item.dep == lemma.lemma) && (item.deppos == wordClassShort))
+                        item.show_rel = "head"
+                        if (list[ret.i].indexOf(item))
+                          return list[ret.i].push(item)
+                      if ((item.head == lemma.lemma) && (item.headpos == wordClassShort))
+                        item.show_rel = "dep"
+                        if (list[ret.i].indexOf(item))
+                          return list[ret.i].push(item)
 
             $.each orderArrays, (i, unsortedList) ->
                 $.each unsortedList, (_, list) ->
