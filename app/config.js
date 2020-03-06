@@ -67,50 +67,132 @@ settings.newsDeskUrl = "http://gtweb.uit.no/korp/pub/gt_news.json";
 
 settings.wordpictureTagset = {
     // supported pos-tags
-    verb: "vb",
-
-    noun: "nn",
-    adjective: "jj",
-    adverb: "ab",
-    preposition: "pp",
+    verb: "V",
+    noun: "N",
+    adjective: "A",
+    //adverb: "Adv",
+    //pronoun: "Pron",
+    popos: "Po",
+    prpos: "Pr",
+    //cc: "CC",
 
     // dependency releations
-    subject: "ss",
-    object: "obj",
-    adverbial: "adv",
-    preposition_rel: "pa",
-    pre_modifier: "at",
-    post_modifier: "et",
-    adverbial2: "aa"
+    //subject: "SUBJ",
+    sub_to_left: "SUBJ→",
+    sub_to_right: "←SUBJ",
+    fsubj_to_left: "-FSUBJ→",
+
+    //object: "OBJ",
+    obj_to_left: "OBJ→",
+    obj_to_right: "←OBJ",
+    fobj_to_left: "-FOBJ→",
+    fobj_to_right: "-F←OBJ", //?? same description as -FOBJ→
+
+    advl_to_left: "ADVL→",
+    advl_to_right: "←ADVL",
+    complement_of_advl: "ADVL←", //to left or right?
+    modifier_of_advl:"→ADVL",
+
+    modifier_of_noun: "N←",
+    prenominal_modifier_to_left: "→N",
+    hnoun: "HNOUN",
+
+    modifier_of_adj_to_left:"→A",
+    modifier_of_adj_to_right:"A←",
+
+    complement_of_popos_to_left: "→P",
+    complement_of_prpos_to_right: "P←",
+
+    fmv: "FMV",
+    faux: "FAUX",
+
+    modifier_of_pron_to_left: "→Pron",
+    modifier_of_pron_to_right: "Pron←",
 }
 
 
 settings.wordPictureConf = {
-    verb: [[
-        {rel: "subject", css_class: "color_blue"},
+    verb: [
+      [
+        {rel: "sub_to_left", css_class: "color_blue", alt_label: "Subject"},
+        {rel: "fsubj_to_left", css_class: "color_blue", alt_label: "F-Subject"},
+        {rel: "obj_to_left", css_class: "color_yellow", alt_label: "Object"},
+        {rel: "fobj_to_left", css_class: "color_yellow", alt_label: "Object"},
+        {rel: "advl_to_left", css_class: "color_purple", alt_label: "Adverbial"},
+        {rel: "faux", css_class: "color_green", alt_label: "Finite auxiliary verb"},
+        "_"
+      ],
+      [
         "_",
-        {rel: "object", css_class: "color_purple"},
-        {rel: "adverbial", css_class: "color_green"}
-    ]],
+        {rel: "sub_to_right", css_class: "color_blue", alt_label: "Subject"},
+        {rel: "obj_to_right", css_class: "color_yellow", alt_label: "Object"},
+        {rel: "fobj_to_right", css_class: "color_yellow", alt_label: "Object"},
+        {rel: "advl_to_right", css_class: "color_purple", alt_label: "Adverbial"},
+        {rel: "fmv", css_class: "color_red", alt_label: "Finite main verb"},
+      ],
+    ],
     noun: [
-        [{rel: "preposition_rel", css_class: "color_yellow", field_reverse: true},
-         {rel: "pre_modifier", css_class: "color_azure"},
-         "_",
-         {rel: "post_modifier", css_class: "color_red"}],
-
-        ["_", {rel: "subject", css_class: "color_blue", field_reverse: true, alt_label: "vb"}],
-        [{rel: "object", css_class: "color_purple", field_reverse: true, alt_label: "vb"}, "_"]
+      [
+        {rel: "modifier_of_advl", css_class: "color_purple_light", alt_label: "Mod. of advl."},
+        {rel: "prenominal_modifier_to_left", css_class: "color_white", alt_label: "Prenom. mod."},
+        {rel: "complement_of_popos_to_left", css_class: "color_azure", alt_label: "Compl. of Po"},
+        {rel: "modifier_of_advl", css_class: "color_purple_light dep", field_reverse: true, alt_label: "Mod. of advl. (dep)"},
+        {rel: "prenominal_modifier_to_left", css_class: "color_white dep", field_reverse: true, alt_label: "Prenom. mod. (dep)"},
+        {rel: "complement_of_popos_to_left", css_class: "color_azure dep", field_reverse: true, alt_label: "Compl. of Po (dep)"},
+        {rel: "obj_to_left", css_class: "color_yellow dep", field_reverse: true, alt_label: "Object (dep)"},
+        {rel: "sub_to_left", css_class: "color_blue dep", field_reverse: true, alt_label: "Subject (dep)"},
+        "_"
+      ],
+      [
+        "_",
+        {rel: "modifier_of_noun", css_class: "color_white", alt_label: "Noun mod."},
+        {rel: "complement_of_advl", css_class: "color_purple", alt_label: "Compl. of advl."},
+        {rel: "complement_of_prpos_to_right", css_class: "color_azure", alt_label: "Compl. of Po"},
+        {rel: "advl_to_right", css_class: "color_purple", alt_label: "Adverbial"},
+        {rel: "modifier_of_noun", css_class: "color_white dep", field_reverse: true, alt_label: "Noun mod. (dep)"},
+        {rel: "complement_of_advl", css_class: "color_purple dep", field_reverse: true, alt_label: "Compl. of advl. (dep)"},
+        {rel: "complement_of_prpos_to_right", css_class: "color_azure dep", field_reverse: true, alt_label: "Compl. of Po (dep)"},
+        {rel: "advl_to_right", css_class: "color_purple dep", field_reverse: true, alt_label: "Adverbial (dep)"},
+        {rel: "obj_to_right", css_class: "color_yellow dep", field_reverse: true, alt_label: "Object (dep)"},
+        {rel: "sub_to_right", css_class: "color_blue dep", field_reverse: true, alt_label: "Subject (dep)"},
+      ]
     ],
     adjective: [
-        ["_", {rel: "pre_modifier", css_class: "color_yellow", field_reverse: true}],
-        [{rel: "adverbial2", css_class: "color_purple"}, "_"]
+      [
+        {rel: "modifier_of_adj_to_left", css_class: "color_purple", alt_label: "Mod. of adj."},
+        {rel: "prenominal_modifier_to_left", css_class: "color_white", alt_label: "Prenom. mod."},
+        {rel: "prenominal_modifier_to_left", css_class: "color_white dep", field_reverse: true, alt_label: "Prenom. mod. (dep)"},
+        "_"
+      ],
+      [
+        "_",
+        {rel: "modifier_of_adj_to_right", css_class: "color_purple", alt_label: "Mod. of adj."},
+      ],
     ],
-    adverb: [
-        ["_", {rel: "adverbial", css_class: "color_yellow", field_reverse: true}],
-        ["_", {rel: "adverbial2", css_class: "color_purple", field_reverse: true}]
+    popos: [
+      [
+        {rel: "complement_of_popos_to_left", css_class: "color_azure", alt_label: "Compl. of Po"},
+        {rel: "advl_to_left", css_class: "color_purple", field_reverse: true, alt_label: "Adverbial"},
+        "_",
+      ],
+      [
+        "_",
+        {rel: "advl_to_right", css_class: "color_purple", field_reverse: true, alt_label: "Adverbial"},
+      ],
     ],
-    preposition: [["_", {rel: "preposition_rel", css_class: "color_green"}]]
+    prpos: [
+      [
+        {rel: "prenominal_modifier_to_left", css_class: "color_white", field_reverse: true, alt_label: "Prenom. mod."},
+        {rel: "advl_to_left", css_class: "color_purple", field_reverse: true, alt_label: "Adverbial"},
+        "_"
+      ],
+      [
+        "_",
+        {rel: "complement_of_prpos_to_right", css_class: "color_azure", alt_label: "Compl. of Po"},
+        {rel: "advl_to_right", css_class: "color_purple", field_reverse: true, alt_label: "Adverbial"},
+      ],
 
+    ]
 }
 
 settings.visibleModes = 7
