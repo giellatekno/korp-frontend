@@ -1,43 +1,15 @@
-settings.senseAutoComplete = "<autoc model='model' placeholder='placeholder' type='sense'/>";
+settings.senseAutoComplete = "<autoc model='model' placeholder='placeholder' type='sense' text-in-field='textInField'/>";
 
 //var karpLemgramLink = "https://spraakbanken.gu.se/karp/#?mode=DEFAULT&search=extended||and|lemgram|equals|<%= val.replace(/:\\d+/, '') %>";
 
-var selectType = {
-    extendedTemplate: "<select ng-model='input' escaper "
-     + "ng-options='tuple[0] as localize(tuple[1]) for tuple in dataset' ></select>",
-    extendedController: function($scope) {
-        $scope.localize = function(str) {
-            if($scope.localize === false) {
-                return str;
-            } else {
-                return util.getLocaleString( ($scope.translationKey || "") + str);
-            }
-        }
-
-        $scope.translationKey = $scope.translationKey || "";
-        var dataset;
-        if(_.isArray($scope.dataset)) {
-            // convert array datasets into objects
-            dataset = _.object(_.map($scope.dataset, function(item) {
-                return [item, item];
-            }));
-        }
-        $scope.dataset = dataset || $scope.dataset;
-
-        $scope.dataset = _.sortBy(_.pairs($scope.dataset), function(tuple) {
-            return $scope.localize(tuple[1]);
-        });
-        $scope.model = $scope.model || $scope.dataset[0][0]
-    }
-};
-
 var liteOptions = {
     "is": "=",
-    "is_not": "!="
+    "is_not": "!=",
 }
+
 var setOptions = {
     "is": "contains",
-    "is_not": "not contains"
+    "is_not": "not contains",
 };
 var probabilitySetOptions = {
     "is": "highest_rank",
@@ -46,95 +18,48 @@ var probabilitySetOptions = {
     "contains_not": "not_rank_contains",
 };
 
+
+
 var defaultContext = {
-    "1 sentence": "1 sentence"
+    "1 sentence": "1 sentence",
 };
 
 var spContext = {
     "1 sentence": "1 sentence",
-    "1 paragraph": "1 paragraph"
+    "1 paragraph": "1 paragraph",
 };
 var spWithin = {
     "sentence": "sentence",
-    "paragraph": "paragraph"
+    "paragraph": "paragraph",
 };
 
 var attrs = {};  // positional attributes
 var sattrs = {}; // structural attributes
 
 attrs.pos = {
-    label: "pos",
-    displayType : "select",
-    translationKey: "pos_",
-    dataset: {
-        "A" : "A",
-        "N" : "N",
-        "V" : "V",
-        "Adv" : "Adv",
-        "Po" : "Po",
-        "Pr" : "Pr",
-        "Pron" : "Pron",
-        "Det" : "Det",
-        "Num" : "Num",
-        "Cmp_SplitR" : "Cmp_SplitR",
-        "Cmp_Sh" : "Cmp_Sh",
-        "CmpNP_First" : "CmpNP_First",
-        "CmpNP_None" : "CmpNP_None",
-        "Cmp_SgNom" : "Cmp_SgNom",
-        "Pcle" : "Pcle",
-        "PUNCT" : "PUNCT",
-        "CC" : "CC",
-        "Interj" : "Interj",
-        "CS" : "CS",
-        "CLB" : "CLB",
-        "___" : "___"
-    },
-    opts: liteOptions,
-    extendedTemplate: selectType.extendedTemplate,
-    extendedController: selectType.extendedController,
-    order: 0
+	label : "pos",
+	displayType : "select",
+	translationKey : "pos_",
+	dataset : {
+		"N" : "N",
+		"V" : "V",
+		"CLB" : "CLB",
+		"Pron" : "Pron",
+		"Adv" : "Adv",
+		"A" : "A",
+		"CC" : "CC",
+		"CS" : "CS",
+		"Pcle" : "Pcle",
+		"Num" : "Num",
+		"Po" : "Po",
+		"Pr" : "Pr",
+		"Interj" : "Interj",
+		"PUNCT" : "PUNCT"
+	},
+	opts : settings.liteOptions
 };
 
-/*
-attrs.msd = {
-    label : "msd",
-    translationKey : "msdval_",
-    opts : settings.defaultOptions,
-    extended_template : '<input class="arg_value" ng-model="model" escaper>' +
-    '<span ng-click="onIconClick()" class="fa fa-info-circle"></span>',
-    controller : function($scope, $modal) {
-        var modal = null;
 
-        $scope.onIconClick = function() {
-            modal = $modal.open({
-                template : '<div>' +
-                                '<div class="modal-header">' +
-                                    '<h3 class="modal-title">{{\'msd_long\' | loc:lang}}</h3>' +
-                                    '<span ng-click="clickX()" class="close-x">×</span>' +
-                                '</div>' +
-                                '<div class="modal-body msd-modal" ng-click="msdClick($event)" ng-include="\'markup/msd.html\'"></div>' +
-                            '</div>',
-                scope : $scope
-            })
-        }
-        $scope.clickX = function(event) {
-            modal.close()
-        }
-        $scope.msdClick = function(event) {
-            val = $(event.target).parent().data("value")
-            if(!val) return;
-            $scope.model = val;
-
-
-            modal.close();
-        }
-    }
-};
-*/
-
-
-/*
-*/
 attrs.msd = {
     label: "msd",
     translationKey : "msdval_",
@@ -145,13 +70,14 @@ attrs.msd = {
         var modal = null;
 
         $scope.onIconClick = function() {
+            var msdHTML = settings.markup.msd;
             modal = $uibModal.open({
                 template: '<div>' +
                                 '<div class="modal-header">' +
                                     '<h3 class="modal-title">{{\'msd_long\' | loc:lang}}</h3>' +
                                     '<span ng-click="clickX()" class="close-x">×</span>' +
                                 '</div>' +
-                                '<div class="modal-body msd-modal" ng-click="msdClick($event)" ng-include="\'markup/msd.html\'"></div>' +
+                                '<div class="modal-body msd-modal" ng-click="msdClick($event)" ng-include="' + msdHTML + '"></div>' +
                             '</div>',
                 scope: $scope
             })
@@ -167,15 +93,12 @@ attrs.msd = {
         }
     }
 };
-/*
-*/
 
 attrs.baseform = {
     label: "baseform",
-    //type: "set",
-    //opts: setOptions,
-    opts :  settings.defaultOptions,
-    extendedTemplate: "<input ng-model='model' >",
+    type: "set",
+    opts: settings.defaultOptions,
+    extendedTemplate: "<input ng-model='input' escaper >",
     order: 1
 };
 attrs.lemgram = {
@@ -184,11 +107,11 @@ attrs.lemgram = {
     opts: setOptions,
     stringify: function(lemgram) {
         // TODO: what if we're getting more than one consequtive lemgram back?
-        return util.lemgramToString(_.str.trim(lemgram), true);
+        return util.lemgramToString(_.trim(lemgram), true);
     },
     //externalSearch: karpLemgramLink,
     internalSearch: true,
-    extendedTemplate: "<autoc model='model' placeholder='placeholder' type='lemgram' typeahead-close-callback='checkForError(valueSelected)'/>"
+    extendedTemplate: "<autoc model='model' placeholder='placeholder' type='lemgram' typeahead-close-callback='checkForError(valueSelected)' text-in-field='textInField'/>"
                         + "<span ng-if='valueError' style='color: red; position: relative; top: 3px; margin-left: 6px'>{{'choose_lemgram' | loc:lang}}</span>",
     extendedController: function($scope) {
         $scope.valueError = false;
@@ -199,6 +122,31 @@ attrs.lemgram = {
     },
     order: 2
 };
+attrs.dalinlemgram = {
+    label: "dalin-lemgram",
+    type: "set",
+    opts: setOptions,
+    stringify: function(lemgram) {
+        // TODO: what if we're getting more than one consequtive lemgram back?
+        return util.lemgramToString(_.trim(lemgram), true);
+    },
+    //externalSearch: karpLemgramLink,
+    internalSearch: true,
+    extendedTemplate: "<autoc model='model' placeholder='placeholder' type='lemgram' variant='dalin' text-in-field='textInField'/>",
+    order: 2
+};
+attrs.saldo = {
+    label: "saldo",
+    type: "set",
+    opts: setOptions,
+    stringify: function(saldo) {
+        return util.saldoToString(saldo, true);
+    },
+    //externalSearch: "https://spraakbanken.gu.se/karp/#?mode=DEFAULT&search=extended||and|sense|equals|<%= val %>",
+    internalSearch: true,
+    extendedTemplate: settings.senseAutoComplete,
+    order: 3
+};
 attrs.dephead = {
     label: "dephead",
     displayType: "hidden"
@@ -206,75 +154,97 @@ attrs.dephead = {
 attrs.deprel = {
     label: "deprel",
     translationKey: "deprel_",
-    extendedTemplate: selectType.extendedTemplate,
-    extendedController: selectType.extendedController,
-    dataset: {
-     	"→A"        : 	 "→A",
-     	"→ADVL"     : 	 "→ADVL",
-     	"→CC"       : 	 "→CC",
-     	"→N"        : 	 "→N",
-     	"→Num"      : 	 "→Num",
-     	"→P"        : 	 "→P",
-     	"→Pron"     : 	 "→Pron",
-     	"←ADVL"     : 	 "←ADVL",
-     	"←OBJ"      : 	 "←OBJ",
-     	"←OPRED"    : 	 "←OPRED",
-     	"←PPRED"    : 	 "←PPRED",
-     	"←SPRED"    : 	 "←SPRED",
-     	"←SUBJ"     : 	 "←SUBJ",
-     	"-F←ADVL"   : 	 "-F←ADVL",
-     	"-F←OBJ"    : 	 "-F←OBJ",
-     	"-F←OPRED"  : 	 "-F←OPRED",
-     	"-F←SUBJ"   : 	 "-F←SUBJ",
-     	"-FADVL→"   : 	 "-FADVL→",
-     	"-FOBJ→"    : 	 "-FOBJ→",
-     	"-FSUBJ→"   : 	 "-FSUBJ→",
-     	"A←"        : 	 "A←",
-     	"ADVL"      : 	 "ADVL",
-     	"ADVL→"     : 	 "ADVL→",
-     	"ADVL→CS"   : 	 "ADVL→CS",
-     	"ADVL←"     : 	 "ADVL←",
-     	"APP-ADVL←" : 	 "APP-ADVL←",
-     	"APP-N←"    : 	 "APP-N←",
-     	"APP-Pron←" : 	 "APP-Pron←",
-     	"CNP"       : 	 "CNP",
-     	"COMP-CS←"  : 	 "COMP-CS←",
-     	"CVP"       : 	 "CVP",
-     	"FAUX"      : 	 "FAUX",
-     	"FMV"       : 	 "FMV",
-     	"FMVdic"    : 	 "FMVdic",
-     	"FS-←ADVL"  : 	 "FS-←ADVL",
-     	"FS-←SUBJ"  : 	 "FS-←SUBJ",
-     	"FS-ADVL→"  : 	 "FS-ADVL→",
-     	"FS-IAUX"   : 	 "FS-IAUX",
-     	"FS-IMV"    : 	 "FS-IMV",
-     	"FS-N←"     : 	 "FS-N←",
-     	"FS-N←IAUX" : 	 "FS-N←IAUX",
-     	"FS-N←IMV"  : 	 "FS-N←IMV",
-     	"FS-OBJ"    : 	 "FS-OBJ",
-     	"FS-P←"     : 	 "FS-P←",
-     	"FS-VFIN←"  : 	 "FS-VFIN←",
-     	"HNOUN"     : 	 "HNOUN",
-     	"IAUX"      : 	 "IAUX",
-     	"ICL-OBJ"   : 	 "ICL-OBJ",
-     	"ICL-SUBJ"  : 	 "ICL-SUBJ",
-     	"IMV"       : 	 "IMV",
-     	"IMVdic"    : 	 "IMVdic",
-     	"INTERJ"    : 	 "INTERJ",
-     	"N←"        : 	 "N←",
-     	"Num←"      : 	 "Num←",
-     	"OBJ→"      : 	 "OBJ→",
-     	"OPRED→"    : 	 "OPRED→",
-     	"P←"        : 	 "P←",
-     	"PCLE"      : 	 "PCLE",
-     	"Pron←"     : 	 "Pron←",
-     	"S←"        : 	 "S←",
-     	"SPRED→"    : 	 "SPRED→",
-     	"SPRED←OBJ" : 	 "SPRED←OBJ",
-     	"SUBJ→"     : 	 "SUBJ→",
-     	"VOC"       : 	 "VOC",
-     	"X"         : 	 "X"
-    },
+    extendedComponent: "datasetSelect",
+    dataset : {
+  		"++" : "++",
+  		"+A" : "+A",
+  		"+F" : "+F",
+  		"AA" : "AA",
+  		"AG" : "AG",
+  		"AN" : "AN",
+  		"AT" : "AT",
+  		"CA" : "CA",
+  		"DB" : "DB",
+  		"DT" : "DT",
+  		"EF" : "EF",
+  		"EO" : "EO",
+  		"ES" : "ES",
+  		"ET" : "ET",
+  		"FO" : "FO",
+  		"FP" : "FP",
+  		"FS" : "FS",
+  		"FV" : "FV",
+  		"I?" : "I?",
+  		"IC" : "IC",
+  		"IG" : "IG",
+  		"IK" : "IK",
+  		"IM" : "IM",
+  		"IO" : "IO",
+  		"IP" : "IP",
+  		"IQ" : "IQ",
+  		"IR" : "IR",
+  		"IS" : "IS",
+  		"IT" : "IT",
+  		"IU" : "IU",
+  		"IV" : "IV",
+  		"JC" : "JC",
+  		"JG" : "JG",
+  		"JR" : "JR",
+  		"JT" : "JT",
+  		"KA" : "KA",
+  		"MA" : "MA",
+  		"MS" : "MS",
+  		"NA" : "NA",
+  		"OA" : "OA",
+  		"OO" : "OO",
+  		"OP" : "OP",
+  		"PL" : "PL",
+  		"PR" : "PR",
+  		"PT" : "PT",
+  		"RA" : "RA",
+  		"SP" : "SP",
+  		"SS" : "SS",
+  		"TA" : "TA",
+  		"TT" : "TT",
+  		"UK" : "UK",
+  		"VA" : "VA",
+  		"VO" : "VO",
+  		"VS" : "VS",
+  		"XA" : "XA",
+  		"XF" : "XF",
+  		"XT" : "XT",
+  		"XX" : "XX",
+  		"YY" : "YY",
+  		"CJ" : "CJ",
+  		"HD" : "HD",
+  		"IF" : "IF",
+  		"PA" : "PA",
+  		"UA" : "UA",
+  		"VG" : "VG",
+  		"+AV" : "+AV",
+  		"+MV" : "+MV",
+  		"+V" : "+V",
+  		"-AV" : "-AV",
+  		"-MV" : "-MV",
+  		"ADV" : "ADV",
+  		"APP" : "APP",
+  		"CMP" : "CMP",
+  		"CNP" : "CNP",
+  		"CVP" : "CVP",
+  		"FRG" : "FRG",
+  		"HAB" : "HAB",
+  		"INT" : "INT",
+  		"MOD" : "MOD",
+  		"OBJ" : "OBJ",
+  		"OPR" : "OPR",
+  		"PCL" : "PCL",
+  		"PPR" : "PPR",
+  		"SBJ" : "SBJ",
+  		"SPR" : "SPR",
+  		"VOC" : "VOC",
+  		"X" : "X",
+  		"_U_" : "_U_"
+  	},
     opts: liteOptions
 };
 attrs.prefix = {
@@ -286,7 +256,7 @@ attrs.prefix = {
     },
     //externalSearch: karpLemgramLink,
     internalSearch: true,
-    extendedTemplate: "<autoc model='model' placeholder='placeholder' type='lemgram' variant='affix'/>"
+    extendedTemplate: "<autoc model='model' placeholder='placeholder' type='lemgram' variant='affix' text-in-field='textInField'/>"
 };
 attrs.suffix = {
     label: "suffix",
@@ -297,7 +267,7 @@ attrs.suffix = {
     },
 //    externalSearch: karpLemgramLink,
     internalSearch: true,
-    extendedTemplate: "<autoc model='model' placeholder='placeholder' type='lemgram' variant='affix'/>"
+    extendedTemplate: "<autoc model='model' placeholder='placeholder' type='lemgram' variant='affix' text-in-field='textInField'/>"
 };
 attrs.ref = {
     label: "ref",
@@ -309,8 +279,7 @@ attrs.link = {
 attrs.ne_ex = {
     label: "ne_expr",
     translationKey: "ne_expr_",
-    extendedTemplate: selectType.extendedTemplate,
-    extendedController: selectType.extendedController,
+    extendedComponent: "datasetSelect",
     isStructAttr: true,
     dataset: [
        "ENAMEX",
@@ -321,8 +290,7 @@ attrs.ne_ex = {
 attrs.ne_type = {
     label: "ne_type",
     translationKey: "ne_type_",
-    extendedTemplate: selectType.extendedTemplate,
-    extendedController: selectType.extendedController,
+    extendedComponent: "datasetSelect",
     isStructAttr: true,
     dataset: [
        "LOC",
@@ -338,8 +306,7 @@ attrs.ne_type = {
 attrs.ne_subtype = {
     label: "ne_subtype",
     translationKey: "ne_subtype_",
-    extendedTemplate: selectType.extendedTemplate,
-    extendedController: selectType.extendedController,
+    extendedComponent: "datasetSelect",
     isStructAttr: true,
     dataset: [
         "AST",
@@ -413,17 +380,20 @@ sattrs.date = {
     label: "date"
 };
 
-var modernAttrs = {
+var modernAttrsOld = {
     pos: attrs.pos,
     msd: attrs.msd,
     lemma: attrs.baseform,
+    lex: attrs.lemgram,
+    saldo: attrs.saldo,
     dephead: attrs.dephead,
     deprel: attrs.deprel,
-    ref: attrs.ref
+    ref: attrs.ref,
+    prefix: attrs.prefix,
+    suffix: attrs.suffix
 };
 
-
-var modernAttrsNew = {
+var modernAttrs = {
     pos: attrs.pos,
     msd: attrs.msd,
     lemma: attrs.baseform,
@@ -476,9 +446,229 @@ var modernAttrsNew = {
         },
         stringify: function(sense) { return util.saldoToString(sense, true); },
         opts: probabilitySetOptions,
-        externalSearch: "https://spraakbanken.gu.se/karp/#?mode=DEFAULT&search=extended||and|sense|equals|<%= val %>",
+        //externalSearch: "https://spraakbanken.gu.se/karp/#?mode=DEFAULT&search=extended||and|sense|equals|<%= val %>",
         internalSearch: true,
         extendedTemplate: settings.senseAutoComplete
+    }
+};
+
+var modernAttrs2 = {
+    pos: attrs.pos,
+    msd: attrs.msd,
+    lemma: attrs.baseform,
+    lex: attrs.lemgram,
+    dephead: attrs.dephead,
+    deprel: attrs.deprel,
+    ref: attrs.ref,
+    prefix: attrs.prefix,
+    suffix: attrs.suffix,
+    ne_ex: attrs.ne_ex,
+    ne_type: attrs.ne_type,
+    ne_subtype: attrs.ne_subtype,
+    ne_name: attrs.ne_name,
+    complemgram: modernAttrs.complemgram,
+    compwf: modernAttrs.compwf,
+    sense: modernAttrs.sense,
+    sentiment: {
+        label: "sentiment"
+    },
+    blingbring: {
+        label: "blingbring",
+        type: "set",
+        internalSearch: true
+    },
+    swefn: {
+        label: "swefn",
+        type: "set",
+        //externalSearch: "https://spraakbanken.gu.se/karp/#?mode=swefn&search=sense%7C%7Cswefn--<%= val %>",
+        internalSearch: true
+    }
+};
+
+var lexClassesText = {
+    text_blingbring: {
+        label: "blingbring",
+        type: "set",
+        isStructAttr: true,
+        ranked: true,
+        order: 500,
+        display: {
+            expandList: {
+                internalSearch: function(key, value) { return "[_.text_blingbring highest_rank '" + regescape(value) + "']"},
+                linkAllValues: true,
+                showAll: true
+            }
+        },
+        internalSearch: true
+    },
+    text_swefn: {
+        label: "swefn",
+        type: "set",
+        isStructAttr: true,
+        ranked: true,
+        order: 501,
+        display: {
+            expandList: {
+                internalSearch: function(key, value) { return "[_.text_swefn highest_rank '" + regescape(value) + "']"},
+                linkAllValues: true,
+                showAll: true
+            }
+        },
+        //externalSearch: "https://spraakbanken.gu.se/karp/#?mode=swefn&search=sense%7C%7Cswefn--<%= val %>",
+        internalSearch: true
+    }
+};
+
+var readability = {
+    lix: {
+        label: "lix",
+        isStructAttr: true,
+        order: 600
+    },
+    ovix: {
+        label: "ovix",
+        isStructAttr: true,
+        order: 601
+    },
+    nk: {
+        label: "nk",
+        isStructAttr: true,
+        order: 602
+    }
+};
+
+settings.posset = {
+   type : "set",
+   label : "pos",
+   displayType : "select",
+   translationKey : "pos_",
+   dataset :  {
+	"N" : "N",
+	"V" : "V",
+	"CLB" : "CLB",
+	"Pron" : "Pron",
+	"Adv" : "Adv",
+	"A" : "A",
+	"CC" : "CC",
+	"CS" : "CS",
+	"Pcle" : "Pcle",
+	"Num" : "Num",
+	"Po" : "Po",
+	"Pr" : "Pr",
+	"Interj" : "Interj",
+	"PUNCT" : "PUNCT"
+			}
+};
+
+settings.fsvlemma = {
+    type: "set",
+    label: "baseform",
+    opts: setOptions,
+    extendedTemplate: "<input ng-model='model' >"
+};
+settings.fsvlex = {
+    type: "set",
+    label: "lemgram",
+    opts: setOptions,
+    extendedTemplate: "<autoc model='model' placeholder='placeholder' type='lemgram' text-in-field='textInField'/>",
+    stringify: function(str) {
+        return util.lemgramToString(str, true);
+    },
+    //externalSearch: karpLemgramLink,
+    internalSearch: true
+};
+settings.fsvvariants = {
+    type: "set",
+    label: "variants",
+    stringify: function(str) {
+        return util.lemgramToString(str, true);
+    },
+    extendedTemplate: "<autoc model='model' placeholder='placeholder' type='lemgram' text-in-field='textInField'/>",
+    opts: setOptions,
+    //externalSearch: karpLemgramLink,
+    internalSearch: true,
+    order: 4
+};
+
+settings.fsvdescription ='<a target="_blank" href="http://project2.sol.lu.se/fornsvenska/">Fornsvenska textbanken</a> är ett projekt som digitaliserar fornsvenska texter och gör dem tillgängliga över webben. Projektet leds av Lars-Olof Delsing vid Lunds universitet.';
+
+var fsv_yngrelagar = {
+    morphology: 'fsvm',
+    id: "fsv-yngrelagar",
+    title: "Yngre lagar – Fornsvenska textbankens material",
+    description: settings.fsvdescription,
+    within: settings.defaultWithin,
+    context: spContext,
+    attributes: {
+        posset: settings.posset,
+        lemma: settings.fsvlemma,
+        lex: settings.fsvlex,
+        variants: settings.fsvvariants
+        },
+    structAttributes: {
+        text_title: {
+            label: "title",
+            extendedComponent: "datasetSelect",
+            dataset: [
+                "Kristoffers Landslag, nyskrivna flockar i förhållande till MEL",
+                "Kristoffers Landslag, innehållsligt ändrade flockar i förhållande til MEL",
+                "Kristoffers Landslag, flockar direkt hämtade från MEL",
+                "Kristoffers Landslag"
+                ],
+        },
+        text_date: {label: "date"}
+    }
+};
+
+var fsv_aldrelagar = {
+    morphology: 'fsvm',
+    id: "fsv-aldrelagar",
+    title: "Äldre lagar – Fornsvenska textbankens material",
+    description: settings.fsvdescription,
+    within: settings.defaultWithin,
+    context: spContext,
+    attributes: {
+        posset: settings.posset,
+        lemma: settings.fsvlemma,
+        lex: settings.fsvlex,
+        variants: settings.fsvvariants
+                },
+    structAttributes: {
+        text_title: {
+            label: "title",
+            extendedComponent: "datasetSelect",
+            dataset: [
+                "Yngre Västgötalagens äldsta fragment, Lydekini excerpter och anteckningar",
+                "Tillägg till Upplandslagen, hskr A (Ups B 12)",
+                "Södermannalagen, enligt Codex iuris Sudermannici",
+                "Östgötalagen, fragment H, ur Kyrkobalken ur Skokloster Avdl I 145",
+                "Yngre Västmannalagen, enl Holm B 57",
+                "Vidhemsprästens anteckningar",
+                "Magnus Erikssons Stadslag, exklusiva stadslagsflockar",
+                "Södermannalagens additamenta, efter NKS 2237",
+                "Hälsingelagen",
+                "Yngre Västgötalagen, tillägg, enligt Holm B 58",
+                "Östgötalagen, fragment C, ur Holm B 1709",
+                "Yngre Västgötalagen, enligt Holm B 58",
+                "Upplandslagen enl Schlyters utgåva och Codex Ups C 12, hskr A",
+                "Skånelagen, enligt Holm B 76",
+                "Östgötalagen, fragment D, ur Holm B 24",
+                "Östgötalagen A, ur Holm B 50",
+                "Äldre Västgötalagen",
+                "Östgötalagen, fragment M, ur Holm B 196",
+                "Gutalagen enligt Holm B 64",
+                "Upplandslagen enligt Codex Holm B 199, Schlyters hskr B",
+                "Smålandslagens kyrkobalk",
+                "Dalalagen (Äldre Västmannalagen)",
+                "Gutalagens additamenta enligt AM 54",
+                "Bjärköarätten",
+                "Magnus Erikssons Landslag",
+                "Östgötalagen, fragment N, ur Köpenhamn AM 1056",
+                "Södermannalagen stadsfästelse - Confirmatio, enligt NKS 2237",
+                "Östgötalagen, fragment E, ur Ups B 22"
+                            ],
+        },
+        text_date: {label: "date"}
     }
 };
 
@@ -500,7 +690,7 @@ settings.commonStructTypes = {
                     var from, moments, ref, ref1, to;
                     moments = cl.getMomentInterval();
                     if (moments.length) {
-                        return ref = _.invoke(moments, "toDate"), s.minDate = ref[0], s.maxDate = ref[1], ref;
+                        return ref = _.invokeMap(moments, "toDate"), s.minDate = ref[0], s.maxDate = ref[1], ref;
                     } else {
                         ref1 = cl.getTimeInterval(), from = ref1[0], to = ref1[1];
                         s.minDate = moment(from.toString(), "YYYY").toDate();
@@ -530,7 +720,7 @@ settings.commonStructTypes = {
                 if (!s.model) {
                     s.from_date = s.minDate;
                     s.to_date = s.maxDate;
-                    ref = _.invoke(cl.getMomentInterval(), "toDate"), s.from_time = ref[0], s.to_time = ref[1];
+                    ref = _.invokeMap(cl.getMomentInterval(), "toDate"), s.from_time = ref[0], s.to_time = ref[1];
                 } else if (s.model.length === 4) {
                     ref1 = _.map(s.model.slice(0, 3), getYear), s.from_date = ref1[0], s.to_date = ref1[1];
                     ref2 = _.map(s.model.slice(2), getTime), s.from_time = ref2[0], s.to_time = ref2[1];
@@ -544,3 +734,22 @@ settings.commonStructTypes = {
         ]
     }
 };
+
+/*I
+module.exports = {
+  spWithin,
+  spContext,
+  modernAttrs,
+  modernAttrs2,
+  defaultContext,
+  attrs,
+  sattrs,
+  modernAttrsOld,
+  setOptions,
+  liteOptions,
+  lexClassesText,
+  readability,
+  fsv_aldrelagar,
+  fsv_yngrelagar
+}
+*/
