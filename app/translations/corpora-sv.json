@@ -16,11 +16,12 @@
     "day" : "dag",
     "party" : "parti",
     "path" : "path",
+    "url" : "URL",
 
     "translated_from" : "översatt från",
     "domain" : "domän",
-    "autor_first_name" : "author's first name",
-    "autor_last_name" : "author's last name",
+    "autor_first_name" : "autor's first name",
+    "autor_last_name" : "autor's last name",
     
     "year_from" : "startår",
     "year_to" : "slutår",
@@ -64,6 +65,7 @@
     "text_path" : "path",
     "text_year" : "år",
     "text_party" : "parti",
+    "text_url" : "URL",
     "date" : "datum",
     "author" : "författare",
     "title" : "titel",
@@ -101,6 +103,7 @@
     "post_url" : "inläggsadress",
     
     "page" : "sida",
+    "page_number" : "page number",
     "author_type" : "författartyp",
     "gender" : "kön",
     "journalist" : "journalist",
