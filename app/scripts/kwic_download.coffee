@@ -77,7 +77,6 @@ korpApp.factory "kwicDownload", () ->
         res = []
         for row in data
             if row.tokens
-
                 leftContext = []
                 if row.match
                   for token in row.tokens.slice 0, row.match.start
@@ -98,9 +97,13 @@ korpApp.factory "kwicDownload", () ->
                           structs.push row.structs[attrName]
                       else
                           structs.push ""
+                else
+                  rightContext = []
+                  for token in row.tokens
+                      rightContext.push token.word
 
-                  newRow = [corpus, row.match.position, leftContext.join(" "), match.join(" "), rightContext.join(" ")].concat structs
-                  res.push newRow
+                newRow = [corpus,  leftContext.join(" "), match.join(" "), rightContext.join(" ")].concat structs
+                res.push newRow
             else if row.newCorpus
                 corpus = row.newCorpus
 
