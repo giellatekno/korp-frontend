@@ -47,7 +47,7 @@ korpApp.factory "kwicDownload", () ->
         headers = _.filter(_.keys(data[1].tokens[0]),(val) -> val.indexOf("_") isnt 0 and val isnt "structs" and val isnt "$$hashKey" and val isnt "position")
         columnCount = headers.length + 1
         res = padRows searchInfo, columnCount
-        res.push ["match"].concat headers 
+        res.push ["match"].concat headers
         for row in data
             if row.tokens
                 textAttributes = []
@@ -57,7 +57,7 @@ korpApp.factory "kwicDownload", () ->
                 hitInfo = emptyRow columnCount
                 hitInfo[0] = "# " + corpus + "; text attributes: " + textAttributes.join(", ")
                 res.push hitInfo
-                
+
                 for token in row.tokens or []
                     if (token.position >= row.match.start) and (token.position < row.match.end)
                         match = "***"
@@ -69,7 +69,7 @@ korpApp.factory "kwicDownload", () ->
                     res.push newRow
             else if row.newCorpus
                 corpus = row.newCorpus
-        
+
         return res
 
     transformDataToKWIC = (data, searchInfo) ->
@@ -79,27 +79,28 @@ korpApp.factory "kwicDownload", () ->
             if row.tokens
 
                 leftContext = []
-                for token in row.tokens.slice 0, row.match.start
-                    leftContext.push token.word
-                match = []
-                for token in row.tokens.slice row.match.start, row.match.end
-                    match.push token.word
-                rightContext = []
-                for token in row.tokens.slice row.match.end, row.tokens.length
-                    rightContext.push token.word
-                
-                structs = []
-                for attrName  of row.structs
-                    if attrName not in structHeaders
-                        structHeaders.push attrName
-                for attrName in structHeaders
-                    if attrName of row.structs
-                        structs.push row.structs[attrName]
-                    else
-                        structs.push ""
+                if row.match
+                  for token in row.tokens.slice 0, row.match.start
+                      leftContext.push token.word
+                  match = []
+                  for token in row.tokens.slice row.match.start, row.match.end
+                      match.push token.word
+                  rightContext = []
+                  for token in row.tokens.slice row.match.end, row.tokens.length
+                      rightContext.push token.word
 
-                newRow = [corpus, row.match.position, leftContext.join(" "), match.join(" "), rightContext.join(" ")].concat structs
-                res.push newRow
+                  structs = []
+                  for attrName  of row.structs
+                      if attrName not in structHeaders
+                          structHeaders.push attrName
+                  for attrName in structHeaders
+                      if attrName of row.structs
+                          structs.push row.structs[attrName]
+                      else
+                          structs.push ""
+
+                  newRow = [corpus, row.match.position, leftContext.join(" "), match.join(" "), rightContext.join(" ")].concat structs
+                  res.push newRow
             else if row.newCorpus
                 corpus = row.newCorpus
 
@@ -118,13 +119,13 @@ korpApp.factory "kwicDownload", () ->
             return transformDataToAnnotations data, searchInfo
         if dataType == "kwic"
             return transformDataToKWIC data, searchInfo
-    
+
     makeContent = (fileType, transformedData) ->
         if fileType == "csv"
             dataDelimiter = ","
         if fileType == "tsv"
             dataDelimiter = "	"
-        
+
         csv = new CSV(transformedData, {
             delimiter: dataDelimiter
         })
