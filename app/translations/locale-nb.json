@@ -72,6 +72,7 @@
 	"wordclass_starts" : "ordklassen begynner med",
 	"interval" : "intervall",
 	"matches" : "regex",
+	"matches_not" : "ikke regulært uttrykk",
 
 	"repeat" : "Gjenta",
 	"to" : "til",

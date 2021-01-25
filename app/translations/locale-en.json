@@ -72,6 +72,7 @@
 	"wordclass_starts" : "word class begins with",
 	"interval" : "interval",
 	"matches" : "regexp",
+	"matches_not" : "not regexp",
 
 	"repeat" : "Repeat",
 	"to" : "to",

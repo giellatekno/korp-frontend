@@ -1,4 +1,4 @@
-{   
+{
     "saldo" : "sense",
     "pos" : "part-of-speech",
     "msd" : "grammatical analysis",
@@ -19,14 +19,14 @@
     "url" : "URL",
 
 
-    "translated from" : "translated from",
+    "translated_from" : "translated from",
     "domain" : "domain",
-    
+
     "year_from" : "starting year",
     "year_to" : "ending year",
-    
+
     "referensnummer" : "reference number",
-    
+
     "weekday" : "weekday",
 	"hashtags" : "hashtags",
 	"mentions" : "mentions",
@@ -44,12 +44,12 @@
 	"description" : "description",
 	"tweets" : "tweets",
 	"website" : "website",
-	
+
 	"id" : "id",
-	
+
 	"imprintyear" : "imprint year",
 	"pagelink" : "page link",
-	
+
     "tisus_l1" : "native language",
     "tisus_lf1" : "reading comprehension, part 1",
     "tisus_lf2" : "reading comprehension, part 2",
@@ -59,7 +59,7 @@
     "education" : "education",
     "finalgrade" : "final grade",
     "sum" : "sum",
-    
+
     "text_orig_lang" : "translated from",
     "text_gt_domain" : "domain",
     "text_year" : "year",
@@ -82,18 +82,18 @@
     "article_topic" : "article topic",
     "text_volume" : "volume",
     "subject" : "subject",
-    
+
     "sentence_link" : "sentence link",
     "text_issue" : "issue",
-    
+
     "text_recipient" : "recipient",
     "text_sv" : "work number",
-    
+
     "oneSentence" : "one sentence",
-    
+
     "source" : "source",
     "age" : "age",
-    
+
     "blog_title" : "blog title",
     "blog_url" : "blog address",
     "author_age" : "author age",
@@ -101,7 +101,7 @@
     "post_title" : "post title",
     "tags" : "tags",
     "post_url" : "post address",
-    
+
     "page" : "page",
     "page_number" : "page number",
     "author_type" : "author type",
@@ -112,7 +112,7 @@
     "female" : "female",
     "unknown" : "unknown",
     "male_female" : "both",
-    
+
     "entryword" : "entry word",
     "entryno" : "entry word (number)",
     "sense1" : "sense 1",
@@ -124,7 +124,7 @@
     "pos_CC": "conjunction",
     "pos_CLB": "punctuation at the end of a sentence",
     "pos_CS": "subjunction",
-    "pos_Interj" : "interjection", 
+    "pos_Interj" : "interjection",
     "pos_N": "noun",
     "pos_N*": "nominal derivation",
     "pos_Num": "numeral",
@@ -136,12 +136,12 @@
     "pos_V": "verb",
     "pos_V*": "verbal derivation",
 
-    "mx" : "flerordsprefix",      
-    "sx" : "prefix",                        
+    "mx" : "flerordsprefix",
+    "sx" : "prefix",
     "page_num" : "page number",
         "year_to"  : "date (to)",
         "year_from"  : "date (from)",
-        
+
     "example" : "Example",
 
     "malt_AT" : "Pre-modifier",
@@ -156,7 +156,7 @@
     "malt_ADV" : "Adverbial",
     "malt_PA" : "Preposition",
     "malt_head" : "Head",
-    
+
     "deprel_ROOT" : "ROOT",
     "deprel_++" : "Coordinating conjunction",
     "deprel_+A" : "Conjunctional adverbial",
@@ -249,7 +249,7 @@
 
     "INFINIT" : "Non-finite verb",
     "FINIT" : "Finite verb",
-    
+
     "origlang" : "original language",
     "page_n" : "page number",
     "paragraph_marginal" : "margin notes",
@@ -258,7 +258,7 @@
     "dalin:baseform" : "dalin:baseform",
     "saldo:lemgram" : "saldo:lemgram",
     "dalin:lemgram" : "dalin:lemgram",
-    
+
     "variants" : "similar lemgram",
 
     "typography" : "typographic information",
@@ -269,7 +269,7 @@
     "fab_headline" : "header",
     "fab_smallcaps" : "small caps",
     "fab_italic" : "italics",
-    
+
      "sst_koncept" : "Stockholms stads tänkebok - Koncept",
      "sst_notariat" : "Stockholms stads tänkebok - Notariat",
      "sst_renskr" : "Stockholms stads tänkebok - Renskr",
@@ -294,14 +294,14 @@
      "krLnyskrivna" : "Kristoffers Landslag, nyskrivna flockar i förhållande till MEL",
      "meL": "Magnus Erikssons Landslag",
      "meSt": "Magnus Erikssons Stadslag, exklusiva stadslagsflockar",
-     
+
     "activity1": "activity 1",
     "activity2": "activity 2",
     "activity3": "activity 3",
     "duration": "duration",
     "project": "project",
     "speaker": "speaker",
-    
+
     "verk" : "book location"
-			
+
 }

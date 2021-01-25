@@ -78,6 +78,7 @@
 	"wordclass_starts" : "ordklassen börjar med",
 	"interval" : "intervall",
 	"matches" : "regexp",
+	"matches_not" : "inte regexp",
 
 	"repeat" : "Upprepa",
 	"to" : "till",

@@ -73,7 +73,8 @@
 	"wordclass_is" : "sátneluohkká lea",
 	"wordclass_starts" : "sátneluohká álgu lea",
 	"interval" : "intervall",
-	"matches" : "regexp",
+	"matches" : "virolaš cealkka",
+	"matches_not" : "ii virolaš cealkka",
 
 	"repeat" : "Gearddut",
 	"to" : "gitta",
