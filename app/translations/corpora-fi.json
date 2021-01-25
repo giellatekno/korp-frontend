@@ -1,4 +1,4 @@
-{   
+{
     "saldo" : "sense",
     "pos" : "sanaluokka",
     "msd" : "morfologinen analyysi",
@@ -24,13 +24,13 @@
     "domain" : "domeeni",
     "autor_first_name" : "kirjailijan etunimi",
     "autor_last_name" : "kirjailijan sukunimi",
-    
+
     "year_from" : "alkaen vuodesta",
     "year_to" : "päättyen vuoteen",
-    
+
     "url" : "url",
     "referensnummer" : "viitenumero",
-    
+
     "weekday" : "viikonpäivä",
 	"hashtags" : "hashtags",
 	"mentions" : "mainninnat",
@@ -48,12 +48,12 @@
 	"description" : "kuvaus",
 	"tweets" : "twiitit",
 	"website" : "nettisivu",
-	
+
 	"id" : "id",
-	
+
 	"imprintyear" : "imprint year",
 	"pagelink" : "sivulinkki",
-	
+
     "tisus_l1" : "äidinkieli",
     "tisus_lf1" : "reading comprehension, part 1",
     "tisus_lf2" : "reading comprehension, part 2",
@@ -63,7 +63,7 @@
     "education" : "education",
     "finalgrade" : "final grade",
     "sum" : "sum",
-    
+
     "text_path" : "path",
     "text_year" : "vuosi",
     "text_party" : "party",
@@ -85,18 +85,18 @@
     "article_topic" : "artikkelin aihe",
     "text_volume" : "nide",
     "subject" : "aihe",
-    
+
     "sentence_link" : "sentence link",
     "text_issue" : "issue",
-    
+
     "text_recipient" : "recipient",
     "text_sv" : "work number",
-    
+
     "oneSentence" : "one sentence",
-    
+
     "source" : "source",
     "age" : "age",
-    
+
     "blog_title" : "blog title",
     "blog_url" : "blog address",
     "author_age" : "author age",
@@ -104,7 +104,7 @@
     "post_title" : "post title",
     "tags" : "tags",
     "post_url" : "post address",
-    
+
     "page" : "page",
     "page_number" : "page number",
     "author_type" : "author type",
@@ -115,7 +115,7 @@
     "female" : "female",
     "unknown" : "unknown",
     "male_female" : "both",
-    
+
     "entryword" : "entry word",
     "entryno" : "entry word (number)",
     "sense1" : "sense 1",
@@ -128,7 +128,7 @@
     "pos_CC": "konjunktio",
     "pos_CLB": "punctuation at the end of a sentence",
     "pos_CS": "subjunktio",
-    "pos_Interj" : "interjektio", 
+    "pos_Interj" : "interjektio",
     "pos_N": "substantiivi",
     "pos_N*": "substantiivijohdos",
     "pos_Num": "lukusana",
@@ -141,12 +141,12 @@
     "pos_V*": "verbijohdos",
     "pos___UNDEF__": "määrittelemätön",
 
-    "mx" : "flerordsprefix",      
-    "sx" : "prefix",                        
+    "mx" : "flerordsprefix",
+    "sx" : "prefix",
     "page_num" : "page number",
     "year_to"  : "date (to)",
     "year_from"  : "date (from)",
-        
+
     "example" : "Example",
 
     "malt_AT" : "Pre-modifier",
@@ -161,7 +161,7 @@
     "malt_ADV" : "Adverbial",
     "malt_PA" : "Preposition",
     "malt_head" : "Head",
-    
+
     "deprel_ROOT" : "ROOT",
     "deprel_++" : "Coordinating conjunction",
     "deprel_+A" : "Conjunctional adverbial",
@@ -254,7 +254,7 @@
 
     "INFINIT" : "Ei-finiittinen verbi",
     "FINIT" : "Finiittinen verb",
-    
+
     "origlang" : "original language",
     "page_n" : "page number",
     "paragraph_marginal" : "margin notes",
@@ -263,7 +263,7 @@
     "dalin:baseform" : "dalin:baseform",
     "saldo:lemgram" : "saldo:lemgram",
     "dalin:lemgram" : "dalin:lemgram",
-    
+
     "variants" : "similar lemgram",
 
     "typography" : "typographic information",
@@ -274,7 +274,7 @@
     "fab_headline" : "header",
     "fab_smallcaps" : "small caps",
     "fab_italic" : "italics",
-    
+
      "sst_koncept" : "Stockholms stads tänkebok - Koncept",
      "sst_notariat" : "Stockholms stads tänkebok - Notariat",
      "sst_renskr" : "Stockholms stads tänkebok - Renskr",
@@ -299,14 +299,80 @@
      "krLnyskrivna" : "Kristoffers Landslag, nyskrivna flockar i förhållande till MEL",
      "meL": "Magnus Erikssons Landslag",
      "meSt": "Magnus Erikssons Stadslag, exklusiva stadslagsflockar",
-     
+
     "activity1": "activity 1",
     "activity2": "activity 2",
     "activity3": "activity 3",
     "duration": "duration",
     "project": "project",
     "speaker": "speaker",
-    
-    "verk" : "book location"
-			
+
+    "verk" : "book location",
+
+    "deprel_if_-F←ADVL" : "verbaalin ulkopuolella olevan verbin modifioiva oikeapuolinen adverbiaali",
+    "deprel_if_-F←OBJ" : "verbaalin ulkopuolella olevan verbin modifioiva oikeapuolinen objekti",
+    "deprel_if_-F←OPRED" : "verbaalin ulkopuolella olevan verbin modifioiva oikeapuolinen objektipredikatiivi",
+    "deprel_if_-FADVL→" : "verbaalin ulkopuolella olevan verbin modifioiva vasenpuolinen adverbiaali",
+    "deprel_if_-FOBJ→" : "verbaalin ulopuolella olevan infiniittisen verbin vasemmanpuoleinen objekti",
+    "deprel_if_-FSUBJ→" : "verbaalin ulopuolella olevan infiniittisen verbin vasemmanpuoleinen subjekti",
+    "deprel_if_←ADVL" : "oikeapuolinen adverbiaali",
+    "deprel_if_←OBJ" : "oikeapuolinen objekti",
+    "deprel_if_←OPRED" : "oikeapuolinen objektipredikatiivi",
+    "deprel_if_←PPRED" : "oikeapuolinen predikatiivin predikatiivi",
+    "deprel_if_←SPRED" : "oikeapuolinen subjektipredikatiivi",
+    "deprel_if_←SUBJ" : "oikeapuolinen subjekti",
+    "deprel_if_→A" : "oikeanpuolisen adjektiivin modifioija",
+    "deprel_if_→ADVL" : "oikeanpuolisen adverbiaalinin täydennys",
+    "deprel_if_→N" : "oikeanpuolisen substantiivin täydennys",
+    "deprel_if_→Num" : "numeraalin oikeanpuolinen täydennys",
+    "deprel_if_→P" : "postposition oikeanpuolinen täydennys",
+    "deprel_if_→Pron" : "pronominin vasemmanpuolinen täydennys",
+    "deprel_if_A←" : "oikeanpuolinen adjektiivin täydennys",
+    "deprel_if_ADVL" : "adverbiaali",
+    "deprel_if_ADVL←" : "oikeanpuolinen adverbiaalin täydennys",
+    "deprel_if_ADVL→" : "vasemmanpuoleinen adverbiaali",
+    "deprel_if_ADVL→CS" : "subjunktiota modifioiva adverbiaali",
+    "deprel_if_APP-ADVL←" : "adverbiaalin appositio",
+    "deprel_if_APP-N←" : "substantiivin appositio",
+    "deprel_if_APP-Pron←" : "pronominin appositio",
+    "deprel_if_CNP" : "paikallinen konkunktionaali",
+    "deprel_if_COMP-CS←" : "subjunktion komplementti",
+    "deprel_if_CVP" : "verbifraaseja sitova konjunktionaali",
+    "deprel_if_HNOUN" : "lausefragmentin substantiivipääsana",
+    "deprel_if_INTERJ" : "interjektio",
+    "deprel_if_N←" : "substantiivin komplementti",
+    "deprel_if_Num←" : "numeraalin komplementti",
+    "deprel_if_OBJ→" : "vasemmalla puolella oleva objekti",
+    "deprel_if_OPRED→" : "vasemmanpuolinen objektipredikatiivi",
+    "deprel_if_P←" : "preposition täydennys",
+    "deprel_if_PCLE" : "partikkeli",
+    "deprel_if_Pron←" : "pronominin oikeanpuolinen komplementti",
+    "deprel_if_SPRED→" : "vasemmanpuolinen subjektipredikatiivi",
+    "deprel_if_SUBJ→" : "vasemmanpuolinen subjekti",
+    "deprel_if_VOC" : "vokatiivi",
+    "deprel_if_X" : "tuntematon",
+    "deprel_if_-F←SUBJ" : "predikaatin vasemmalla puolella oleva subjekti",
+    "deprel_if_→CC" : "konjunktionaalin vasemmanpuolinen täydennys",
+    "deprel_if_FAUX" : "finiittinen apuverbi",
+    "deprel_if_FMV" : "finiittinen pääverbi",
+    "deprel_if_FMVdic" : "suoraa puhetta esittelevä finiittinen pääverbi",
+    "deprel_if_FS-←ADVL" : "päälauseen oikealla puolella oleva ja adverbiaalina toimiva finiittinen verbi",
+    "deprel_if_FS-←SUBJ" : "oikealla puolella oleva subjektina toimiva finiittinen verbi sivulauseessa",
+    "deprel_if_FS-ADVL→" : "adverbiaalina toimiva sivulauseen finiittiverbi",
+    "deprel_if_FS-IAUX" : "sivulauseen infiniittinen apuverbi",
+    "deprel_if_FS-IMV" : "sivulauseen infiniittinen pääverbi",
+    "deprel_if_FS-N←" : "relatiivilauseen finiittinen pääverbi",
+    "deprel_if_FS-N←IAUX" : "relatiivilauseen infiniittinen pääverbi",
+    "deprel_if_FS-N←IMV" : "relatiivisen sivulauseen infiniittinen pääverbi",
+    "deprel_if_FS-OBJ" : "relatiivisen sivulauseen finiittinen pääverbi",
+    "deprel_if_FS-P←" : "preposition täydennyksenä toimiva sivulauseen finiittinen pääverbi",
+    "deprel_if_FS-VFIN←" : "oikeanpuolisen rinnakkaisen päälauseen finiittinen verbi",
+    "deprel_if_IAUX" : "infiniittinen apuverbi",
+    "deprel_if_ICL-OBJ" : "objektina toimiva infinitiivi",
+    "deprel_if_ICL-SUBJ" : "subjektina toimiva infinitiivi",
+    "deprel_if_IMV" : "infiniittinen pääverbi",
+    "deprel_if_IMVdic" : "suoraa puhetta esittävä infiniittinen pääverbi",
+    "deprel_if_S←" : "rinnakkaisen päälauseen finiittinen verbi",
+    "deprel_if_SPRED←OBJ" : "elliptisen lauseen objekti"
+
 }
