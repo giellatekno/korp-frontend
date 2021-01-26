@@ -2,6 +2,35 @@ settings.senseAutoComplete = "<autoc model='model' placeholder='placeholder' typ
 
 //var karpLemgramLink = "https://spraakbanken.gu.se/karp/#?mode=DEFAULT&search=extended||and|lemgram|equals|<%= val.replace(/:\\d+/, '') %>";
 
+var selectType = {
+    extendedTemplate: "<select ng-model='input' escaper "
+     + "ng-options='tuple[0] as localize(tuple[1]) for tuple in dataset' ></select>",
+    extendedController: function($scope) {
+        $scope.localize = function(str) {
+            if($scope.localize === false) {
+                return str;
+            } else {
+                return util.getLocaleString( ($scope.translationKey || "") + str);
+            }
+        }
+
+        $scope.translationKey = $scope.translationKey || "";
+        var dataset;
+        if(_.isArray($scope.dataset)) {
+            // convert array datasets into objects
+            dataset = _.object(_.map($scope.dataset, function(item) {
+                return [item, item];
+            }));
+        }
+        $scope.dataset = dataset || $scope.dataset;
+
+        $scope.dataset = _.sortBy(_.pairs($scope.dataset), function(tuple) {
+            return $scope.localize(tuple[1]);
+        });
+        $scope.model = $scope.model || $scope.dataset[0][0]
+    }
+};
+
 var liteOptions = {
     "is": "=",
     "is_not": "!=",
@@ -35,26 +64,36 @@ var attrs = {};  // positional attributes
 var sattrs = {}; // structural attributes
 
 attrs.pos = {
-	label : "pos",
-	displayType : "select",
-	translationKey : "pos_",
-	dataset : {
-		"N" : "N",
-		"V" : "V",
-		"CLB" : "CLB",
-		"Pron" : "Pron",
-		"Adv" : "Adv",
-		"A" : "A",
-		"CC" : "CC",
-		"CS" : "CS",
-		"Pcle" : "Pcle",
-		"Num" : "Num",
-		"Po" : "Po",
-		"Pr" : "Pr",
-		"Interj" : "Interj",
-		"PUNCT" : "PUNCT"
-	},
-	opts : settings.liteOptions
+    label: "pos",
+    displayType : "select",
+    translationKey: "pos_",
+    dataset: {
+        "A" : "A",
+        "N" : "N",
+        "V" : "V",
+        "Adv" : "Adv",
+        "Po" : "Po",
+        "Pr" : "Pr",
+        "Pron" : "Pron",
+        "Det" : "Det",
+        "Num" : "Num",
+        "Cmp_SplitR" : "Cmp_SplitR",
+        "Cmp_Sh" : "Cmp_Sh",
+        "CmpNP_First" : "CmpNP_First",
+        "CmpNP_None" : "CmpNP_None",
+        "Cmp_SgNom" : "Cmp_SgNom",
+        "Pcle" : "Pcle",
+        "PUNCT" : "PUNCT",
+        "CC" : "CC",
+        "Interj" : "Interj",
+        "CS" : "CS",
+        "CLB" : "CLB",
+        "___" : "___"
+    },
+    opts: liteOptions,
+    extendedTemplate: selectType.extendedTemplate,
+    extendedController: selectType.extendedController,
+    order: 0
 };
 
 
