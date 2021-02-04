@@ -72,7 +72,7 @@ class BaseProxy
         if not @total? and struct.progress_corpora?.length
             tmp = $.map struct["progress_corpora"], (corpus) ->
                 return if not corpus.length
-                
+
                 _(corpus.split("|")).map((corpus) ->
                     parseInt settings.corpora[corpus.toLowerCase()].info.Size
                 ).reduce((a, b) ->
@@ -280,7 +280,7 @@ class model.NameProxy extends BaseProxy
     makeRequest: (cqp, callback) ->
         self = this
         super()
-        
+
         posTags = for posTag in settings.mapPosTag
             "pos='#{posTag}'"
 
@@ -291,7 +291,7 @@ class model.NameProxy extends BaseProxy
             corpus: settings.corpusListing.stringifySelected(true)
             incremental: true
         _.extend parameters, settings.corpusListing.getWithinParameters()
-        
+
         def = $.Deferred()
         @pendingRequests.push $.ajax
             url: settings.korpBackendURL + "/count"
@@ -368,7 +368,7 @@ class model.TimeProxy extends BaseProxy
             type: "GET"
             data:
                 granularity: "y"
-                corpus: settings.corpusListing.stringifyAll()
+                corpus: settings.corpusListing.stringifyAll()+","
 
         xhr.done (data, status, xhr) =>
             c.log "timespan done", data
