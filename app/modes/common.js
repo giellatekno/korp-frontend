@@ -643,7 +643,7 @@ settings.commonStructTypes = {
         hideCompare: "true",
         hideStatistics: "true",
         opts: false,
-        extendedTemplate: '<div class="date_interval_arg_type"> <div class="section"> <button class="btn btn-default btn-sm" popper no-close-on-click my="left top" at="right top"> <i class="fa fa-calendar"></i> Från </button> {{combined.format("YYYY-MM-DD HH:mm")}} <time-interval ng-click="from_click($event)" class="date_interval popper_menu dropdown-menu" date-model="from_date" time-model="from_time" model="combined" min-date="minDate" max-date="maxDate"> </time-interval> </div> <div class="section"> <button class="btn btn-default btn-sm" popper no-close-on-click my="left top" at="right top"> <i class="fa fa-calendar"></i> Till </button> {{combined2.format("YYYY-MM-DD HH:mm")}} <time-interval ng-click="from_click($event)" class="date_interval popper_menu dropdown-menu" date-model="to_date" time-model="to_time" model="combined2" my="left top" at="right top" min-date="minDate" max-date="maxDate"> </time-interval> </div> </div>',
+        extendedTemplate: '<div class="date_interval_arg_type"> <div class="section"> <button class="btn btn-default btn-sm" popper no-close-on-click my="left top" at="right top"> <i class="fa fa-calendar"></i> From </button> {{combined.format("YYYY-MM-DD HH:mm")}} <time-interval ng-click="from_click($event)" class="date_interval popper_menu dropdown-menu" date-model="from_date" time-model="from_time" model="combined" min-date="minDate" max-date="maxDate"> </time-interval> </div> <div class="section"> <button class="btn btn-default btn-sm" popper no-close-on-click my="left top" at="right top"> <i class="fa fa-calendar"></i> To </button> {{combined2.format("YYYY-MM-DD HH:mm")}} <time-interval ng-click="from_click($event)" class="date_interval popper_menu dropdown-menu" date-model="to_date" time-model="to_time" model="combined2" my="left top" at="right top" min-date="minDate" max-date="maxDate"> </time-interval> </div> </div>',
         extendedController: [
             "$scope", "searches", "$timeout", function($scope, searches, $timeout) {
                 var cl, getTime, getYear, ref, ref1, ref2, s, updateIntervals;
@@ -654,7 +654,7 @@ settings.commonStructTypes = {
                     var from, moments, ref, ref1, to;
                     moments = cl.getMomentInterval();
                     if (moments.length) {
-                        return ref = _.invokeMap(moments, "toDate"), s.minDate = ref[0], s.maxDate = ref[1], ref;
+                        return ref = _.invoke(moments, "toDate"), s.minDate = ref[0], s.maxDate = ref[1], ref;
                     } else {
                         ref1 = cl.getTimeInterval(), from = ref1[0], to = ref1[1];
                         s.minDate = moment(from.toString(), "YYYY").toDate();
@@ -667,6 +667,7 @@ settings.commonStructTypes = {
                 });
 
                 updateIntervals();
+
 
                 s.from_click = function(event) {
                   event.originalEvent.preventDefault();
@@ -684,7 +685,7 @@ settings.commonStructTypes = {
                 if (!s.model) {
                     s.from_date = s.minDate;
                     s.to_date = s.maxDate;
-                    ref = _.invokeMap(cl.getMomentInterval(), "toDate"), s.from_time = ref[0], s.to_time = ref[1];
+                    ref = _.invoke(cl.getMomentInterval(), "toDate"), s.from_time = ref[0], s.to_time = ref[1];
                 } else if (s.model.length === 4) {
                     ref1 = _.map(s.model.slice(0, 3), getYear), s.from_date = ref1[0], s.to_date = ref1[1];
                     ref2 = _.map(s.model.slice(2), getTime), s.from_time = ref2[0], s.to_time = ref2[1];

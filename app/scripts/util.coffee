@@ -232,7 +232,10 @@ class window.CorpusListing
         else
             to = _.max tos, toUnix
 
-        [from, to]
+        if from and to
+          [from, to]
+        else
+          []
 
 
     getNonProtected : () ->
