@@ -19,6 +19,7 @@ settings.corpora.mrj_facta_20201209 = {
 		text_title : {label : "title"},
 		text_orig_lang : {label : "translated_from"},
 		text_gt_domain : {label : "domain"},
+		text_date: {label: "date"},
 	}
 };
 
@@ -33,6 +34,7 @@ settings.corpora.mrj_laws_20201209 = {
 		text_title : {label : "title"},
 		text_orig_lang : {label : "translated_from"},
 		text_gt_domain : {label : "domain"},
+		text_date: {label: "date"},
 	}
 };
 
@@ -47,6 +49,7 @@ settings.corpora.mrj_science_20201209 = {
 		text_title : {label : "title"},
 		text_orig_lang : {label : "translated_from"},
 		text_gt_domain : {label : "domain"},
+		text_date: {label: "date"},
 	}
 };
 
@@ -61,6 +64,7 @@ settings.corpora.mrj_news_20201209 = {
 		text_title : {label : "title"},
 		text_orig_lang : {label : "translated_from"},
 		text_gt_domain : {label : "domain"},
+		text_date: {label: "date"},
 	}
 };
 
@@ -75,6 +79,7 @@ settings.corpora.mrj_wikipedia_20201209 = {
 		text_title : {label : "title"},
 		text_orig_lang : {label : "translated_from"},
 		text_gt_domain : {label : "domain"},
+		text_date: {label: "date"},
 	}
 };
 

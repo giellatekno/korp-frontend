@@ -19,6 +19,7 @@ settings.corpora.myv_wikipedia_20201209 = {
       		text_title : {label : "title"},
       		text_orig_lang : {label : "translated_from"},
       		text_gt_domain : {label : "domain"},
+          text_date: {label: "date"},
       	}
 };
 
@@ -33,6 +34,7 @@ settings.corpora.myv_ficti_20201209 = {
 		text_title : {label : "title"},
 		text_orig_lang : {label : "translated_from"},
 		text_gt_domain : {label : "domain"},
+    text_date: {label: "date"},
 	}
 };
 
@@ -47,6 +49,7 @@ settings.corpora.myv_news_20201209 = {
 		text_title : {label : "title"},
 		text_orig_lang : {label : "translated_from"},
 		text_gt_domain : {label : "domain"},
+    text_date: {label: "date"},
 	}
 };
 

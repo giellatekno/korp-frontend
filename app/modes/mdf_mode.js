@@ -20,6 +20,7 @@ settings.corpora.mdf_wikipedia_20201209 = {
       		text_title : {label : "title"},
       		text_orig_lang : {label : "translated_from"},
       		text_gt_domain : {label : "domain"},
+          text_text_date: {label: "date"},
       	}
 };
 
@@ -34,31 +35,8 @@ settings.corpora.mdf_news_20201209 = {
       		text_title : {label : "title"},
       		text_orig_lang : {label : "translated_from"},
       		text_gt_domain : {label : "domain"},
+          text_text_date: {label: "date"},
       	}
 };
 
-/*
-settings.corpora.mdf_erme_20160725 = {
-        id : "mdf_erme_20160725",
-        title : "ERME (Mokša/Moksha)",
-        description : "ERME (Mokša/Moksha)",
-        within : settings.defaultWithin,
-        context : settings.defaultContext,
-        attributes : {
-                //pos : attrs.pos,
-                //msd : attrs.msd,
-                //lemma : attrs.baseform,
-        },
-        struct_attributes : {
-                text_title : {label : "title"},
-                //text_orig_lang : {label : "translated_from"},
-                //text_gt_domain : {label : "domain"},
-                text_author : {label : "author"},
-                //text_last_name : {label : "autor_last_name"},
-                text_year : {label : "year"},
-                sentence_p : {label : "page_number"},
-                //text_path : {label : "path"},
-        }
-};
-*/
 settings.corpusListing = new CorpusListing(settings.corpora);
