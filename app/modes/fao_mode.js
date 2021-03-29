@@ -8,8 +8,23 @@ settings.wordpicture = false;
 settings.corpora = {};
 settings.corporafolders = {};
 
-settings.corpora.mhr_facta_20201209 = {
-	id : "mhr_facta_20201209",
+settings.corpora.fao_admin_20210319 = {
+	id : "fao_admin_20210319",
+	title : "Administration texts",
+	description : "A collection of administration texts",
+	within : settings.defaultWithin,
+	context : settings.defaultContext,
+	attributes : modernAttrs,
+	structAttributes : {
+		text_title : {label : "title"},
+		text_orig_lang : {label : "translated_from"},
+		text_gt_domain : {label : "domain"},
+		text_date: {label: "date"},
+	}
+};
+
+settings.corpora.fao_facta_20210319 = {
+	id : "fao_facta_20210319",
 	title : "Non-fiction texts",
 	description : "A collection of non-fiction texts",
 	within : settings.defaultWithin,
@@ -23,38 +38,8 @@ settings.corpora.mhr_facta_20201209 = {
 	}
 };
 
-settings.corpora.mhr_ficti_20201209 = {
-	id : "mhr_ficti_20201209",
-	title : "Fiction texts",
-	description : "A collection of fiction texts",
-	within : settings.defaultWithin,
-	context : settings.defaultContext,
-	attributes : modernAttrs,
-	structAttributes : {
-		text_title : {label : "title"},
-		text_orig_lang : {label : "translated_from"},
-		text_gt_domain : {label : "domain"},
-		text_date: {label: "date"},
-	}
-};
-
-settings.corpora.mhr_laws_20201209 = {
-	id : "mhr_laws_20201209",
-	title : "Law texts",
-	description : "A collection of legislative texts",
-	within : settings.defaultWithin,
-	context : settings.defaultContext,
-	attributes : modernAttrs,
-	structAttributes : {
-		text_title : {label : "title"},
-		text_orig_lang : {label : "translated_from"},
-		text_gt_domain : {label : "domain"},
-		text_date: {label: "date"},
-	}
-};
-
-settings.corpora.mhr_science_20201209 = {
-	id : "mhr_science_20201209",
+settings.corpora.fao_science_20210319 = {
+	id : "fao_science_20210319",
 	title : "Science texts",
 	description : "A collection of science texts such as masters theses, phd theses, and articles",
 	within : settings.defaultWithin,
@@ -68,11 +53,11 @@ settings.corpora.mhr_science_20201209 = {
 	}
 };
 
-settings.corpora.mhr_news_20201209 = {
-	id : "mhr_news_20201209",
-	title : "News texts",
-	description : "A collection of news texts",
-	within : settings.defaultWithin,
+settings.corpora.fao_wikipedia_20210319 = {
+  id : "fao_wikipedia_20210319",
+  title : "Faroese Wikipedia",
+  description : "Faroese texts collected from the <a href=\"https://dumps.wikimedia.org/fowiki/20201221/\">Wikipedia</a>",
+  within : settings.defaultWithin,
 	context : settings.defaultContext,
 	attributes : modernAttrs,
 	structAttributes : {
@@ -83,19 +68,6 @@ settings.corpora.mhr_news_20201209 = {
 	}
 };
 
-settings.corpora.mhr_wikipedia_20201209 = {
-	id : "mhr_wikipedia_20201209",
-	title : "Wikipedia texts",
-	description : "A collection of wikipedia texts",
-	within : settings.defaultWithin,
-	context : settings.defaultContext,
-	attributes : modernAttrs,
-	structAttributes : {
-		text_title : {label : "title"},
-		text_orig_lang : {label : "translated_from"},
-		text_gt_domain : {label : "domain"},
-		text_date: {label: "date"},
-	}
-};
+
 
 settings.corpusListing = new CorpusListing(settings.corpora);
