@@ -13,7 +13,7 @@ settings.enableBackendKwicDownload = false
 settings.enableFrontendKwicDownload = true
 
 settings.languages = ["se", "nb", "fi", "sv", "en"];
-settings.defaultLanguage = "en";
+settings.defaultLanguage = "fi";
 
 settings.downloadFormats = [
     "csv",
@@ -67,34 +67,34 @@ settings.newsDeskUrl = "news.json";
 
 settings.visibleModes = 7
 settings.modeConfig = [
-    {
-        localekey: "kom_texts",
-        mode: "default"
-    },
-    {
-        localekey: "koi_texts",
-        mode: "koi"
-    },
-    {
-        localekey: "udm_texts",
-        mode: "udm",
-    },
-    {
-        localekey: "mdf_texts",
-        mode: "mdf",
-    },
-    {
-        localekey: "myv_texts",
-        mode: "myv",
-    },
-    {
-        localekey: "mrj_texts",
-        mode: "mrj",
-    },
-    {
-        localekey: "mhr_texts",
-        mode: "mhr",
-    }
+  {
+      localekey: "fkv_texts",
+      mode: "default"
+  },
+  {
+      localekey: "fit_texts",
+      mode: "fit",
+  },
+  {
+      localekey: "vep_texts",
+      mode: "vep",
+  },
+  {
+      localekey: "vro_texts",
+      mode: "vro",
+  },
+  {
+      localekey: "fao_texts",
+      mode: "fao",
+  },
+  {
+      localekey: "olo_texts",
+      mode: "olo",
+  },
+  {
+      localekey: "parallel_texts",
+      mode: "parallel"
+  }
 ];
 
 settings.primaryColor = "rgb(221, 233, 255)";
@@ -150,7 +150,7 @@ settings.defaultOptionsMsd = {
     "matches_not": "!*=",
 }
 
-settings.korpBackendURL = "http://gtweb.uit.no/ws/u_korp";
+settings.korpBackendURL = "http://gtweb.uit.no/ws/gt_korp";
 
 settings.mapCenter = {
   lat: 62.99515845212052,
