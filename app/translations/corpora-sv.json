@@ -1,6 +1,6 @@
 {   "saldo" : "betydelse",
     "pos" : "ordklass",
-    "msd" : "grammatisk analys",
+    "msd" : "msd",
     "baseform" : "grundform",
     "lemgram" : "lemgram",
     "dephead" : "dephead",
@@ -16,7 +16,6 @@
     "day" : "dag",
     "party" : "parti",
     "path" : "path",
-    "url" : "URL",
 
     "translated_from" : "översatt från",
     "domain" : "domän",
@@ -65,10 +64,10 @@
     "text_path" : "path",
     "text_year" : "år",
     "text_party" : "parti",
-    "text_url" : "URL",
     "date" : "datum",
     "author" : "författare",
     "title" : "titel",
+    "s_title" : "titel",
     "section" : "avdelning",
     "genre" : "genre",
     "article" : "artikel",
@@ -103,7 +102,6 @@
     "post_url" : "inläggsadress",
     
     "page" : "sida",
-    "page_number" : "page number",
     "author_type" : "författartyp",
     "gender" : "kön",
     "journalist" : "journalist",
@@ -251,6 +249,7 @@
     "FINIT" : "Finit verb",
     
     "origlang" : "orginalspråk",
+    "lang" : "språk",
     "page_n" : "sidonummer",
     
     "paragraph_marginal" : "marginalnoter",
