@@ -2,14 +2,14 @@ newsdata([
   {
     "h":{
       "en":"<p>Corpus for Kven updated</p>",
-      //"nb":"<p></p>",
-      //"fi":"<p></p>",
+      "nb":"<p>Korpus for kvensk er oppdatert</p>",
+      "fi":"<p>Kveenin korpus on päivitetty</p>",
       //"se":"<p></p>",
     },
     "t":{
       "en":"Corpus updated",
-      //"nb":"<p></p>",
-      //"fi":"<p></p>",
+      "nb":"<p>Korpuset er oppdatert</p>",
+      "fi":"<p>Korpus on päivitetty</p>",
       //"se":"<p></p>",
     },
     "d":"2021-03-29"
@@ -17,105 +17,105 @@ newsdata([
   {
     "h":{
       "en":"<p>Corpus for Meänkieli updated</p>",
-      //"nb":"<p></p>",
-      //"fi":"<p></p>",
+      "nb":"<p>Korpuset for meänkieli er oppdatert</p>",
+      "fi":"<p>Meänkielen korpus on päivitetty</p>",
       //"se":"<p></p>",
     },
     "t":{
       "en":"Corpus updated",
-      //"nb":"",
+      "nb":"<p>Korpuset er oppdatert</p>",
       //"se":"",
-      //"fi":"",
+      "fi":"<p>Korpus on päivitetty</p>",
     },
     "d":"2021-03-29"
   },
   {
     "h":{
       "en":"<p>Corpus for Veps updated</p>",
-      //"nb":"<p></p>",
-      //"fi":"<p></p>",
+      "nb":"<p>Korpuset for vepsisk er oppdatert</p>",
+      "fi":"<p>Vepsän korpus on päivitetty</p>",
       //"se":"<p></p>",
     },
     "t":{
       "en":"Corpus updated",
-      //"nb":"",
+      "nb":"<p>Korpuset er oppdatert</p>",
       //"se":"",
-      //"fi":"",
+      "fi":"<p>Korpus on päivitetty</p>",
     },
     "d":"2021-03-29"
   },
   {
     "h":{
       "en":"<p>Corpus for Võro updated</p>",
-      //"nb":"<p></p>",
-      //"fi":"<p></p>",
+      "nb":"<p>Korpuset for võro er oppdatert</p>",
+      "fi":"<p>Võron korpus on päivitetty</p>",
       //"se":"<p></p>",
     },
     "t":{
       "en":"Corpus updated",
-      //"nb":"",
+      "nb":"<p>Korpuset er oppdatert</p>",
       //"se":"",
-      //"fi":"",
+      "fi":"<p>korpus on päivitetty</p>",
     },
     "d":"2021-03-29"
   },
   {
     "h":{
       "en":"<p>New corpus for Faroese</p>",
-      //"nb":"<p></p>",
-      //"fi":"<p></p>",
+      "nb":"<p>Korpuset for færøysk er oppdatert</p>",
+      "fi":"<p>Fäärin kielen korpus on päivitetty</p>",
       //"se":"<p></p>",
     },
     "t":{
       "en":"Corpus introduced",
-      //"nb":"",
+      "nb":"<p>Korpuset for er oppdatert</p>",
       //"se":"",
-      //"fi":"",
+      "fi":"<p>Korpus on päivitetty</p>",
     },
     "d":"2021-03-29"
   },
   {
     "h":{
       "en":"<p>New corpus for Livvi</p>",
-      //"nb":"<p></p>",
-      //"fi":"<p></p>",
+      "nb":"<p>Korpuset for livvisk er oppdatert</p>",
+      "fi":"<p>Livvin korpus on päivitetty</p>",
       //"se":"<p></p>",
     },
     "t":{
       "en":"Corpus introduced",
-      //"nb":"",
+      "nb":"<p>Korpuset er oppdatert</p>",
       //"se":"",
-      //"fi":"",
+      "fi":"<p>Korpus on päivitetty</p>",
     },
     "d":"2021-03-29"
   },
   {
     "h":{
       "en":"<p>Parallel corpus for Norwegian-Kven updated</p>",
-      //"nb":"<p></p>",
-      //"fi":"<p></p>",
+      "nb":"<p>Parallelkorpuset for norsk-kvensk er oppdatert</p>",
+      "fi":"<p>Norjan-kveenin rinnakkaiskorpus on päivitetty</p>",
       //"se":"<p></p>",
     },
     "t":{
       "en":"Parallel corpus updated",
-      //"nb":"",
+      "nb":"<p>Parallellkorpuset er oppdatert</p>",
       //"se":"",
-      //"fi":"",
+      "fi":"<p>Rinnakkaiskorpus on päivitetty</p>",
     },
     "d":"2021-03-29"
   },
   {
     "h":{
       "en":"<p>Korp version updated from 2.0 to 6.0.1</p>",
-      //"nb":"<p></p>",
-      //"fi":"<p></p>",
+      "nb":"<p>Korpusversjonen er oppdatert fra 2.0 til 6.0.1</p>",
+      "fi":"<p>Korpusversio on päivitetty versiosta 2.0 versioon 6.0.1</p>",
       //"se":"<p></p>",
     },
     "t":{
       "en":"Korp version updated",
-      //"nb":"",
+      "nb":"<p>Korpusversjonen er oppdatert</p>",
       //"se":"",
-      //"fi":"",
+      "fi":"<p>Korpusversio on päivitetty</p>",
     },
     "d":"2021-03-29"
   }
