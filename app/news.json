@@ -1,7 +1,7 @@
 newsdata([
   {
     "h":{
-      "en":"<p>Corpus for Komi-Zyrian updated</p>",
+      "en":"<p>Corpus for Kven updated</p>",
       //"nb":"<p></p>",
       //"fi":"<p></p>",
       //"se":"<p></p>",
@@ -12,11 +12,11 @@ newsdata([
       //"fi":"<p></p>",
       //"se":"<p></p>",
     },
-    "d":"2020-12-22"
+    "d":"2021-03-29"
   },
   {
     "h":{
-      "en":"<p>Corpus for Komi-Permyak updated</p>",
+      "en":"<p>Corpus for Meänkieli updated</p>",
       //"nb":"<p></p>",
       //"fi":"<p></p>",
       //"se":"<p></p>",
@@ -27,11 +27,11 @@ newsdata([
       //"se":"",
       //"fi":"",
     },
-    "d":"2020-12-22"
+    "d":"2021-03-29"
   },
   {
     "h":{
-      "en":"<p>Corpus for Udmurt updated</p>",
+      "en":"<p>Corpus for Veps updated</p>",
       //"nb":"<p></p>",
       //"fi":"<p></p>",
       //"se":"<p></p>",
@@ -42,11 +42,11 @@ newsdata([
       //"se":"",
       //"fi":"",
     },
-    "d":"2020-12-22"
+    "d":"2021-03-29"
   },
   {
     "h":{
-      "en":"<p>Corpus for Moksha updated</p>",
+      "en":"<p>Corpus for Võro updated</p>",
       //"nb":"<p></p>",
       //"fi":"<p></p>",
       //"se":"<p></p>",
@@ -57,52 +57,52 @@ newsdata([
       //"se":"",
       //"fi":"",
     },
-    "d":"2020-12-22"
+    "d":"2021-03-29"
   },
   {
     "h":{
-      "en":"<p>Corpus for Erzya updated</p>",
+      "en":"<p>New corpus for Faroese</p>",
       //"nb":"<p></p>",
       //"fi":"<p></p>",
       //"se":"<p></p>",
     },
     "t":{
-      "en":"Corpus updated",
+      "en":"Corpus introduced",
       //"nb":"",
       //"se":"",
       //"fi":"",
     },
-    "d":"2020-12-22"
+    "d":"2021-03-29"
   },
   {
     "h":{
-      "en":"<p>Corpus for Hill Mari updated</p>",
+      "en":"<p>New corpus for Livvi</p>",
       //"nb":"<p></p>",
       //"fi":"<p></p>",
       //"se":"<p></p>",
     },
     "t":{
-      "en":"Corpus updated",
+      "en":"Corpus introduced",
       //"nb":"",
       //"se":"",
       //"fi":"",
     },
-    "d":"2020-12-22"
+    "d":"2021-03-29"
   },
   {
     "h":{
-      "en":"<p>Corpus for Meadow Mari updated</p>",
+      "en":"<p>Parallel corpus for Norwegian-Kven updated</p>",
       //"nb":"<p></p>",
       //"fi":"<p></p>",
       //"se":"<p></p>",
     },
     "t":{
-      "en":"Corpus updated",
+      "en":"Parallel corpus updated",
       //"nb":"",
       //"se":"",
       //"fi":"",
     },
-    "d":"2020-12-22"
+    "d":"2021-03-29"
   },
   {
     "h":{
@@ -117,6 +117,6 @@ newsdata([
       //"se":"",
       //"fi":"",
     },
-    "d":"2020-12-22"
+    "d":"2021-03-29"
   }
 ])
