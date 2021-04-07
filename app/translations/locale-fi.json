@@ -58,8 +58,8 @@
     "import_chain" : "Annotaatiolaboratorio",
     "show_deptree" : "Näytä dependenssipuu",
     "dep_tree" : "Dependenssipuu",
-		"show_word_pic" : "Show word picture",
-		"show_stats" : "Show statistics",
+		"show_word_pic" : "Näytä sanakuva",
+	"show_stats" : "Näytä tilastoja",
 
 	"is" : "on",
 	"is_not" : "ei ole",

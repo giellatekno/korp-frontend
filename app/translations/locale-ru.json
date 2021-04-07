@@ -26,7 +26,7 @@
 	"about_dev" : "Разработчики",
 	"about_logo" : "Логотип",
 	"about_contributors" : "Авторы",
-	"about_cite_header": "Cite Korp",
+	"about_cite_header": "Процитируйте Korp",
 	"warning_header" : "пожалуйста, обратите внимание",
 	"warning_body" : "Проиллюстрированные здесь отношения зависимости являются результатом автоматического анализа.",
 	"fail_text" : "Произошла ошибка.",
@@ -51,8 +51,8 @@
     "import_chain" : "Лаборатория аннотаций",
     "show_deptree" : "Показать дерево зависимостей",
     "dep_tree" : "Дерево зависимостей",
-		"show_word_pic" : "Show word picture",
-		"show_stats" : "Show statistics",
+		"show_word_pic" : "Показать картинку слова",
+		"show_stats" : "Показать статистику",
 
 	"is" : "является",
 	"is_not" : "не является",
@@ -74,6 +74,7 @@
 	"wordclass_starts" : "часть речи начинается с",
 	"interval" : "интервал",
 	"matches" : "регулярное выражение",
+	"matches_not" : "нет регулярное выражение",
 
 	"repeat" : "Повторение",
 	"to" : "к",

@@ -18,11 +18,11 @@
     "party" : "party",
     "path" : "polku",
 
-    "in_order_chk": "in order",
+    "in_order_chk": "",
     "prefix_chk": "alkuosa",
     "suffix_chk": "loppuosa",
 
-    "translated_from" : "translated from",
+    "translated_from" : "käännetty kielestä",
     "domain" : "domeeni",
     "autor_first_name" : "kirjailijan etunimi",
     "autor_last_name" : "kirjailijan sukunimi",
@@ -34,12 +34,12 @@
     "referensnummer" : "viitenumero",
 
     "weekday" : "viikonpäivä",
-	"hashtags" : "hashtags",
+	"hashtags" : "risuaidat",
 	"mentions" : "mainninnat",
 	"retweets" : "uudelleentwiittaukset",
 	"replytouser" : "reply to",
 	"coordinates" : "coordinates",
-	"location" : "tweeted from",
+	"location" : "sijainti",
 	"username2" : "käyttäjännimi",
 	"name" : "nimi",
 	"user_location" : "asuu paikkakunnalla",
