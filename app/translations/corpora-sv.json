@@ -17,17 +17,21 @@
     "party" : "parti",
     "path" : "path",
 
+    "in_order_chk": "in order",
+    "prefix_chk": "initial part",
+    "suffix_chk": "final part",
+
     "translated_from" : "översatt från",
     "domain" : "domän",
     "autor_first_name" : "autor's first name",
     "autor_last_name" : "autor's last name",
-    
+
     "year_from" : "startår",
     "year_to" : "slutår",
-    
+
     "url" : "url",
     "referensnummer" : "referensnummer",
-    
+
     "weekday" : "veckodag",
 	"hashtags" : "hashtaggar",
 	"mentions" : "omnämnda",
@@ -45,12 +49,12 @@
 	"description" : "beskrivning",
 	"tweets" : "tweets",
 	"website" : "webbsida",
-	
+
 	"id" : "id",
 
     "imprintyear" : "tryckår",
     "pagelink" : "sidlänk",
-    
+
     "tisus_l1" : "modersmål",
     "tisus_lf1" : "läsförståelse, del 1",
     "tisus_lf2" : "läsförståelse, del 2",
@@ -60,7 +64,7 @@
     "education" : "utbildning",
     "finalgrade" : "slutgiltigt betyg",
     "sum" : "summa",
-	
+
     "text_path" : "path",
     "text_year" : "år",
     "text_party" : "parti",
@@ -82,17 +86,17 @@
     "article_topic" : "artikelns ämne/tema",
     "text_volume" : "band",
     "subject" : "ämne",
-    
+
     "sentence_link" : "meningslänk",
     "text_issue" : "utgåva",
     "text_recipient" : "mottagare",
     "text_sv" : "verksnummer",
-    
+
     "oneSentence" : "en mening",
-    
+
     "source" : "källa",
     "age" : "ålder",
-    
+
     "blog_title" : "bloggtitel",
     "blog_url" : "bloggaddress",
     "author_age" : "författarens ålder",
@@ -100,7 +104,7 @@
     "post_title" : "inläggets titel",
     "tags" : "nyckelord",
     "post_url" : "inläggsadress",
-    
+
     "page" : "sida",
     "author_type" : "författartyp",
     "gender" : "kön",
@@ -110,12 +114,12 @@
     "female" : "kvinna",
     "unknown" : "okänd",
     "male_female" : "man och kvinna",
-    
+
     "entryword" : "uppslagsord",
     "entryno" : "uppslagsord (nummer)",
     "sense1" : "huvudbetydelse",
     "sense2" : "betydelsenyans",
-    
+
     "pos_A": "adjektiv",
     "pos_A*": "adjektival avledning",
     "pos_Adv": "adverb",
@@ -134,12 +138,12 @@
     "pos_V": "verb",
     "pos_V*": "verbal avledning",
     "pos___UNDEF__": "undefined",
-    
+
     "example" : "Exempel",
     "page_num" : "sidonummer",
     "year_to"  : "datum (start)",
     "year_from"  : "datum (slut)",
-    
+
     "malt_AT" : "Attribut",
     "malt_ET" : "Efterställt attribut",
     "malt_IO" : "Indirekt objekt",
@@ -152,7 +156,7 @@
     "malt_ADV" : "Adverbial",
     "malt_PA" : "Preposition",
     "malt_head" : "Huvud",
-    
+
     "deprel_ROOT" : "ROOT",
     "deprel_++" : "Samordnande konjunktion",
     "deprel_+A" : "Konjuktionellt adverb",
@@ -244,14 +248,14 @@
     "deprel__U_" : "Unspecified",
 
 
-    
+
     "INFINIT" : "Infinit verb",
     "FINIT" : "Finit verb",
-    
+
     "origlang" : "orginalspråk",
     "lang" : "språk",
     "page_n" : "sidonummer",
-    
+
     "paragraph_marginal" : "marginalnoter",
     "date_interval" : "tidsintervall",
 
@@ -265,7 +269,7 @@
     "fab_headline" : "rubrik",
     "fab_smallcaps" : "kapitäler",
     "fab_italic" : "kursivt",
-    
+
 
 
      "sst_koncept" : "Stockholms stads tänkebok - Koncept",
@@ -299,6 +303,6 @@
     "duration": "längd",
     "project": "projekt",
     "speaker": "talare",
-    
+
     "verk" : "länk till boken"
 }

@@ -18,6 +18,9 @@
     "party" : "партия",
     "url" : "URL",
 
+    "in_order_chk": "in order",
+    "prefix_chk": "initial part",
+    "suffix_chk": "final part",
 
     "translated from" : "переведено с",
     "domain" : "домен",
@@ -141,7 +144,6 @@
     "page_num" : "номер страницы",
         "year_to"  : "дата (до)",
         "year_from"  : "Дата, с)",
-        "        ",
     "example" : "пример",
 
     "malt_AT" : "Предварительный модификатор",

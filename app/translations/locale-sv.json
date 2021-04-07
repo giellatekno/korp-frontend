@@ -58,6 +58,8 @@
 	"import_chain" : "Annoteringslabbet",
 	"show_deptree" : "Visa dependensträd",
 	"dep_tree" : "Dependensträd",
+	"show_word_pic" : "Show word picture",
+	"show_stats" : "Show statistics",
 
 	"any_word_placeholder" : "<vilket ord som helst>",
 	"case_insensitive" : "skiftlägesoberoende",
@@ -79,6 +81,7 @@
 	"wordclass_starts" : "ordklassen börjar med",
 	"interval" : "intervall",
 	"matches" : "regexp",
+	"matches_not" : "inte regexp",
 
 	"repeat" : "Upprepa",
 	"to" : "till",
@@ -177,6 +180,7 @@
 	"corpselector_time" : "Material daterat",
 	"corpselector_rest_time" : "Odaterat material",
 	"corpselector_time_chosen" : "Valt material",
+	"corpselector_of" : " av ",
 	"corpselector_of_total" : "av sammanlagt",
 
 	"statstable_allcorpora" : "Samtliga",

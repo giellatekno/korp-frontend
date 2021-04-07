@@ -16,7 +16,11 @@
     "day" : "beaivi",
     "party" : "bellodat",
     "path" : "path",
-    
+
+    "in_order_chk": "rivttes ortnegis",
+    "prefix_chk": "sáni álgun",
+    "suffix_chk": "sáni loahppan",
+
     "translated_from" : "translated from",
     "domain" : "domain",
     "autor_first_name" : "autor's first name",
@@ -24,10 +28,10 @@
 
     "year_from" : "álgojahki",
     "year_to" : "loahppajahki",
-    
+
     "url" : "url",
     "referensnummer" : "referánsanummir",
-    
+
     "weekday" : "vahkkobeaivi",
 	"hashtags" : "hášgilkor",
 	"mentions" : "omnämnda",
@@ -45,12 +49,12 @@
 	"description" : "čilgehus",
 	"tweets" : "tweets",
 	"website" : "neahttasiidu",
-	
+
 	"id" : "id",
 
     "imprintyear" : "almmuhanjahki",
     "pagelink" : "siidoliŋka",
-    
+
     "tisus_l1" : "modersmål",
     "tisus_lf1" : "läsförståelse, del 1",
     "tisus_lf2" : "läsförståelse, del 2",
@@ -60,7 +64,7 @@
     "education" : "utbildning",
     "finalgrade" : "slutgiltigt betyg",
     "sum" : "summa",
-	
+
     "text_path" : "path",
     "text_year" : "jagi",
     "text_party" : "bellodat",
@@ -82,17 +86,17 @@
     "article_topic" : "artihkalfáddá",
     "text_volume" : "girji",
     "subject" : "fáddá",
-    
+
     "sentence_link" : "cealkkaliŋka",
     "text_issue" : "preanttus",
     "text_recipient" : "vuostáiváldi",
     "text_sv" : "girjji nr.",
-    
+
     "oneSentence" : "okta cealkka",
-    
+
     "source" : "gáldu",
     "age" : "ahki",
-    
+
     "blog_title" : "bloggatihttel",
     "blog_url" : "bloggačujuhus",
     "author_age" : "čálli ahki",
@@ -100,7 +104,7 @@
     "post_title" : "lohkkireivve tihttel",
     "tags" : "čoavddasánit",
     "post_url" : "reivve čujuhus",
-    
+
     "page" : "siidu",
     "author_type" : "författartyp",
     "gender" : "sohkabealli",
@@ -110,19 +114,19 @@
     "female" : "nisu",
     "unknown" : "dovdameahttun",
     "male_female" : "dievdu ja nisu",
-    
+
     "entryword" : "ohcansátni",
     "entryno" : "ohcansátni (nummir)",
     "sense1" : "váldomearkkašupmi",
     "sense2" : "lassemearkkašupmi",
-    
+
     "pos_A": "adjektiiva",
     "pos_A*": "adjektiivvas suorggiduvvo",
     "pos_Adv": "advearba",
     "pos_CC": "konjunkšuvdna",
     "pos_CLB": "punktuašuvdna at the end of a sentence",
     "pos_CS": "subjunkšuvdna",
-    "pos_Interj" : "interjekšuvdna", 
+    "pos_Interj" : "interjekšuvdna",
     "pos_N": "substantiiva",
     "pos_N*": "substantiivas suorggiduvvo",
     "pos_Num": "lohkosánit",
@@ -134,15 +138,15 @@
     "pos_V": "vearba",
     "pos_V*": "vearbas suorggiduvvo",
     "pos___UNDEF__": "undefined",
-    
-    "mx" : "máŋggasániprefiksa",      
+
+    "mx" : "máŋggasániprefiksa",
     "sx" : "prefiksa",
-    
+
     "example" : "Ovdamearka",
     "page_num" : "siidonummir",
     "year_to"  : "dáhtun (álgu)",
     "year_from"  : "dáhtun (loahppa)",
-    
+
     "malt_AT" : "Attribuhta",
     "malt_ET" : "Kompleameanta",
     "malt_IO" : "Eahpenjuolgga objeakta",
@@ -155,7 +159,7 @@
     "malt_ADV" : "Advearbiála",
     "malt_PA" : "Preposišuvdna",
     "malt_head" : "Oaivi",
-    
+
     "deprel_ROOT" : "ROOT",
     "deprel_++" : "Konjunkšuvdna",
     "deprel_+A" : "Konjuktionellt adverb",
@@ -222,14 +226,14 @@
     "deprel_PA" : "Adposišuvnna komplemeanta",
     "deprel_UA" : "Oalgecealkka, subjunkšuvnna haga",
     "deprel_VG" : "Vearbajoavku",
-    
+
     "INFINIT" : "Infinihtta vearba",
     "FINIT" : "Finihtta vearba",
-    
+
     "origlang" : "álgogiella",
     "lang" : "giella",
     "page_n" : "siidonummir",
-    
+
     "paragraph_marginal" : "ravdanohtat",
     "date_interval" : "áigodat",
 
@@ -243,7 +247,7 @@
     "fab_headline" : "kolonna",
     "fab_smallcaps" : "stuora bustávat",
     "fab_italic" : "vinjučála",
-    
+
 
 
      "sst_koncept" : "Stockholms stads tänkebok - Koncept",
@@ -277,6 +281,6 @@
     "duration": "guhkodat",
     "project": "prošeakta",
     "speaker": "hubmi",
-    
+
     "verk" : "liŋka girjái"
 }

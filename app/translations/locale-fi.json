@@ -58,6 +58,8 @@
     "import_chain" : "Annotaatiolaboratorio",
     "show_deptree" : "Näytä dependenssipuu",
     "dep_tree" : "Dependenssipuu",
+		"show_word_pic" : "Show word picture",
+		"show_stats" : "Show statistics",
 
 	"is" : "on",
 	"is_not" : "ei ole",
@@ -79,6 +81,7 @@
 	"wordclass_starts" : "sanaluokka alkaa",
 	"interval" : "väli",
 	"matches" : "säännöllinen lauseke",
+	"matches_not" : "ei säännöllinen lauseke",
 
 	"repeat" : "toista",
 	"to" : "-",
@@ -176,7 +179,8 @@
 	"corpselector_time" : "Aineisto päivätty",
 	"corpselector_rest_time" : "Päiväämätön aineisto",
 	"corpselector_time_chosen" : "Valitut aineistot",
-        "corpselector_of_total" : "kaikista",
+	"corpselector_of" : "/",
+  "corpselector_of_total" : "kaikista",
 
 	"statstable_allcorpora" : "Kaikki&nbsp;korpukset",
 	"statstable_relfreq" : "suhteellinen frekvenssi (miljoonaa sanaa kohti):",

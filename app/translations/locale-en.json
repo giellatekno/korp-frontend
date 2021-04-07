@@ -57,6 +57,8 @@
     "import_chain" : "Annotation Lab",
     "show_deptree" : "Show Dependency Tree",
     "dep_tree" : "Dependency Tree",
+		"show_word_pic" : "Show word picture",
+		"show_stats" : "Show statistics",
 
 	"is" : "is",
 	"is_not" : "is not",
@@ -78,6 +80,7 @@
 	"wordclass_starts" : "word class begins with",
 	"interval" : "interval",
 	"matches" : "regexp",
+	"matches_not" : "not regexp",
 
 	"repeat" : "Repeat",
 	"to" : "to",
@@ -175,7 +178,8 @@
 	"corpselector_time" : "Material dated",
 	"corpselector_rest_time" : "Undated material",
 	"corpselector_time_chosen" : "Selected material",
-        "corpselector_of_total" : "of total",
+	"corpselector_of" : " of ",
+  "corpselector_of_total" : "of total",
 
 	"statstable_allcorpora" : "All&nbsp;corpora",
 	"statstable_relfreq" : "relative frequency (per million words):",

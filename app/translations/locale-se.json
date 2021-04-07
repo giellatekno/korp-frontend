@@ -56,6 +56,8 @@
 	"import_chain" : "Annoteringslabbet",
 	"show_deptree" : "Čájet dependeansamuora",
 	"dep_tree" : "Dependeansamuorra",
+	"show_word_pic" : "Show word picture",
+	"show_stats" : "Show statistics",
 
 	"any_word_placeholder" : "<vaikko makkár sátni>",
 	"case_insensitive" : "beroškeahttá unna/stuorra bustávain",
@@ -76,7 +78,8 @@
 	"wordclass_is" : "sátneluohkká lea",
 	"wordclass_starts" : "sátneluohká álgu lea",
 	"interval" : "intervall",
-	"matches" : "regexp",
+	"matches" : "virolaš cealkka",
+	"matches_not" : "ii virolaš cealkka",
 
 	"repeat" : "Gearddut",
 	"to" : "gitta",
@@ -174,6 +177,7 @@
 	"corpselector_time" : "Teavsttat leat beaiváduvvon",
 	"corpselector_rest_time" : "Teavsttat mat eai leat beaiváduvvon",
 	"corpselector_time_chosen" : "Válljejuvvon teavsttat",
+	"corpselector_of" : "/",
 	"corpselector_of_total" : "váldon oktiibuot",
 
 	"statstable_allcorpora" : "Buot",

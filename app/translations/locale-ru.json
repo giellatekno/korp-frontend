@@ -1,5 +1,5 @@
 {
-	"docs" : 
+	"docs" : "",
 	"northsaami" : "Davvisámi",
 	"norwegian" : "Norsk",
 	"finnish" : "Suomi",
@@ -26,6 +26,7 @@
 	"about_dev" : "Разработчики",
 	"about_logo" : "Логотип",
 	"about_contributors" : "Авторы",
+	"about_cite_header": "Cite Korp",
 	"warning_header" : "пожалуйста, обратите внимание",
 	"warning_body" : "Проиллюстрированные здесь отношения зависимости являются результатом автоматического анализа.",
 	"fail_text" : "Произошла ошибка.",
@@ -50,6 +51,8 @@
     "import_chain" : "Лаборатория аннотаций",
     "show_deptree" : "Показать дерево зависимостей",
     "dep_tree" : "Дерево зависимостей",
+		"show_word_pic" : "Show word picture",
+		"show_stats" : "Show statistics",
 
 	"is" : "является",
 	"is_not" : "не является",
@@ -166,7 +169,8 @@
 	"corpselector_time" : "Материал датирован",
 	"corpselector_rest_time" : "Недатированный материал",
 	"corpselector_time_chosen" : "Выбранный материал",
-        "corpselector_of_total" : "всего",
+	"corpselector_of" : " of ",
+  "corpselector_of_total" : "всего",
 
 	"statstable_allcorpora" : "Все&nbsp;корпуса",
 	"statstable_relfreq" : "относительная частота (на миллион слов):",
@@ -187,6 +191,6 @@
 	"hitspicture_hits" : "хиты",
 	"hitspicture_gotocorpushits" : "Щелкните, чтобы перейти на первую страницу с обращениями из этого корпуса.",
 
-	"hits_per_mil" : "Хитов на миллион токенов",
+	"hits_per_mil" : "Хитов на миллион токенов"
 
 }
