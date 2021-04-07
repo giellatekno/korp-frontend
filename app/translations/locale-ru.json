@@ -1,5 +1,5 @@
 {
-	"docs" : 
+	"docs" : "",
 	"northsaami" : "Davvisámi",
 	"norwegian" : "Norsk",
 	"finnish" : "Suomi",
@@ -185,6 +185,6 @@
 	"hitspicture_hits" : "хиты",
 	"hitspicture_gotocorpushits" : "Щелкните, чтобы перейти на первую страницу с обращениями из этого корпуса.",
 
-	"hits_per_mil" : "Хитов на миллион токенов",
+	"hits_per_mil" : "Хитов на миллион токенов"
 
 }

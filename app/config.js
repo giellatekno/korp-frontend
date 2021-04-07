@@ -12,7 +12,7 @@ settings.hitsPerPageValues = [25,50,75,100,500,1000]
 settings.enableBackendKwicDownload = false
 settings.enableFrontendKwicDownload = true
 
-settings.languages = ["se", "nb", "fi", "sv", "en"];
+settings.languages = ["se", "nb", "fi", "sv", "en", "ru"];
 settings.defaultLanguage = "en";
 
 settings.downloadFormats = [
@@ -150,7 +150,7 @@ settings.defaultOptionsMsd = {
     "matches_not": "!*=",
 }
 
-settings.korpBackendURL = "http://gtweb.uit.no/ws/u_korp";
+settings.korpBackendURL = "http://gtweb.uit.no/ws/gt_korp";
 
 settings.mapCenter = {
   lat: 62.99515845212052,
