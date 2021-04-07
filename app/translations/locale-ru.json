@@ -171,7 +171,7 @@
 	"corpselector_time" : "Материал датирован",
 	"corpselector_rest_time" : "Недатированный материал",
 	"corpselector_time_chosen" : "Выбранный материал",
-	"corpselector_of" : " of ",
+	"corpselector_of" : " из ",
   "corpselector_of_total" : "всего",
 
 	"statstable_allcorpora" : "Все&nbsp;корпуса",
