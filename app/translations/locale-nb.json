@@ -1,8 +1,8 @@
 {
 	"docs" : "Bruksanvisning",
-        "northsaami" : "Davvisámi",
-        "norwegian" : "Norsk",
-        "finnish" : "Suomi",
+	"northsaami" : "Davvisámi",
+	"norwegian" : "Norsk",
+	"finnish" : "Suomi",
 	"swedish" : "Svenska",
 	"english" : "English",
 	"russian" : "По-русски",
@@ -10,21 +10,21 @@
 	"korp_lab" : "Korplab",
 	"university" : "Göteborgs universitet",
 	"modern_texts" : "Enspråklige",
-        "fkv_texts" : "Kvensk tekst",
-        "fit_texts" : "Meänkieli-tekst",
-        "vep_texts" : "Vepsisk tekst",
-        "vro_texts" : "Võro-tekst",
-        "fao_texts" : "Færøysk tekst",
-        "olo_texts" : "Livvisk tekst",
-        "fkv_ptexts" : "Kvenske parallelltekster",
-        "fit_ptexts" : "Meänkieli-parallelltekster",
-        "parallel_texts" : "Parallelltekster",
+	"fkv_texts" : "Kvensk tekst",
+	"fit_texts" : "Meänkieli-tekst",
+	"vep_texts" : "Vepsisk tekst",
+	"vro_texts" : "Võro-tekst",
+	"fao_texts" : "Færøysk tekst",
+	"olo_texts" : "Livvisk tekst",
+	"fkv_ptexts" : "Kvenske parallelltekster",
+	"fit_ptexts" : "Meänkieli-parallelltekster",
+	"parallel_texts" : "Parallelltekster",
 	"1800_texts" : "Bibelstället",
 	"search_history" : "Søkehistorikk",
 	"add_lang" : "Flere språk",
 	"remove_lang" : "Færre språk",
 	"about" : "Om Korp",
-    	"about_gt_body" : "Korp er <a href='http://giellatekno.uit.no/'>Giellatekno</a>/<a href='http://divvun.no/'>Divvun</a> konkordansverktøy. For mer informasjon, kommentarer eller forslag, kontakta <a href='mailto:giellatekno@uit.no?subject=Feedback Korp'>Giellatekno</a>.",
+	"about_gt_body" : "Korp er <a href='http://giellatekno.uit.no/'>Giellatekno</a>/<a href='http://divvun.no/'>Divvun</a> konkordansverktøy. For mer informasjon, kommentarer eller forslag, kontakta <a href='mailto:giellatekno@uit.no?subject=Feedback Korp'>Giellatekno</a>.",
 	"about_body" : "Korp er Språkbankens konkordansverktøy.",
 	"about_man" : "Projektledelse",
 	"about_dev" : "Utvikler",
@@ -39,9 +39,9 @@
 	"show_more" : "Vis flere",
 	"in_corpus" : "i korpus",
 	"cqp_query" : "Fullstendig CQP-spørsmål",
-  "cqp_docs" : "Hent CQP-dokumentasjonen",
-  "active_cqp_simple" : "Aktivt enkelt søk som CQP",
-  "active_cqp_extended" : "Aktivt utvidet søk som CQP",
+	"cqp_docs" : "Hent CQP-dokumentasjonen",
+	"active_cqp_simple" : "Aktivt enkelt søk som CQP",
+	"active_cqp_extended" : "Aktivt utvidet søk som CQP",
 	"max" : "opp til",
 	"min" : "minst",
 	"and" : "og",
@@ -90,7 +90,6 @@
 	"sent_start" : "Begynnelsen av setninga",
 	"sent_end" : "Slutten av setninga",
 
-
 	"none_selected" : "&lt;ikke valgt&gt;",
 
 	"any" : "hvilket ord som helst",
@@ -107,13 +106,13 @@
 	"detailed" : "Utvidet",
 	"advanced" : "CQP-uttrykk",
 	"parallel" : "Parallell",
-        "swe" : "svensk",
-        "fit" : "meänkieli",
-        "nob" : "norsk",
-        "fkv" : "kvensk",
-        "sme" : "nordsamisk",
-        "sjd" : "kildinsamisk",
-        "rus" : "russisk",
+	"swe" : "svensk",
+	"fit" : "meänkieli",
+	"nob" : "norsk",
+	"fkv" : "kvensk",
+	"sme" : "nordsamisk",
+	"sjd" : "kildinsamisk",
+	"rus" : "russisk",
 	"statistics" : "Statistikk",
 	"lemgram_results" : "Ordbilde",
 	"sort_default" : "sorter korpus etter",
@@ -154,12 +153,10 @@
 	"text" : "tekst",
 	"word" : "ord",
 
-
-        "more_languages" : "Mer språk",
-        "fewer_languages" : "Ferre språk",
+	"more_languages" : "Mer språk",
+	"fewer_languages" : "Ferre språk",
 
 	"msd_long" : "Morfosyntaktisk beskrivning",
-
 
 	"corpselector_allselected" : " korpuser valgt (alle)",
 	"corpselector_noneselected" : "Ingen valgt korpus",
@@ -203,6 +200,4 @@
 	"hitspicture_gotocorpushits" : "Klikk for å gå til den første sida med treff fra dette korpuset.",
 
 	"hits_per_mil" : "Treff per million token"
-
-
 }

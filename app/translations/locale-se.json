@@ -1,22 +1,22 @@
 {
 	"docs" : "Användarhandledning",
-        "northsaami" : "Davvisámi",
-        "norwegian" : "Norsk",
-        "finnish" : "Suomeksi",
+	"northsaami" : "Davvisámi",
+	"norwegian" : "Norsk",
+	"finnish" : "Suomeksi",
 	"swedish" : "Svenska",
 	"english" : "English",
 	"russian" : "По-русски",
 	"korp" : "Korp",
 	"korp_lab" : "Korplaboratoria",
 	"university" : "Göteborga universitehta",
-        "fkv_texts" : "Kveanateavsttat",
-        "fit_texts" : "Meänkieliteavsttat",
-        "vep_texts" : "Vepsateavsttat",
-        "vro_texts" : "Võroteavsttat",
+	"fkv_texts" : "Kveanateavsttat",
+	"fit_texts" : "Meänkieliteavsttat",
+	"vep_texts" : "Vepsateavsttat",
+	"vro_texts" : "Võroteavsttat",
 	"fao_texts" : "Fearagiel teavsttat",
-        "olo_texts" : "Livvigiel teavsttat",
-        "fkv_ptexts" : "Kvena bálddalas teavsttat",
-        "fit_ptexts" : "Meänkieli bálddalas teavsttat",
+	"olo_texts" : "Livvigiel teavsttat",
+	"fkv_ptexts" : "Kvena bálddalas teavsttat",
+	"fit_ptexts" : "Meänkieli bálddalas teavsttat",
 	"parallel_texts" : "Bálddalas teavsttat",
 	"search_history" : "Ohcanhistorjá",
 	"add_lang" : "Eanet gielat",
@@ -88,7 +88,6 @@
 	"sent_start" : "Cealkaga álgu",
 	"sent_end" : "Cealkaga loahppa",
 
-
 	"none_selected" : "&lt;ej vald&gt;",
 
 	"any" : "vaikko makkár sátni",
@@ -107,11 +106,11 @@
 	"parallel" : "Bálddalas teavsttain",
 	"swe" : "ruoŧa",
 	"fit" : "meänkieli",
-        "nob" : "dárogiella",
-        "fkv" : "kveanagiela",
-        "sme" : "davvisámegiella",
-        "sjd" : "gielddasámi",
-        "rus" : "ruoššagiella",
+	"nob" : "dárogiella",
+	"fkv" : "kveanagiela",
+	"sme" : "davvisámegiella",
+	"sjd" : "gielddasámi",
+	"rus" : "ruoššagiella",
 	"statistics" : "Statistihkka",
 	"lemgram_results" : "Sátnegovva ii vuos doaimma",
 	"sort_default" : "bordde ",
@@ -152,11 +151,10 @@
 	"text" : "teaksta",
 	"word" : "sátni",
 
-        "more_languages" : "Eanet gielat",
-        "fewer_languages" : "Unnit gielat",
+	"more_languages" : "Eanet gielat",
+	"fewer_languages" : "Unnit gielat",
 
 	"msd_long" : "Morfosyntaktisk beskrivning",
-
 
 	"corpselector_allselected" : " válljejuvvon korpusa (buot)",
 	"corpselector_noneselected" : "It leat válljen korpusa",
@@ -200,5 +198,4 @@
 	"hitspicture_gotocorpushits" : "Coahkkal beassat dán korpusa bohtosa vuosttaš siidui.",
 
 	"hits_per_mil" : "Galle bohtosa pr miljovnna sáni"
-
 }

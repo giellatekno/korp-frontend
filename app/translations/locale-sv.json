@@ -1,21 +1,21 @@
 {
 	"docs" : "Användarhandledning",
-        "northsaami" : "Davvisámi",
-        "norwegian" : "Norsk",
-        "finnish" : "Suomi",
+	"northsaami" : "Davvisámi",
+	"norwegian" : "Norsk",
+	"finnish" : "Suomi",
 	"swedish" : "Svenska",
 	"english" : "English",
 	"russian" : "По-русски",
 	"korp" : "Korp",
 	"korp_lab" : "Korplabbet",
 	"university" : "Göteborgs universitet",
-        "fkv_texts" : "Kven texts",
-        "fit_texts" : "Meänkieli texts",
-        "vep_texts" : "Veps texts",
-        "vro_texts" : "Võro texts",
-        "fkv_ptexts" : "Kven parallel texts",
-        "fit_ptexts" : "Meänkieli parallel texts",
-        "parallel_texts" : "Parallella texts",
+	"fkv_texts" : "Kven texts",
+	"fit_texts" : "Meänkieli texts",
+	"vep_texts" : "Veps texts",
+	"vro_texts" : "Võro texts",
+	"fkv_ptexts" : "Kven parallel texts",
+	"fit_ptexts" : "Meänkieli parallel texts",
+	"parallel_texts" : "Parallella texts",
 	"faroese_texts" : "Färöiska",
 	"old_swedish_texts" : "Fornsvenska",
 	"digidaily" : "Digidaily",
@@ -90,7 +90,6 @@
 	"sent_start" : "Meningsbörjan",
 	"sent_end" : "Meningsslut",
 
-
 	"none_selected" : "&lt;ej vald&gt;",
 
 	"any" : "vilket ord som helst",
@@ -109,11 +108,11 @@
 	"parallel" : "Parallell",
 	"swe" : "svenska",
 	"fit" : "meänkieli",
- 	"nob" : "norska",
- 	"fkv" : "kvenska",
- 	"sme" : "nordsamiska",
- 	"sjd" : "kildinsamiska",
- 	"rus" : "russiska",
+	"nob" : "norska",
+	"fkv" : "kvenska",
+	"sme" : "nordsamiska",
+	"sjd" : "kildinsamiska",
+	"rus" : "russiska",
 	"statistics" : "Statistik",
 	"lemgram_results" : "Ordbild",
 	"sort_default" : "sortera inom korpus på",
@@ -154,12 +153,10 @@
 	"text" : "text",
 	"word" : "ord",
 
-
-        "more_languages" : "Fler språk",
-        "fewer_languages" : "Färre språk",
+	"more_languages" : "Fler språk",
+	"fewer_languages" : "Färre språk",
 
 	"msd_long" : "Morfosyntaktisk beskrivning",
-
 
 	"corpselector_allselected" : " korpusar valda (alla)",
 	"corpselector_noneselected" : "Ingen vald korpus",
@@ -203,5 +200,4 @@
 	"hitspicture_gotocorpushits" : "Klicka för att gå till första sidan med träffar från denna korpus.",
 
 	"hits_per_mil" : "Träffar per miljon token"
-
 }
