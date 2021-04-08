@@ -34,6 +34,7 @@
 	"about_dev" : "Utvecklare",
 	"about_logo" : "Logotyp av",
 	"about_contributors" : "Med bidrag från",
+	"about_cite_header": "Cite Korp",
 	"warning_header" : "Vänligen uppmärksamma",
 	"warning_body" : "Relationerna mellan orden är ett resultat av automatisk parsning. ",
 	"fail_text" : "Ett fel har uppstått. ",
@@ -58,6 +59,8 @@
 	"import_chain" : "Annoteringslabbet",
 	"show_deptree" : "Visa dependensträd",
 	"dep_tree" : "Dependensträd",
+	"show_word_pic" : "Show word picture",
+	"show_stats" : "Show statistics",
 
 	"any_word_placeholder" : "<vilket ord som helst>",
 	"case_insensitive" : "skiftlägesoberoende",

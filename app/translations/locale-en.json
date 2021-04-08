@@ -55,7 +55,9 @@
     "import_chain" : "Annotation Lab",
     "show_deptree" : "Show Dependency Tree",
     "dep_tree" : "Dependency Tree",
-
+		"show_word_pic" : "Show word picture",
+		"show_stats" : "Show statistics",
+		
 	"is" : "is",
 	"is_not" : "is not",
 	"starts_with" : "begins with",

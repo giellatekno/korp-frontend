@@ -18,6 +18,10 @@
     "path" : "path",
     "url" : "URL",
 
+    "in_order_chk": "rivttes ortnegis",
+    "prefix_chk": "sáni álgun",
+    "suffix_chk": "sáni loahppan",
+
     "translated_from" : "translated from",
     "domain" : "domain",
     "autor_first_name" : "autor's first name",

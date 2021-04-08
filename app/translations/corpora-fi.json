@@ -19,6 +19,9 @@
     "path" : "polku",
     "url" : "URL",
 
+    "in_order_chk": "",
+    "prefix_chk": "alkuosa",
+    "suffix_chk": "loppuosa",
 
     "translated_from" : "translated from",
     "domain" : "domeeni",
@@ -235,7 +238,7 @@
     "deprel_SUBJ→"     : 	 "SUBJ→",
     "deprel_VOC"       : 	 "VOC",
     "deprel_X"         : 	 "X",
-    
+
     "INFINIT" : "Ei-finiittinen verbi",
     "FINIT" : "Finiittinen verb",
 

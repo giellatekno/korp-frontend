@@ -27,6 +27,7 @@
 	"about_dev" : "Utvikler",
 	"about_logo" : "Om logoen",
 	"about_contributors" : "Med bidrag fra",
+	"about_cite_header": "Vise til Korp",
 	"warning_header" : "Vennligst legg merke til",
 	"warning_body" : "Relasjonene mellom orda er et resultat av automatisk parsing. ",
 	"fail_text" : "En feil har oppstått. ",
@@ -54,6 +55,8 @@
 	"import_chain" : "Annoteringslab",
 	"show_deptree" : "Vis dependenstre",
 	"dep_tree" : "Dependenstre",
+	"show_word_pic" : "Show word picture",
+	"show_stats" : "Show statistics",
 
 	"any_word_placeholder" : "<vilket ord som helst>",
 	"case_insensitive" : "skiller ikke mellom store/små",

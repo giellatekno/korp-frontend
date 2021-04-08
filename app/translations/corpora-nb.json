@@ -18,6 +18,10 @@
     "path" : "path",
     "url" : "URL",
 
+    "in_order_chk": "i rekkefølge",
+        "prefix_chk": "prefiks",
+        "suffix_chk": "suffiks",
+        
     "year_from" : "startår",
     "year_to" : "sluttår",
 
@@ -231,7 +235,7 @@
     "deprel_SUBJ→"     : 	 "SUBJ→",
     "deprel_VOC"       : 	 "VOC",
     "deprel_X"         : 	 "X",
-    
+
     "INFINIT" : "Infinitt verb",
     "FINIT" : "Finitt verb",
 

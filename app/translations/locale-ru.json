@@ -25,6 +25,7 @@
 	"about_dev" : "Разработчики",
 	"about_logo" : "Логотип",
 	"about_contributors" : "Авторы",
+	"about_cite_header": "Процитируйте Korp",
 	"warning_header" : "пожалуйста, обратите внимание",
 	"warning_body" : "Проиллюстрированные здесь отношения зависимости являются результатом автоматического анализа.",
 	"fail_text" : "Произошла ошибка.",
@@ -49,6 +50,8 @@
     "import_chain" : "Лаборатория аннотаций",
     "show_deptree" : "Показать дерево зависимостей",
     "dep_tree" : "Дерево зависимостей",
+		"show_word_pic" : "Показать картинку слова",
+		"show_stats" : "Показать статистику",
 
 	"is" : "является",
 	"is_not" : "не является",
@@ -166,6 +169,7 @@
 	"corpselector_rest_time" : "Недатированный материал",
 	"corpselector_time_chosen" : "Выбранный материал",
         "corpselector_of_total" : "всего",
+				"corpselector_of" : " из ",
 
 	"statstable_allcorpora" : "Все&nbsp;корпуса",
 	"statstable_relfreq" : "относительная частота (на миллион слов):",

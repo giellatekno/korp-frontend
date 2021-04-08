@@ -30,6 +30,7 @@
 	"about_dev" : "Ovddideaddjit",
 	"about_logo" : "Logotyp av",
 	"about_contributers" : "Veahkit",
+	"about_cite_header": "Čujuhit Korpii",
 	"warning_header" : "Vänligen uppmärksamma",
 	"warning_body" : "Sániid relašuvnnat leat automáhtalaš analysa boađusin ",
 	"fail_text" : "Meattáhus. ",
@@ -57,6 +58,8 @@
 	"import_chain" : "Annoteringslabbet",
 	"show_deptree" : "Čájet dependeansamuora",
 	"dep_tree" : "Dependeansamuorra",
+	"show_word_pic" : "Show word picture",
+	"show_stats" : "Show statistics",
 
 	"any_word_placeholder" : "<vaikko makkár sátni>",
 	"case_insensitive" : "beroškeahttá unna/stuorra bustávain",
