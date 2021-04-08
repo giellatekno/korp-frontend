@@ -1,20 +1,20 @@
 {
 	"docs" : "Användarhandledning",
-        "northsaami" : "Davvisámi",
-        "norwegian" : "Norsk",
-        "finnish" : "Suomeksi",
+	"northsaami" : "Davvisámi",
+	"norwegian" : "Norsk",
+	"finnish" : "Suomeksi",
 	"swedish" : "Svenska",
 	"english" : "English",
 	"russian" : "По-русски",
 	"korp" : "Korp",
 	"korp_lab" : "Korplaboratoria",
 	"university" : "Göteborga universitehta",
-        "mdf_texts" : "Moksha texts",
-        "mrj_texts" : "Hill Mari texts",
-        "myv_texts" : "Erzya texts",
-        "mhr_texts" : "Meadow Mari texts",
-        "kom_texts" : "Komi-Zyrian texts",
-        "koi_texts" : "Komi-Permyak texts",
+	"mdf_texts" : "Moksha texts",
+	"mrj_texts" : "Hill Mari texts",
+	"myv_texts" : "Erzya texts",
+	"mhr_texts" : "Meadow Mari texts",
+	"kom_texts" : "Komi-Zyrian texts",
+	"koi_texts" : "Komi-Permyak texts",
 	"udm_texts" : "Udmurt texts",
 	"faroese_texts" : "Fearagiella",
 	"old_swedish_texts" : "Boares ruoŧagiella",
@@ -39,9 +39,9 @@
 	"show_more" : "Čájet eanet",
 	"in_corpus" : "čoakkáldagas",
 	"cqp_query" : "Dievaslaš CQP-ohcan",
-  "cqp_docs" : "Viečča CQP-čilgehusaid",
-  "active_cqp_simple" : "Dálá oktageardánis ohcan CQP",
-  "active_cqp_extended" : "Dálá viiddiduvvon ohcan CQP",
+	"cqp_docs" : "Viečča CQP-čilgehusaid",
+	"active_cqp_simple" : "Dálá oktageardánis ohcan CQP",
+	"active_cqp_extended" : "Dálá viiddiduvvon ohcan CQP",
 	"max" : "dán rádjai",
 	"min" : "unnimusat",
 	"and" : "ja",
@@ -90,7 +90,6 @@
 	"sent_start" : "Cealkaga álgu",
 	"sent_end" : "Cealkaga loahppa",
 
-
 	"none_selected" : "&lt;ej vald&gt;",
 
 	"any" : "vaikko makkár sátni",
@@ -108,10 +107,10 @@
 	"advanced" : "CQP Query",
 	"parallel" : "Bálddalasteavsttain",
 	"swe" : "ruoŧa",
-        "nob" : "dárogiella",
-        "sme" : "davvisámegiella",
-        "sjd" : "gielddasámi",
-        "rus" : "ruoššagiella",
+	"nob" : "dárogiella",
+	"sme" : "davvisámegiella",
+	"sjd" : "gielddasámi",
+	"rus" : "ruoššagiella",
 	"statistics" : "Statistihkka",
 	"lemgram_results" : "Sátnegovva ii vuos doaimma",
 	"sort_default" : "mo bordit ",
@@ -152,11 +151,10 @@
 	"text" : "teaksta",
 	"word" : "sáni",
 
-        "more_languages" : "Eanet gielat",
-        "fewer_languages" : "Unnit gielat",
+	"more_languages" : "Eanet gielat",
+	"fewer_languages" : "Unnit gielat",
 
 	"msd_long" : "Morfosyntaktisk beskrivning",
-
 
 	"corpselector_allselected" : " válljejuvvon čoakkáldaga (buot)",
 	"corpselector_noneselected" : "It leat válljen čoakkáldaga",
@@ -4247,5 +4245,4 @@
 	"msdval_V*_Actio_N_Sg_Loc" : "aktio substantiiva ovttaidlogu lokatiiva",
 	"msdval_V*_Actio_N_Sg_Nom" : "aktio substantiiva ovttaidlogu nominatiiva",
 	"msdval____" : "dovddatmeahttun"
-
 }

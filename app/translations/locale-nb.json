@@ -1,8 +1,8 @@
 {
 	"docs" : "Bruksanvisning",
-        "northsaami" : "Davvisámi",
-        "norwegian" : "Norsk",
-        "finnish" : "Suomi",
+	"northsaami" : "Davvisámi",
+	"norwegian" : "Norsk",
+	"finnish" : "Suomi",
 	"swedish" : "Svenska",
 	"english" : "English",
 	"russian" : "По-русски",
@@ -10,12 +10,12 @@
 	"korp_lab" : "Korplab",
 	"university" : "Göteborgs universitet",
 	"modern_texts" : "Enspråklige",
-        "mdf_texts" : "Mokshatekster",
-        "mrj_texts" : "Vestmariske tekster",
-        "myv_texts" : "Erzjatekster",
-        "mhr_texts" : "Østmariske tekster",
-        "kom_texts" : "Komisyrjenske tekster",
-        "koi_texts" : "Komipermjakiske tekster",
+	"mdf_texts" : "Mokshatekster",
+	"mrj_texts" : "Vestmariske tekster",
+	"myv_texts" : "Erzjatekster",
+	"mhr_texts" : "Østmariske tekster",
+	"kom_texts" : "Komisyrjenske tekster",
+	"koi_texts" : "Komipermjakiske tekster",
 	"udm_texts" : "Udmurtiske tekster",
 	"search_history" : "Søkehistorikk",
 	"about" : "Om Korp",
@@ -36,9 +36,9 @@
 	"show_more" : "Vis flere",
 	"in_corpus" : "i tekstsamling",
 	"cqp_query" : "Fullstendig CQP-spørsmål",
-  "cqp_docs" : "Hent CQP-dokumentasjonen",
-  "active_cqp_simple" : "Aktivt enkelt søk som CQP",
-  "active_cqp_extended" : "Aktivt utvidet søk som CQP",
+	"cqp_docs" : "Hent CQP-dokumentasjonen",
+	"active_cqp_simple" : "Aktivt enkelt søk som CQP",
+	"active_cqp_extended" : "Aktivt utvidet søk som CQP",
 	"max" : "opp til",
 	"min" : "minst",
 	"and" : "og",
@@ -87,7 +87,6 @@
 	"sent_start" : "Begynnelsen av setninga",
 	"sent_end" : "Slutten av setninga",
 
-
 	"none_selected" : "&lt;ikke valgt&gt;",
 
 	"any" : "hvilket ord som helst",
@@ -104,11 +103,11 @@
 	"detailed" : "Utvidet",
 	"advanced" : "CQP-uttrykk",
 	"parallel" : "Parallell",
-        "swe" : "svensk",
-        "nob" : "norsk",
-        "sme" : "nordsamisk",
-        "sjd" : "kildinsamisk",
-        "rus" : "russisk",
+	"swe" : "svensk",
+	"nob" : "norsk",
+	"sme" : "nordsamisk",
+	"sjd" : "kildinsamisk",
+	"rus" : "russisk",
 	"statistics" : "Statistikk",
 	"lemgram_results" : "Ordbilde",
 	"sort_default" : "sorter tekstsamling etter",
@@ -149,12 +148,10 @@
 	"text" : "tekst",
 	"word" : "ord",
 
-
-        "more_languages" : "Mer språk",
-        "fewer_languages" : "Ferre språk",
+	"more_languages" : "Mer språk",
+	"fewer_languages" : "Ferre språk",
 
 	"msd_long" : "Morfosyntaktisk beskrivning",
-
 
 	"corpselector_allselected" : " tekstsamlinger valgt (alle)",
 	"corpselector_noneselected" : "Ingen valgte tekstsamlinger",
@@ -4245,5 +4242,4 @@
 	"msdval_V*_Actio_N_Sg_Loc" : "aktio substantiv entall lokativ",
 	"msdval_V*_Actio_N_Sg_Nom" : "aktio substantiv entall nominativ",
 	"msdval____" : "ukjent"
-
 }

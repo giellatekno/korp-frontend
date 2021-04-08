@@ -1,20 +1,20 @@
 {
 	"docs" : "Användarhandledning",
-        "northsaami" : "Davvisámi",
-        "norwegian" : "Norsk",
-        "finnish" : "Suomi",
+	"northsaami" : "Davvisámi",
+	"norwegian" : "Norsk",
+	"finnish" : "Suomi",
 	"swedish" : "Svenska",
 	"english" : "English",
 	"russian" : "По-русски",
 	"korp" : "Korp",
 	"korp_lab" : "Korplabbet",
 	"university" : "Göteborgs universitet",
-        "mdf_texts" : "Moksha texts",
-        "mrj_texts" : "Hill Mari texts",
-        "myv_texts" : "Erzya texts",
-        "mhr_texts" : "Meadow Mari texts",
-        "kom_texts" : "Komi-Zyrian texts",
-        "koi_texts" : "Komi-Permyak texts",
+	"mdf_texts" : "Moksha texts",
+	"mrj_texts" : "Hill Mari texts",
+	"myv_texts" : "Erzya texts",
+	"mhr_texts" : "Meadow Mari texts",
+	"kom_texts" : "Komi-Zyrian texts",
+	"koi_texts" : "Komi-Permyak texts",
 	"udm_texts" : "Udmurt texts",
 	"faroese_texts" : "Färöiska",
 	"old_swedish_texts" : "Fornsvenska",
@@ -91,7 +91,6 @@
 	"sent_start" : "Meningsbörjan",
 	"sent_end" : "Meningsslut",
 
-
 	"none_selected" : "&lt;ej vald&gt;",
 
 	"any" : "vilket ord som helst",
@@ -109,10 +108,10 @@
 	"advanced" : "Avancerad",
 	"parallel" : "Parallell",
 	"swe" : "svenska",
- 	"nob" : "norska",
- 	"sme" : "nordsamiska",
- 	"sjd" : "kildinsamiska",
- 	"rus" : "russiska",
+	"nob" : "norska",
+	"sme" : "nordsamiska",
+	"sjd" : "kildinsamiska",
+	"rus" : "russiska",
 	"statistics" : "Statistik",
 	"lemgram_results" : "Ordbild",
 	"sort_default" : "sortera inom korpus på",
@@ -153,12 +152,10 @@
 	"text" : "text",
 	"word" : "ord",
 
-
-        "more_languages" : "Fler språk",
-        "fewer_languages" : "Färre språk",
+	"more_languages" : "Fler språk",
+	"fewer_languages" : "Färre språk",
 
 	"msd_long" : "Morfosyntaktisk beskrivning",
-
 
 	"corpselector_allselected" : " korpusar valda (alla)",
 	"corpselector_noneselected" : "Ingen vald korpus",
@@ -202,5 +199,4 @@
 	"hitspicture_gotocorpushits" : "Klicka för att gå till första sidan med träffar från denna korpus.",
 
 	"hits_per_mil" : "Träffar per miljon token"
-
 }
