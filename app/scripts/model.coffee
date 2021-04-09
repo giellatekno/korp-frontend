@@ -368,7 +368,8 @@ class model.TimeProxy extends BaseProxy
             type: "GET"
             data:
                 granularity: "y"
-                corpus: settings.corpusListing.stringifyAll()+","
+                #corpus: settings.corpusListing.stringifyAll()+","
+                corpus: settings.corpusListing.stringifyAll()
 
         xhr.done (data, status, xhr) =>
             c.log "timespan done", data
