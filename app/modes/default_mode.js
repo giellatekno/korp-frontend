@@ -8,7 +8,7 @@ settings.corporafolders = {};
 /*
 	* CORPORA
 */
-settings.preselected_corpora = ["fkv_admin_20210319.vrt  fkv_bible_20210319.vrt  fkv_facta_20210319.vrt  fkv_ficti_20210319.vrt  fkv_news_20210319.vrt"]
+settings.preselected_corpora = ["fkv_admin_20210319.vrt",  "fkv_bible_20210319.vrt",  "fkv_facta_20210319.vrt",  "fkv_ficti_20210319.vrt", "fkv_news_20210319.vrt"]
 
 settings.corpora.fkv_admin_20210319 = {
 	id : "fkv_admin_20210319",
