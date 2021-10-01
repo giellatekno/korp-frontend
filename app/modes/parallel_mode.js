@@ -8,7 +8,7 @@ settings.hitsPerPageValues = [10,25,50,75,100,500,1000]
 korpApp.controller("SearchCtrl", function($rootScope, $scope, $controller, $location) {
     // resolve globalFilterDef since globalFilter-directive is not used
     $rootScope.globalFilterDef.resolve()
-    
+
     $controller(window.SearchCtrl, {$scope: $scope})
     $scope.visibleTabs = [false, true, false, false];
     $scope.extendedTmpl = "modes/parallel_extended_tmpl.html";
@@ -290,16 +290,16 @@ settings.corporafolders = {};
 
 settings.corporafolders.nob2sme = {
     title: "Norwegian-North Saami parallel texts",
-    contents: ["nob2sme_20131127-nob"]
+    //contents: ["nob2sme_20131127-nob"]
+    contents: ["nob2sme_admin_20191210-nob", "nob2sme_bible_20191210-nob", "nob2sme_facta_20191210-nob", "nob2sme_science_20191210-nob", "nob2sme_laws_20191210-nob", "nob2sme_mixed_20191210-nob"]
     //description: "xxx"
 };
 
 settings.corporafolders.nob2sma = {
     title: "Norwegian-South Saami parallel texts",
-    contents: ["nob2sma_20170828-nob"]
+    contents: ["nob2sma_admin_20190926-nob", "nob2sma_bible_20190926-nob", "nob2sma_science_20190926-nob", "nob2sma_facta_20190926-nob"]
     //description: "xxx"
 };
-
 
 settings.corpora = {};
 
@@ -307,10 +307,10 @@ settings.corpora = {};
 //corporafolders.nob2sme//
 //////////////////////////
 
-settings.corpora["nob2sme_20131127-nob"] = {
-    id: "nob2sme_20131127-nob",
+settings.corpora["nob2sme_admin_20191210-nob"] = {
+    id: "nob2sme_admin_20191210-nob",
     lang: "nob",
-    linkedTo: ["nob2sme_20131127-sme"],
+    linkedTo: ["nob2sme_admin_20191210-sme"],
     pivot: true,
     title: "Norwegian-North Saami administrative corpus",
     context: context.defaultAligned,
@@ -323,15 +323,15 @@ settings.corpora["nob2sme_20131127-nob"] = {
     },
     structAttributes: {
             //text_de_title : {label : "title"},
-            //text_o_lang : {label : "origlang"},
-            //text_author : {label : "author"},
+            //            //text_o_lang : {label : "origlang"},
+            //                        //text_author : {label : "author"},
     }
 };
 
-settings.corpora["nob2sme_20131127-sme"] = {
-    id: "nob2sme_20131127-sme",
+settings.corpora["nob2sme_admin_20191210-sme"] = {
+    id: "nob2sme_admin_20191210-sme",
     lang: "sme",
-    linkedTo: ["nob2sme_20131127-nob"],
+    linkedTo: ["nob2sme_admin_20191210-nob"],
     title: "Norwegian-North Saami administrative corpus",
     context: {
         "1 link": "1 link"
@@ -348,19 +348,16 @@ settings.corpora["nob2sme_20131127-sme"] = {
     hide: true
 };
 
-//////////////////////////
-//corporafolders.nob2sma//
-//////////////////////////
 
-settings.corpora["nob2sma_20170828-nob"] = {
-    id: "nob2sma_20170828-nob",
+settings.corpora["nob2sme_bible_20191210-nob"] = {
+    id: "nob2sme_bible_20191210-nob",
     lang: "nob",
-    linkedTo: ["nob2sma_20170828-sma"],
+    linkedTo: ["nob2sme_bible_20191210-sme"],
     pivot: true,
-    title: "Norwegian-South Saami administrative corpus",
+    title: "Norwegian-North Saami religion parallel corpus",
     context: context.defaultAligned,
     within: {
-        "linksma": "meningspar"
+        "linksme": "meningspar"
     },
     attributes: {
         pos: attrs.pos,
@@ -371,11 +368,11 @@ settings.corpora["nob2sma_20170828-nob"] = {
     }
 };
 
-settings.corpora["nob2sma_20170828-sma"] = {
-    id: "nob2sma_20170828-sma",
-    lang: "sma",
-    linkedTo: ["nob2sma_20170828-nob"],
-    title: "Norwegian-South Saami administrative corpus",
+settings.corpora["nob2sme_bible_20191210-sme"] = {
+    id: "nob2sme_bible_20191210-sme",
+    lang: "sme",
+    linkedTo: ["nob2sme_bible_20191210-nob"],
+    title: "Norwegian-North Saami religion parallel corpus",
     context: {
         "1 link": "1 link"
     },
@@ -392,6 +389,338 @@ settings.corpora["nob2sma_20170828-sma"] = {
     },
     hide: true
 };
+
+settings.corpora["nob2sme_facta_20191210-nob"] = {
+    id: "nob2sme_facta_20191210-nob",
+    lang: "nob",
+    linkedTo: ["nob2sme_facta_20191210-sme"],
+    pivot: true,
+    title: "Norwegian-North Saami non-fiction parallel corpus",
+    context: context.defaultAligned,
+    within: {
+        "linksme": "meningspar"
+    },
+    attributes: {
+        pos: attrs.pos,
+        lemma: attrs.baseform,
+    },
+    structAttributes: {
+	text_gt_domain : {label : "domain"}
+    }
+};
+
+settings.corpora["nob2sme_facta_20191210-sme"] = {
+    id: "nob2sme_facta_20191210-sme",
+    lang: "sme",
+    linkedTo: ["nob2sme_facta_20191210-nob"],
+    title: "Norwegian-North Saami non-fiction parallel corpus",
+    context: {
+        "1 link": "1 link"
+    },
+    within: {
+        "link": "meningspar"
+    },
+    attributes: {
+                pos: attrs.pos,
+                lemma: attrs.baseform,
+                msd: attrs.msd
+    },
+    structAttributes: {
+	text_gt_domain : {label : "domain"}
+    },
+    hide: true
+};
+
+settings.corpora["nob2sme_laws_20191210-nob"] = {
+    id: "nob2sme_laws_20191210-nob",
+    lang: "nob",
+    linkedTo: ["nob2sme_laws_20191210-sme"],
+    pivot: true,
+    title: "Norwegian-North Saami legislative parallel corpus",
+    context: context.defaultAligned,
+    within: {
+        "linksme": "meningspar"
+    },
+    attributes: {
+        pos: attrs.pos,
+        lemma: attrs.baseform,
+    },
+    structAttributes: {
+	text_gt_domain : {label : "domain"}
+    }
+};
+
+settings.corpora["nob2sme_laws_20191210-sme"] = {
+    id: "nob2sme_laws_20191210-sme",
+    lang: "sme",
+    linkedTo: ["nob2sme_laws_20191210-nob"],
+    title: "Norwegian-North Saami legislative parallel corpus",
+    context: {
+        "1 link": "1 link"
+    },
+    within: {
+        "link": "meningspar"
+    },
+    attributes: {
+                pos: attrs.pos,
+                lemma: attrs.baseform,
+                msd: attrs.msd
+    },
+    structAttributes: {
+	text_gt_domain : {label : "domain"}
+    },
+    hide: true
+};
+
+settings.corpora["nob2sme_science_20191210-nob"] = {
+    id: "nob2sme_science_20191210-nob",
+    lang: "nob",
+    linkedTo: ["nob2sme_science_20191210-sme"],
+    pivot: true,
+    title: "Norwegian-North Saami science parallel corpus",
+    context: context.defaultAligned,
+    within: {
+        "linksme": "meningspar"
+    },
+    attributes: {
+        pos: attrs.pos,
+        lemma: attrs.baseform,
+    },
+    structAttributes: {
+	text_gt_domain : {label : "domain"}
+    }
+};
+
+settings.corpora["nob2sme_science_20191210-sme"] = {
+    id: "nob2sme_science_20191210-sme",
+    lang: "sme",
+    linkedTo: ["nob2sme_science_20191210-nob"],
+    title: "Norwegian-North Saami science parallel corpus",
+    context: {
+        "1 link": "1 link"
+    },
+    within: {
+        "link": "meningspar"
+    },
+    attributes: {
+                pos: attrs.pos,
+                lemma: attrs.baseform,
+                msd: attrs.msd
+    },
+    structAttributes: {
+	text_gt_domain : {label : "domain"}
+    },
+    hide: true
+};
+
+settings.corpora["nob2sme_mixed_20191210-nob"] = {
+    id: "nob2sme_mixed_20191210-nob",
+    lang: "nob",
+    linkedTo: ["nob2sme_mixed_20191210-sme"],
+    pivot: true,
+    title: "Norwegian-North Saami mixed parallel corpus from 2012 and before",
+    context: context.defaultAligned,
+    within: {
+        "linksme": "meningspar"
+    },
+    attributes: {
+        pos: attrs.pos,
+        lemma: attrs.baseform,
+    },
+    structAttributes: {
+	text_gt_domain : {label : "domain"}
+    }
+};
+
+settings.corpora["nob2sme_mixed_20191210-sme"] = {
+    id: "nob2sme_mixed_20191210-sme",
+    lang: "sme",
+    linkedTo: ["nob2sme_mixed_20191210-nob"],
+    title: "Norwegian-North Saami mixed parallel corpus from 2012 and before",
+    context: {
+        "1 link": "1 link"
+    },
+    within: {
+        "link": "meningspar"
+    },
+    attributes: {
+                pos: attrs.pos,
+                lemma: attrs.baseform,
+                msd: attrs.msd
+    },
+    structAttributes: {
+	text_gt_domain : {label : "domain"}
+    },
+    hide: true
+};
+
+//////////////////////////
+//corporafolders.nob2sma//
+//////////////////////////
+settings.corpora["nob2sma_admin_20190926-nob"] = {
+    id: "nob2sma_admin_20190926-nob",
+    lang: "nob",
+    linkedTo: ["nob2sma_admin_20190926-sma"],
+    pivot: true,
+    title: "Norwegian-South Saami administrative parallel corpus",
+    context: context.defaultAligned,
+    within: {
+        "linksma": "meningspar"
+    },
+    attributes: {
+        pos: attrs.pos,
+        lemma: attrs.baseform,
+    },
+    structAttributes: {
+	text_gt_domain : {label : "domain"}
+    }
+};
+
+settings.corpora["nob2sma_admin_20190926-sma"] = {
+    id: "nob2sma_admin_20190926-sma",
+    lang: "sma",
+    linkedTo: ["nob2sma_admin_20190926-nob"],
+    title: "Norwegian-South Saami administrative parallel corpus",
+    context: {
+        "1 link": "1 link"
+    },
+    within: {
+        "link": "meningspar"
+    },
+    attributes: {
+                pos: attrs.pos,
+                lemma: attrs.baseform,
+                msd: attrs.msd
+    },
+    structAttributes: {
+	text_gt_domain : {label : "domain"}
+    },
+    hide: true
+};
+
+settings.corpora["nob2sma_bible_20190926-nob"] = {
+    id: "nob2sma_bible_20190926-nob",
+    lang: "nob",
+    linkedTo: ["nob2sma_bible_20190926-sma"],
+    pivot: true,
+    title: "Norwegian-South Saami religion parallel corpus",
+    context: context.defaultAligned,
+    within: {
+        "linksma": "meningspar"
+    },
+    attributes: {
+        pos: attrs.pos,
+        lemma: attrs.baseform,
+    },
+    structAttributes: {
+	text_gt_domain : {label : "domain"}
+    }
+};
+
+settings.corpora["nob2sma_bible_20190926-sma"] = {
+    id: "nob2sma_bible_20190926-sma",
+    lang: "sma",
+    linkedTo: ["nob2sma_bible_20190926-nob"],
+    title: "Norwegian-South Saami religion parallel corpus",
+    context: {
+        "1 link": "1 link"
+    },
+    within: {
+        "link": "meningspar"
+    },
+    attributes: {
+                pos: attrs.pos,
+                lemma: attrs.baseform,
+                msd: attrs.msd
+    },
+    structAttributes: {
+	text_gt_domain : {label : "domain"}
+    },
+    hide: true
+};
+
+settings.corpora["nob2sma_facta_20190926-nob"] = {
+    id: "nob2sma_facta_20190926-nob",
+    lang: "nob",
+    linkedTo: ["nob2sma_facta_20190926-sma"],
+    pivot: true,
+    title: "Norwegian-South Saami non-fiction parallel corpus",
+    context: context.defaultAligned,
+    within: {
+        "linksma": "meningspar"
+    },
+    attributes: {
+        pos: attrs.pos,
+        lemma: attrs.baseform,
+    },
+    structAttributes: {
+	text_gt_domain : {label : "domain"}
+    }
+};
+
+settings.corpora["nob2sma_facta_20190926-sma"] = {
+    id: "nob2sma_facta_20190926-sma",
+    lang: "sma",
+    linkedTo: ["nob2sma_facta_20190926-nob"],
+    title: "Norwegian-South Saami non-fiction parallel corpus",
+    context: {
+        "1 link": "1 link"
+    },
+    within: {
+        "link": "meningspar"
+    },
+    attributes: {
+                pos: attrs.pos,
+                lemma: attrs.baseform,
+                msd: attrs.msd
+    },
+    structAttributes: {
+	text_gt_domain : {label : "domain"}
+    },
+    hide: true
+};
+
+settings.corpora["nob2sma_science_20190926-nob"] = {
+    id: "nob2sma_science_20190926-nob",
+    lang: "nob",
+    linkedTo: ["nob2sma_science_20190926-sma"],
+    pivot: true,
+    title: "Norwegian-South Saami science parallel corpus",
+    context: context.defaultAligned,
+    within: {
+        "linksma": "meningspar"
+    },
+    attributes: {
+        pos: attrs.pos,
+        lemma: attrs.baseform,
+    },
+    structAttributes: {
+	text_gt_domain : {label : "domain"}
+    }
+};
+
+settings.corpora["nob2sma_science_20190926-sma"] = {
+    id: "nob2sma_science_20190926-sma",
+    lang: "sma",
+    linkedTo: ["nob2sma_science_20190926-nob"],
+    title: "Norwegian-South Saami science parallel corpus",
+    context: {
+        "1 link": "1 link"
+    },
+    within: {
+        "link": "meningspar"
+    },
+    attributes: {
+                pos: attrs.pos,
+                lemma: attrs.baseform,
+                msd: attrs.msd
+    },
+    structAttributes: {
+	text_gt_domain : {label : "domain"}
+    },
+    hide: true
+};
+
 
 
 
