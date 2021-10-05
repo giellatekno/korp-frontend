@@ -63,7 +63,7 @@ settings.reduceStructAttributeSelector = "intersection";
 
 settings.filterSelection = "intersection"
 
-settings.newsDeskUrl = "http://gtweb.uit.no/korp/pub/gt_news.json";
+settings.newsDeskUrl = "https://gtweb.uit.no/korp/pub/gt_news.json";
 
 settings.wordpictureTagset = {
     // supported pos-tags
@@ -278,7 +278,7 @@ settings.defaultOptionsMsd = {
     "matches_not": "!*=",
 }
 
-settings.korpBackendURL = "http://gtweb.uit.no/ws/gt_korp";
+settings.korpBackendURL = "https://gtweb.uit.no/ws/gt_korp";
 //settings.downloadCgiScript = "https://ws.spraakbanken.gu.se/ws/korp/download";
 
 settings.mapCenter = {
