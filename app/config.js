@@ -150,7 +150,7 @@ settings.defaultOptionsMsd = {
     "matches_not": "!*=",
 }
 
-settings.korpBackendURL = "http://gtweb.uit.no/ws/gt_korp";
+settings.korpBackendURL = "https://gtweb.uit.no/ws/gt_korp";
 
 settings.mapCenter = {
   lat: 62.99515845212052,
