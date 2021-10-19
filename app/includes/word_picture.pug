@@ -33,7 +33,7 @@ div(constr='LemgramResults', constr-name='lemgramResults')
             span(ng-if="header != '_'")
               | {{getHeaderLabel(header, section, $index) | loc:lang}}
             span(ng-if="header == '_'")
-              b() {{fromLemgram(word.token)}}
+              b(class="token") {{fromLemgram(word.token)}}
 
         div(ng-repeat="table in section", ng-if="renderTable(table.table)",
             class="lemgram_result",
