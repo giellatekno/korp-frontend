@@ -15,7 +15,7 @@ korpApp.directive 'kwicWord', ->
                 match_sentence : wd._matchSentence
                 link_selected : wd._link_selected
 
-           if wd.word == "//"
+            if wd.word == "//"
                     wd.word = "/"
             for struct in (wd._open or [])
                 output["open_" + struct] = true
