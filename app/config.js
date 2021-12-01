@@ -81,12 +81,14 @@ settings.wordpictureTagset = {
     sub_to_left: "SUBJ→",
     sub_to_right: "←SUBJ",
     fsubj_to_left: "-FSUBJ→",
+    subj: "SUBJ",
 
     //object: "OBJ",
     obj_to_left: "OBJ→",
     obj_to_right: "←OBJ",
     fobj_to_left: "-FOBJ→",
     fobj_to_right: "-F←OBJ", //?? same description as -FOBJ→
+    obj: "OBJ",
 
     advl_to_left: "ADVL→",
     advl_to_right: "←ADVL",
@@ -104,7 +106,6 @@ settings.wordpictureTagset = {
     complement_of_prpos_to_right: "P←",
 
     fmv: "FMV",
-    faux: "FAUX",
 
     modifier_of_pron_to_left: "→Pron",
     modifier_of_pron_to_right: "Pron←",
@@ -114,21 +115,16 @@ settings.wordpictureTagset = {
 settings.wordPictureConf = {
     verb: [
       [
-        {rel: "sub_to_left", css_class: "color_blue", alt_label: "Subject"},
-        {rel: "fsubj_to_left", css_class: "color_blue", alt_label: "F-Subject"},
-        {rel: "obj_to_left", css_class: "color_yellow", alt_label: "Object"},
-        {rel: "fobj_to_left", css_class: "color_yellow", alt_label: "Object"},
+        {rel: "subj", css_class: "color_blue", alt_label: "Subject"},
+        {rel: "obj", css_class: "color_yellow", alt_label: "Object"},
         {rel: "advl_to_left", css_class: "color_purple", alt_label: "Adverbial"},
-        {rel: "faux", css_class: "color_green", alt_label: "Finite auxiliary verb"},
         "_"
       ],
       [
         "_",
-        {rel: "sub_to_right", css_class: "color_blue", alt_label: "Subject"},
-        {rel: "obj_to_right", css_class: "color_yellow", alt_label: "Object"},
-        {rel: "fobj_to_right", css_class: "color_yellow", alt_label: "Object"},
         {rel: "advl_to_right", css_class: "color_purple", alt_label: "Adverbial"},
         {rel: "fmv", css_class: "color_red", alt_label: "Finite main verb"},
+
       ],
     ],
     noun: [
@@ -139,8 +135,8 @@ settings.wordPictureConf = {
         {rel: "modifier_of_advl", css_class: "color_purple_light dep", field_reverse: true, alt_label: "Mod. of advl. (dep)"},
         {rel: "prenominal_modifier_to_left", css_class: "color_white dep", field_reverse: true, alt_label: "Prenom. mod. (dep)"},
         {rel: "complement_of_popos_to_left", css_class: "color_azure dep", field_reverse: true, alt_label: "Compl. of Po (dep)"},
-        {rel: "obj_to_left", css_class: "color_yellow dep", field_reverse: true, alt_label: "Object (dep)"},
-        {rel: "sub_to_left", css_class: "color_blue dep", field_reverse: true, alt_label: "Subject (dep)"},
+        {rel: "obj", css_class: "color_yellow dep", field_reverse: true, alt_label: "Object (dep)"},
+        {rel: "subj", css_class: "color_blue dep", field_reverse: true, alt_label: "Subject (dep)"},
         "_"
       ],
       [
