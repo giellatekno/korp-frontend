@@ -12,27 +12,27 @@ settings.corporafolders = {};
 // TODO: this should be moved when modern texts are moved to their own mode
 if (window.currentMode == "default")
   settings.preselected_corpora = [
-    "sme_admin_20210625",
-    "sme_bible_20210625",
-    "sme_facta_20210625",
-    "sme_ficti_20210625",
-    "sme_laws_20210625",
-    "sme_science_20210625",
-    "sme_news_20210625",
-    "sme_blogs_20210625",
-    "sme_wikipedia_20210625",
+    "sme_admin_20211118",
+    "sme_bible_20211118",
+    "sme_facta_20211118",
+    "sme_ficti_20211118",
+    "sme_laws_20211118",
+    "sme_science_20211118",
+    "sme_news_20211118",
+    "sme_blogs_20211118",
+    "sme_wikipedia_20211118",
   ];
 /*
 
-  settings.preselected_corpora = ["test_admin", "sme_admin_20210625"];
+  settings.preselected_corpora = ["test_admin", "sme_admin_20211118"];
   */
 
 /*
  * CORPORA
  */
 
-settings.corpora.sme_admin_20210625 = {
-  id: "sme_admin_20210625",
+settings.corpora.sme_admin_20211118 = {
+  id: "sme_admin_20211118",
   title: "Administrative texts",
   description:
     'Administrative texts, mostly from the <a href="http://www.samediggi.no/" target="_blank">Saami Parliament</a> in Norway',
@@ -46,8 +46,8 @@ settings.corpora.sme_admin_20210625 = {
   },
 };
 
-settings.corpora.sme_bible_20210625 = {
-  id: "sme_bible_20210625",
+settings.corpora.sme_bible_20211118 = {
+  id: "sme_bible_20211118",
   title: "Religion texts",
   description: "Texts on religion",
   within: settings.defaultWithin,
@@ -60,8 +60,8 @@ settings.corpora.sme_bible_20210625 = {
   },
 };
 
-settings.corpora.sme_facta_20210625 = {
-  id: "sme_facta_20210625",
+settings.corpora.sme_facta_20211118 = {
+  id: "sme_facta_20211118",
   title: "Non-fiction texts",
   description: "A collection of non-fiction texts",
   within: settings.defaultWithin,
@@ -74,8 +74,8 @@ settings.corpora.sme_facta_20210625 = {
   },
 };
 
-settings.corpora.sme_ficti_20210625 = {
-  id: "sme_ficti_20210625",
+settings.corpora.sme_ficti_20211118 = {
+  id: "sme_ficti_20211118",
   title: "Fiction texts",
   description: "A collection of fiction texts",
   within: settings.defaultWithin,
@@ -88,8 +88,9 @@ settings.corpora.sme_ficti_20210625 = {
   },
 };
 
-settings.corpora.sme_laws_20210625 = {
-  id: "sme_laws_20210625",
+
+settings.corpora.sme_laws_20211118 = {
+  id: "sme_laws_20211118",
   title: "Law texts",
   description: "A collection of legislative texts",
   within: settings.defaultWithin,
@@ -102,8 +103,8 @@ settings.corpora.sme_laws_20210625 = {
   },
 };
 
-settings.corpora.sme_news_20210625 = {
-  id: "sme_news_20210625",
+settings.corpora.sme_news_20211118 = {
+  id: "sme_news_20211118",
   title: "News texts",
   description: "A collection of news texts",
   within: settings.defaultWithin,
@@ -116,8 +117,8 @@ settings.corpora.sme_news_20210625 = {
   },
 };
 
-settings.corpora.sme_science_20210625 = {
-  id: "sme_science_20210625",
+settings.corpora.sme_science_20211118 = {
+  id: "sme_science_20211118",
   title: "Science texts",
   description:
     "A collection of science texts such as masters theses, phd theses, and articles",
@@ -131,8 +132,8 @@ settings.corpora.sme_science_20210625 = {
   },
 };
 
-settings.corpora.sme_blogs_20210625 = {
-  id: "sme_blogs_20210625",
+settings.corpora.sme_blogs_20211118 = {
+  id: "sme_blogs_20211118",
   title: "North Saami blogs",
   description: "A collection of blog texts",
   within: settings.defaultWithin,
@@ -145,8 +146,8 @@ settings.corpora.sme_blogs_20210625 = {
   },
 };
 
-settings.corpora.sme_wikipedia_20210625 = {
-  id: "sme_wikipedia_20210625",
+settings.corpora.sme_wikipedia_20211118 = {
+  id: "sme_wikipedia_20211118",
   title: "Wikipedia texts",
   description: "A collection of wikipedia texts",
   within: settings.spWithin,
