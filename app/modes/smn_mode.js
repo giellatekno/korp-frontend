@@ -158,4 +158,25 @@ settings.corpora.smn_science_20211118 = {
         }
 };
 
+settings.corpora.smn_wikipedia_20211118 = {
+        id : "smn_wikipedia_20211118",
+        title : "Wikipedia texts",
+        description : "A collection of wikipedia texts",
+        within : settings.defaultWithin,
+        context : settings.defaultContext,
+        attributes : {
+                pos : attrs.pos,
+                msd : attrs.msd,
+                lemma : attrs.baseform,
+                dephead : attrs.dephead,
+                deprel : attrs.deprel,
+                ref : attrs.ref,
+        },
+        structAttributes : {
+                text_title : {label : "title"},
+                text_orig_lang : {label : "translated_from"},
+                text_gt_domain : {label : "domain"},
+        }
+};
+
 settings.corpusListing = new CorpusListing(settings.corpora);
