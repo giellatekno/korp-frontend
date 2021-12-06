@@ -26,6 +26,7 @@ settings.corpora.smn_admin_20211118 = {
                 text_title : {label : "title"},
                 text_orig_lang : {label : "translated_from"},
                 text_gt_domain : {label : "domain"},
+                text_date: {label: "date"},
         }
 };
 
@@ -47,6 +48,7 @@ settings.corpora.smn_bible_20211118 = {
                 text_title : {label : "title"},
                 text_orig_lang : {label : "translated_from"},
                 text_gt_domain : {label : "domain"},
+                text_date: {label: "date"},
         }
 };
 
@@ -68,6 +70,7 @@ settings.corpora.smn_blogs_20211118 = {
         text_title : {label : "title"},
         text_orig_lang : {label : "translated_from"},
         text_gt_domain : {label : "domain"},
+        text_date: {label: "date"},
   }
 };
 
@@ -90,6 +93,7 @@ settings.corpora.smn_facta_20211118 = {
                 text_title : {label : "title"},
                 text_orig_lang : {label : "translated_from"},
                 text_gt_domain : {label : "domain"},
+                text_date: {label: "date"},
         }
 };
 
@@ -112,6 +116,7 @@ settings.corpora.smn_ficti_20211118 = {
                 text_title : {label : "title"},
                 text_orig_lang : {label : "translated_from"},
                 text_gt_domain : {label : "domain"},
+                text_date: {label: "date"},
   }
 };
 
@@ -133,6 +138,7 @@ settings.corpora.smn_news_20211118 = {
                 text_title : {label : "title"},
                 text_orig_lang : {label : "translated_from"},
                 text_gt_domain : {label : "domain"},
+                text_date: {label: "date"},
         }
 };
 
@@ -155,6 +161,7 @@ settings.corpora.smn_science_20211118 = {
                 text_title : {label : "title"},
                 text_orig_lang : {label : "translated_from"},
                 text_gt_domain : {label : "domain"},
+                text_date: {label: "date"},
         }
 };
 
@@ -176,6 +183,7 @@ settings.corpora.smn_wikipedia_20211118 = {
                 text_title : {label : "title"},
                 text_orig_lang : {label : "translated_from"},
                 text_gt_domain : {label : "domain"},
+                text_date: {label: "date"},
         }
 };
 

@@ -26,6 +26,7 @@ settings.corpora.sms_admin_20211118 = {
                 text_title : {label : "title"},
                 text_orig_lang : {label : "translated_from"},
                 text_gt_domain : {label : "domain"},
+                text_date: {label: "date"},
         }
 };
 
@@ -47,6 +48,7 @@ settings.corpora.sms_blogs_20211118 = {
                 text_title : {label : "title"},
                 text_orig_lang : {label : "translated_from"},
                 text_gt_domain : {label : "domain"},
+                text_date: {label: "date"},
         }
 };
 
@@ -68,6 +70,7 @@ settings.corpora.sms_facta_20211118 = {
                 text_title : {label : "title"},
                 text_orig_lang : {label : "translated_from"},
                 text_gt_domain : {label : "domain"},
+                text_date: {label: "date"},
         }
 };
 
@@ -89,6 +92,7 @@ settings.corpora.sms_laws_20211118 = {
                 text_title : {label : "title"},
                 text_orig_lang : {label : "translated_from"},
                 text_gt_domain : {label : "domain"},
+                text_date: {label: "date"},
         }
 };
 
@@ -110,6 +114,7 @@ settings.corpora.sms_literature_20211118 = {
                 text_title : {label : "title"},
                 text_orig_lang : {label : "translated_from"},
                 text_gt_domain : {label : "domain"},
+                text_date: {label: "date"},
         }
 };
 
@@ -131,6 +136,7 @@ settings.corpora.sms_science_20211118 = {
                 text_title : {label : "title"},
                 text_orig_lang : {label : "translated_from"},
                 text_gt_domain : {label : "domain"},
+                text_date: {label: "date"},
         }
 };
 
@@ -153,6 +159,7 @@ settings.corpora.sms_news_20211118 = {
                 text_title : {label : "title"},
                 text_orig_lang : {label : "translated_from"},
                 text_gt_domain : {label : "domain"},
+                text_date: {label: "date"},
         }
 };
 

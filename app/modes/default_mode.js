@@ -43,6 +43,7 @@ settings.corpora.sme_admin_20211118 = {
     text_title: { label: "title" },
     text_orig_lang: { label: "translated_from" },
     text_gt_domain: { label: "domain" },
+    text_date: {label: "date"},
   },
 };
 
@@ -57,6 +58,7 @@ settings.corpora.sme_bible_20211118 = {
     text_title: { label: "title" },
     text_orig_lang: { label: "translated_from" },
     text_gt_domain: { label: "domain" },
+    text_date: {label: "date"},
   },
 };
 
@@ -71,6 +73,7 @@ settings.corpora.sme_facta_20211118 = {
     text_title: { label: "title" },
     text_orig_lang: { label: "translated_from" },
     text_gt_domain: { label: "domain" },
+    text_date: {label: "date"},
   },
 };
 
@@ -85,6 +88,7 @@ settings.corpora.sme_ficti_20211118 = {
     text_title: { label: "title" },
     text_orig_lang: { label: "translated_from" },
     text_gt_domain: { label: "domain" },
+    text_date: {label: "date"},
   },
 };
 
@@ -100,6 +104,7 @@ settings.corpora.sme_laws_20211118 = {
     text_title: { label: "title" },
     text_orig_lang: { label: "translated_from" },
     text_gt_domain: { label: "domain" },
+    text_date: {label: "date"},
   },
 };
 
@@ -114,6 +119,7 @@ settings.corpora.sme_news_20211118 = {
     text_title: { label: "title" },
     text_orig_lang: { label: "translated_from" },
     text_gt_domain: { label: "domain" },
+    text_date: {label: "date"},
   },
 };
 
@@ -129,6 +135,7 @@ settings.corpora.sme_science_20211118 = {
     text_title: { label: "title" },
     text_orig_lang: { label: "translated_from" },
     text_gt_domain: { label: "domain" },
+    text_date: {label: "date"},
   },
 };
 
@@ -143,6 +150,7 @@ settings.corpora.sme_blogs_20211118 = {
     text_title: { label: "title" },
     text_orig_lang: { label: "translated_from" },
     text_gt_domain: { label: "domain" },
+    text_date: {label: "date"},
   },
 };
 
@@ -156,6 +164,7 @@ settings.corpora.sme_wikipedia_20211118 = {
   structAttributes: {
     text_title: { label: "title" },
     text_gt_domain: { label: "domain" },
+    text_date: {label: "date"},
   },
 };
 
