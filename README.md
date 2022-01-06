@@ -31,7 +31,7 @@ Available target in grunt are:
 - serve - Start a local instance of Korp. Also builds any necessary files.
 - release - Same as build, but updates a file with SVN revision
 
-## Local setup for Ubuntu
+## Local setup for Ubuntu (not needed on Mac)
 
 - `sudo apt install npm`
 - `sudo npm install -g grunt-cli`
