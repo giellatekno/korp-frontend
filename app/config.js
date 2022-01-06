@@ -274,7 +274,11 @@ settings.defaultOptionsMsd = {
     "matches_not": "!*=",
 }
 
-settings.korpBackendURL = "https://gtweb.uit.no/ws/gt_korp";
+
+//settings.korpBackendURL = "https://gtweb.uit.no/ws/gt_korp";
+settings.korpBackendURL = "http://localhost:1235";
+// ws/gt_korp gjev onlinekorpus med lokalt grensesnitt, localhost:1235 gjev begge lokalt.
+// For formatet på settings.korpBackendURL sjå originalen på /corpora/gt_cwb/ på serveren (Trond)
 //settings.downloadCgiScript = "https://ws.spraakbanken.gu.se/ws/korp/download";
 
 settings.mapCenter = {
