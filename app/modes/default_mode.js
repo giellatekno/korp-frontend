@@ -20,7 +20,6 @@ if (window.currentMode == "default")
     "sme_science_20211118",
     "sme_news_20211118",
     "sme_blogs_20211118",
-    "sme_wikipedia_20211118",
   ];
 /*
 
@@ -154,19 +153,6 @@ settings.corpora.sme_blogs_20211118 = {
   },
 };
 
-settings.corpora.sme_wikipedia_20211118 = {
-  id: "sme_wikipedia_20211118",
-  title: "Wikipedia texts",
-  description: "A collection of wikipedia texts",
-  within: settings.spWithin,
-  context: settings.spContext,
-  attributes: modernAttrs,
-  structAttributes: {
-    text_title: { label: "title" },
-    text_gt_domain: { label: "domain" },
-    text_date: {label: "date"},
-  },
-};
 
 /*
 settings.corpora.test_admin = {
