@@ -1,3 +1,16 @@
+# Giealltekno branch
+
+This is the giellatekno branch. We have imported the config file we use,
+and made slight adjustments to design and images.
+
+## build the docker image
+
+Example:
+
+`podman build -t gt-korp-frontend -f Dockerfile`
+
+# Original README.md below
+
 This repo contains the frontend for [Korp](https://spraakbanken.gu.se/korp), 
 a tool using the IMS Open Corpus Workbench (CWB). Korp is a great
 tool for searching and visualising natural language corpus data. 
