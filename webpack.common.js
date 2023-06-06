@@ -174,7 +174,8 @@ module.exports = {
         (e) => e.message.includes("Can't resolve 'modes"),
     ],
     entry: {
-        index: "./app/index.ts",
+        bundle: "./app/index.js",
+        backend: "./app/backend.js",
         worker: "./app/scripts/statistics_worker.ts",
     },
     output: {
