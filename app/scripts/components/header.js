@@ -1,7 +1,7 @@
 /** @format */
 import korpLogo from "../../img/korplogo_block.svg"
-import sbxLogo from "../../img/sbx1r.svg"
-import sweClarinLogo from "../../img/sweclarin_logo.png"
+import giellateknoLogo from "../../img/giellatekno_logo.png"
+import divvunLogo from "../../img/divvun_logo.png"
 
 let html = String.raw
 export const headerComponent = {
@@ -129,10 +129,10 @@ export const headerComponent = {
                 ><!-- spacer-->
                 <div class="grow"></div>
                 <span class="flex items-end mr-4 max-w-lg justify-end"
-                    ><a class="hidden lg_inline" href="https://spraakbanken.gu.se" target="_blank"
-                        ><img src="${sbxLogo}" style="margin-bottom: -6%;" /></a
-                    ><a class="hidden lg_inline grow-0" href="https://sweclarin.se" target="_blank"
-                        ><img src="${sweClarinLogo}" style="margin-bottom: 2px" /></a></span
+                    ><a class="hidden lg_inline mr-2" href="https://giellatekno.uit.no" target="_blank"
+                        ><img src="${giellateknoLogo}" style="height: 60px;" /></a
+                    ><a class="hidden lg_inline grow-0" href="https://divvun.no" target="_blank"
+                        ><img src="${divvunLogo}" style="margin-bottom: 2px; height: 60px;" /></a></span
                 ><select class="hidden md_block shrink min-w-0" id="search_history"></select>
             </div>
         </div>
