@@ -2,6 +2,8 @@
 import settings from 'korp_config'
 
 window.settings = settings
+window.settings.korp_backend_url = window.BACKEND_URL;
+
 settings.markup = {
   msd: require("./markup/msd.html")
 }

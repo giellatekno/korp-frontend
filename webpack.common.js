@@ -172,6 +172,7 @@ module.exports = {
     ],
     entry: {
         bundle: "./app/index.js",
+        backend: "./app/backend.js",
         worker: "./app/scripts/statistics_worker.ts",
     },
     output: {
