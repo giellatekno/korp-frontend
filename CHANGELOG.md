@@ -7,6 +7,13 @@
 - https://github.com/spraakbanken/korp-frontend/issues/323
 - https://github.com/spraakbanken/korp-frontend/issues/327
 
+## [9.4.3dev0] - 20231031
+
+### Bug fixes
+
+- https://github.com/spraakbanken/korp-frontend/issues/326
+- https://github.com/spraakbanken/korp-frontend/issues/328
+
 ## [9.4.2] - 20230515
 
 ### Bug fixes
