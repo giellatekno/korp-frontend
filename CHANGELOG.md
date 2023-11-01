@@ -1,5 +1,19 @@
 # Changelog
 
+## [9.5.0-dev]
+
+### Changed
+
+- Logo changes: New Korp, new Språkbanken Text, replaced Swe-CLARIN with University of Gothenburg
+- The search history selector has been moved down to the search tab bar
+
+## [9.4.4] - 20231031
+
+### Bug fixes
+
+- https://github.com/spraakbanken/korp-frontend/issues/326
+- https://github.com/spraakbanken/korp-frontend/issues/328
+
 ## [9.4.3] - 20230531
 
 ### Bug fixes
