@@ -65,7 +65,6 @@ try {
 }
 
 require("angular-dynamic-locale/dist/tmhDynamicLocale.js")
-window.Raphael = require("raphael")
 
 require("jquery-flot/jquery.flot.js")
 require("jquery-flot/jquery.flot.stack.js")
