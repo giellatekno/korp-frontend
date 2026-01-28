@@ -1,6 +1,6 @@
-This repo contains the frontend for [Korp](https://spraakbanken.gu.se/korp), 
+This repo contains [Giellatekno](https://giellatekno.uit.no/)'s fork of the frontend for [Korp](https://spraakbanken.gu.se/korp), 
 a tool using the IMS Open Corpus Workbench (CWB). Korp is a great
-tool for searching and visualising natural language corpus data. 
+tool for searching and visualising natural language corpus data. **It is only used for our old Korp instances!** For the new instances, we use Språkbanken's current version with locally applied patches.
 
 Korp is mainly developed by [Språkbanken](https://spraakbanken.gu.se) at the 
 University of Gothenburg, Sweden. Contributions are also made from other
